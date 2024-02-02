@@ -65,7 +65,7 @@
 }
 
 .navbar-toggler {
-  padding: 0;
+  padding: 25px 0px;
 }
 
 .navbar-toggler .toggler-icon {
@@ -285,11 +285,12 @@
 }
 
 .navbar-btn .ud-white-btn {
-  background: rgba(255, 255, 255, 0.2);
+  background: white;
+  color: var(--heading-color);
 }
 
 .navbar-btn .ud-white-btn:hover {
-  background: white;
+  background: #ADB4D7;
   color: var(--heading-color);
 }
 
@@ -298,18 +299,18 @@
 }
 
 .sticky .navbar-nav .nav-item:hover > a {
-  color: var(--primary-color);
-  opacity: 1;
+  color: var(--white);
+  opacity: 0.5
 }
 
 .sticky .navbar-nav .nav-item a {
-  color: var(--heading-color);
+  color: var(--white);
 }
 
 .sticky .navbar-nav .nav-item a.active,
 .sticky .navbar-nav .nav-item a:hover {
-  color: var(--primary-color);
-  opacity: 1;
+  color: var(--white);
+  opacity: 0.5
 }
 
 .sticky .navbar-btn .ud-main-btn.ud-login-btn {
@@ -322,12 +323,13 @@
 }
 
 .sticky .navbar-btn .ud-white-btn {
-  background: var(--primary-color);
-  color: var(--white);
+  background: white;
+  color: var(--heading-color);
 }
 
 .sticky .navbar-btn .ud-white-btn:hover {
-  background: var(--heading-color);
+  background: #ADB4D7;
+  color: var(--heading-color);
 }
 
 /* ===== Hero CSS ===== */
@@ -1290,7 +1292,7 @@
 }
 
 .ud-widget .ud-widget-links a:hover {
-  color: var(--primary-color);
+  color: #ADB4D7;
   padding-left: 10px;
 }
 
@@ -1366,7 +1368,7 @@
 }
 
 .ud-footer-bottom .ud-footer-bottom-right a {
-  color: var(--primary-color);
+  color: #ADB4D7;
 }
 
 .ud-footer-bottom .ud-footer-bottom-right a:hover {

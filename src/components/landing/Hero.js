@@ -22,12 +22,12 @@ const Hero = () => {
                                         <i style={{ color: '#ADB4D7' }}>GitHub</i> profile in minutes
                                     </h1>
                                     <p className="ud-hero-desc">
-                                    Generate Readme.md for your profile and show off your skills, experience and projects.
+                                        Generate Readme.md for your profile and show off your skills, experience and projects.
                                     </p>
                                     <ul className="ud-hero-buttons">
                                         <li>
                                             <Link
-                                                to="/sign-up"
+                                                to="/create-profile"
                                                 className="ud-main-btn ud-white-btn"
                                             >
                                                 Get Started
@@ -40,7 +40,8 @@ const Hero = () => {
                                                 target="_blank"
                                                 className="ud-main-btn ud-link-btn"
                                             >
-                                                Learn More <i className="lni lni-arrow-right" />
+                                                <i class="fa-brands fa-github"></i> &nbsp;
+                                                GitHub <i className="lni lni-arrow-right" />
                                             </a>
                                         </li>
                                     </ul>
