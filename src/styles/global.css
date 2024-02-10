@@ -3,8 +3,11 @@
   --font: "Inter", sans-serif;
   --body-color: #637381;
   --heading-color: #212b36;
-  --primary-color: #181C31;
+  /* --primary-color: #181C31; */
+  --primary-color: #1b1b1b;
+  --pop-color: #adb4d7;
   --white: #ffffff;
+  color-scheme: dark;
 }
 
 body {
@@ -66,17 +69,6 @@ video {
   vertical-align: middle;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  color: var(--heading-color);
-  margin: 0px;
-}
-
 h1 {
   font-size: 48px;
 }
@@ -126,65 +118,80 @@ p {
 
 /*===== All Button Style =====*/
 .ud-main-btn {
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    font-weight: 500;
-    font-size: 16px;
-    border-radius: 5px;
-    padding: 15px 25px;
-    border: 1px solid transparent;
-    color: var(--white);
-    cursor: pointer;
-    z-index: 5;
-    -webkit-transition: all 0.4s ease-out 0s;
-    transition: all 0.4s ease-out 0s;
-    background: var(--primary-color);
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 15px 25px;
+  border: 1px solid transparent;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  background: var(--primary-color);
+}
+
+.ud-main-btn:hover {
+  color: var(--white);
+  background: var(--heading-color);
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
   }
-  
-  .ud-main-btn:hover {
-    color: var(--white);
-    background: var(--heading-color);
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  
-  @media (max-width: 767px) {
-    .container {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-  }
-  
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    .container {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-  
-  .back-to-top {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    background: var(--primary-color);
-    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-radius: 5px;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    z-index: 99;
-    color: var(--white);
-  }
-  
-  .back-to-top:hover {
-    color: var(--white);
-    background: var(--heading-color);
-  }
+}
+
+.back-to-top {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: var(--primary-color);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 99;
+  color: var(--white);
+}
+
+.back-to-top:hover {
+  color: var(--white);
+  background: var(--heading-color);
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

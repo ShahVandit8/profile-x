@@ -1320,11 +1320,6 @@
   }
 }
 
-.ud-footer-bottom {
-  padding: 35px 0;
-  border-top: 1px solid rgba(136, 144, 164, 0.43);
-}
-
 .ud-footer-bottom .ud-footer-bottom-left {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -1,3 +1,7 @@
+.profile-container {
+  overflow: hidden;
+}
+
 .header {
   display: block;
   margin: 0 auto;
@@ -9,11 +13,12 @@
   height: 60px !important;
   overflow: hidden;
   z-index: 10;
+  border-bottom: 1px solid var(--body-color);
 }
 .main {
+  overflow: hidden;
   margin: 0 auto;
-  display: block;
-  height: 100%;
+  /* height: 100%; */
   /* margin-top: 60px; */
 }
 .mainInner {
@@ -37,7 +42,7 @@
   margin-top: 60px;
   transform: translateX(-250px);
   transition: transform 250ms ease-in-out;
-  background: var(--primary-color);
+  background: #0F0F0F;
 }
 .sidebarMenuInner {
   margin: 0;
@@ -132,3 +137,84 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   transform: rotate(-135deg);
   margin-top: -9px;
 }
+
+/* Main CSS */
+
+.left-content {
+  background-color: var(--primary-color);
+  height: 100lvh;
+  border-right: 1px solid var(--body-color);
+}
+
+.headbar {
+  border: solid;
+}
+
+.right-content {
+  padding-top: 60px;
+  background-color: var(--primary-color);
+  height: 100lvh;
+}
+
+.active-btn {
+  background-color: var(--pop-color);
+}
+
+.active-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nonactive-btn {
+  border: 1px solid var(--body-color);
+  color: var(--body-color);
+}
+
+.nonactive-btn:hover {
+  background-color: var(--pop-color);
+}
+
+.nonactive-btn:focus {
+  outline: none;
+  box-shadow: none;
+} 
+
+.content {
+  overflow-y: scroll;
+}
+
+
+.textarea {
+  width: 100%;
+  height: 78vh;
+  padding: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff !important;
+}
+
+.textarea ul {
+  margin-top: 15px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.textarea h1 {
+  font-size: 2.25rem;
+}
+
+.textarea h2 {
+  font-size: 1.875rem;
+}
+
+.textarea p {
+  line-height: 1.625;
+  color: #adadad;
+}
+
+.textarea img {
+  margin-top: 15px;
+}
+

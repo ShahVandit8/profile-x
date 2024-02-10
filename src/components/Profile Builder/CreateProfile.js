@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 
 const CreateProfile = () => {
   return (
-    <div>
+    <div className="profile-container">
       <Navbar />
     </div>
   )

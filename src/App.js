@@ -11,15 +11,18 @@ import About from "./components/landing/About";
 import Footer from "./components/landing/Footer";
 import Landing from "./components/landing/Landing";
 import CreateProfile from "./components/Profile Builder/CreateProfile";
+import Main from "./components/Profile Builder/Main";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" exact element={<Landing />} />
-        <Route path="/create-profile" exact element={<CreateProfile />} />
+        <Route path="create-profile" element={<CreateProfile />} >
+          <Route path="" element={<Main />} />
+        </Route>
       </Routes>
-  </Router>
+    </Router>
   );
 }
 

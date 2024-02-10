@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <>
             <div className="header" >
-                <Link className="navbar-brand" style={{float: 'right', marginTop: '10px'}} to="/">
+                <Link className="navbar-brand" style={{ float: 'right', marginTop: '10px' }} to="/">
                     <span className="nav-title ">Profile<i style={{ color: '#ADB4D7', fontWeight: '700' }}>X</i></span>
                     {/* <img src={logoWhite} className="nav-logo" alt="Logo" /> */}
                 </Link>
@@ -19,40 +19,34 @@ const Navbar = () => {
             <div id="sidebarMenu">
                 <ul className="sidebarMenuInner">
                     <li>
-                        Jelena Jovanovic <span>Web Developer</span>
-                    </li>
-                    <li>
-                        <a href="https://vanila.io" target="_blank">
-                            Company
+                        <a href="" target="_blank">
+                            Introduction
                         </a>
                     </li>
                     <li>
-                        <a href="https://instagram.com/plavookac" target="_blank">
-                            Instagram
+                        <a href="" target="_blank">
+                            Skills
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/plavookac" target="_blank">
-                            Twitter
+                        <a href="" target="_blank">
+                            Socials
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="https://www.youtube.com/channel/UCDfZM0IK6RBgud8HYGFXAJg"
-                            target="_blank"
-                        >
-                            YouTube
+                        <a href="" target="_blank">
+                            Badges
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/plavookac/" target="_blank">
-                            Linkedin
+                        <a href="" target="_blank">
+                            Support
                         </a>
                     </li>
                 </ul>
             </div>
             <div id="center" className="main center">
-            <Outlet />
+                <Outlet />
             </div>
         </>
 
