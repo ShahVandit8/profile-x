@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<Landing />} />
         <Route path="create-profile" element={<CreateProfile />} >
-          <Route path="" element={<Main />} />
+          {/* <Route path="" element={<Main />} /> */}
         </Route>
       </Routes>
     </Router>

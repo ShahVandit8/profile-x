@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import Main from './Main'
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+    const {page, setpage, nextPage, previousPage} = props
     return (
         <>
             <div className="header" >
@@ -18,35 +21,40 @@ const Navbar = () => {
             </label>
             <div id="sidebarMenu">
                 <ul className="sidebarMenuInner">
-                    <li>
-                        <a href="" target="_blank">
+                    <li className="side-logo">
+                        <Link className="navbar-brand" style={{ marginTop: '10px'}} to="/">
+                            <span style={{ fontWeight: "normal" }} className="nav-title ">Profile<i style={{ color: '#ADB4D7', fontWeight: '700' }}>X</i></span>
+                        </Link>
+                    </li>
+                    <li className={page == 1 ? 'active' : ''} onClick={() => setpage(1)}>
+                        <a>
                             Introduction
                         </a>
                     </li>
-                    <li>
-                        <a href="" target="_blank">
+                    <li className={page == 2 ? 'active' : ''} onClick={() => setpage(2)}>
+                        <a>
                             Skills
                         </a>
                     </li>
-                    <li>
-                        <a href="" target="_blank">
+                    <li className={page == 3 ? 'active' : ''} onClick={() => setpage(3)}>
+                        <a>
                             Socials
                         </a>
                     </li>
-                    <li>
-                        <a href="" target="_blank">
+                    <li className={page == 4 ? 'active' : ''} onClick={() => setpage(4)}>
+                        <a>
                             Badges
                         </a>
                     </li>
-                    <li>
-                        <a href="" target="_blank">
+                    <li className={page == 5 ? 'active' : ''} onClick={() => setpage(5)}>
+                        <a>
                             Support
                         </a>
                     </li>
                 </ul>
             </div>
             <div id="center" className="main center">
-                <Outlet />
+                <Main page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} />
             </div>
         </>
 

@@ -40,7 +40,7 @@
   left: 0;
   width: 250px;
   margin-top: 60px;
-  transform: translateX(-250px);
+  transform: translateX(-251px);
   transition: transform 250ms ease-in-out;
   background: #0F0F0F;
 }
@@ -49,27 +49,39 @@
   padding: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.sidebarMenuInner .side-logo {
+  pointer-events: none;
+}
+
 .sidebarMenuInner li {
   list-style: none;
   color: #fff;
   text-transform: uppercase;
-  font-weight: bold;
-  padding: 20px;
+  padding: 12px;
   cursor: pointer;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.sidebarMenuInner li span {
-  display: block;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.5);
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
 }
 .sidebarMenuInner li a {
-  color: #fff;
+  color: inherit;
   text-transform: uppercase;
-  font-weight: bold;
+  font-size: 14px;
   cursor: pointer;
   text-decoration: none;
 }
+
+.sidebarMenuInner li:hover {
+  text-decoration: none;
+  background-color: #ADB4D7;
+  color: #0F0F0F;
+}
+
+.sidebarMenuInner .active {
+  text-decoration: none;
+  background-color: #ADB4D7;
+  color: #0F0F0F;
+}
+
 input[type="checkbox"]:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
@@ -141,13 +153,22 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 /* Main CSS */
 
 .left-content {
+  padding-top: 60px;
   background-color: var(--primary-color);
   height: 100lvh;
   border-right: 1px solid var(--body-color);
 }
 
 .headbar {
-  border: solid;
+  border-bottom: 1px solid var(--body-color);
+}
+
+.headbar h3 {
+  color: white;
+}
+
+.headbar p {
+  color: #adadad;
 }
 
 .right-content {
