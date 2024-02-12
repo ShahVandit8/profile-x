@@ -31,7 +31,7 @@ const Footer = () => {
                                         {/* <img src={logoWhite} className="nav-logo" alt="Logo" /> */}
                                     </Link>
                                     <p className="ud-widget-desc">
-                                        Brilliant Platform to Build Professional Resume Faster.
+                                        Brilliant Platform to Build GitHub Profile Faster.
                                     </p>
                                 </div>
                             </div>

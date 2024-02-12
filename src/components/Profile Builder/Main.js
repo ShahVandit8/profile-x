@@ -28,7 +28,7 @@ const Main = ({page, setpage, nextPage, previousPage}) => {
 
   return (
     <div className="row">
-      <div className="col-6 pe-0">
+      <div className="col-12 col-md-6 pe-0">
         <div className="left-content">
           <div className="headbar p-3">
             {
@@ -65,27 +65,26 @@ const Main = ({page, setpage, nextPage, previousPage}) => {
               </button>
             </div>
           </div>
-          <div className="content p-2">
+          <div className="content p-3">
             {
               page == 1 ?
-                <Introduction />
+                <Introduction page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} />
                 :
                 page == 2 ?
-                  <Skills />
+                  <Skills page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} />
                   :
                   page == 3 ?
-                    <Socials />
+                    <Socials page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} />
                     :
                     page == 4 ?
                       <Badges />
                       :
                       <Support />
             }
-
           </div>
         </div>
       </div>
-      <div className="col-6 ps-0">
+      <div className="col-12 col-md-6 ps-0">
         <div className="right-content">
           <nav className="navbar py-3">
             <div className="container-fluid d-block">

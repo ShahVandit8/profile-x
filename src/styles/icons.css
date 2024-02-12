@@ -1,0 +1,26 @@
+.selected {
+    background-image:url(/public/icons/other/check.svg);
+}
+
+.c {
+    background-image: url(/public/icons/skills/c.svg)
+}
+
+.c-colored {
+    background-image: url(/public/icons/skills/c-colored.svg)
+}
+
+.cplusplus {
+    background-image: url(/public/icons/skills/cplusplus.svg)
+}
+
+.cplusplus-colored {
+    background-image: url(/public/icons/skills/cplusplus-colored.svg)
+}
+
+
+/* Socials icons */
+
+.github {
+    background-image: url(/public/icons/socials/github-dark.svg);
+}

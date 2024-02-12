@@ -1,5 +1,5 @@
 .profile-container {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .header {
@@ -23,7 +23,8 @@
 }
 .mainInner {
   display: table;
-  height: 100%;
+  height: 100lvh;
+  max-height: 100lvh;
   width: 100%;
   text-align: center;
 }
@@ -42,7 +43,7 @@
   margin-top: 60px;
   transform: translateX(-251px);
   transition: transform 250ms ease-in-out;
-  background: #0F0F0F;
+  background: #0f0f0f;
 }
 .sidebarMenuInner {
   margin: 0;
@@ -72,14 +73,14 @@
 
 .sidebarMenuInner li:hover {
   text-decoration: none;
-  background-color: #ADB4D7;
-  color: #0F0F0F;
+  background-color: #adb4d7;
+  color: #0f0f0f;
 }
 
 .sidebarMenuInner .active {
   text-decoration: none;
-  background-color: #ADB4D7;
-  color: #0F0F0F;
+  background-color: #adb4d7;
+  color: #0f0f0f;
 }
 
 input[type="checkbox"]:checked ~ #sidebarMenu {
@@ -156,11 +157,15 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   padding-top: 60px;
   background-color: var(--primary-color);
   height: 100lvh;
+  max-height: 100lvh;
   border-right: 1px solid var(--body-color);
+  display: flex;
+  flex-direction: column;
 }
 
 .headbar {
   border-bottom: 1px solid var(--body-color);
+  flex: 0 1 auto;
 }
 
 .headbar h3 {
@@ -171,10 +176,108 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   color: #adadad;
 }
 
+.form-section {
+  width: 100%;
+  /* height: auto; */
+  margin-top: 15px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff !important;
+  flex: 1 1 auto;
+  max-height: calc(100vh - var(--headbar-height));
+  overflow-y: auto;
+}
+
+.form-section .form-field {
+  margin-bottom: 22px;
+}
+
+.form-section span {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.form-section .text-input {
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  background-color: #262626;
+}
+
+.form-section .text-input:focus {
+  border: 1px solid #414141;
+  outline: none !important;
+  transition: none !important;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  background-color: #262626;
+}
+
+.input-box .prefix {
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+}
+
+.input-box input {
+  /* flex-grow: 1; */
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding-left: 2px;
+  font-size: 15px;
+  background-color: #262626;
+}
+
+.input-box:focus-within {
+  border-color: #777;
+}
+
+.form-section .textarea-input {
+  width: 100%;
+  height: 5rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  background-color: #262626;
+}
+
+.form-section .textarea-input:focus {
+  border: 1px solid #414141;
+  outline: none !important;
+  transition: none !important;
+}
+
+.form-section h4 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
 .right-content {
   padding-top: 60px;
   background-color: var(--primary-color);
   height: 100lvh;
+  max-height: 100lvh;
 }
 
 .active-btn {
@@ -198,16 +301,15 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .nonactive-btn:focus {
   outline: none;
   box-shadow: none;
-} 
+}
 
 .content {
   overflow-y: scroll;
 }
 
-
 .textarea {
   width: 100%;
-  height: 78vh;
+  height: inherit;
   padding: 5px;
   font-size: 1rem;
   outline: none;
@@ -239,3 +341,48 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   margin-top: 15px;
 }
 
+/* Skills Section */
+
+.skill-group {
+  background-color: #262626;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.skill-group p {
+  color: #fff;
+}
+
+.skill-group .skills {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 10px;
+}
+
+.skill-group .skill-button {
+  background: transparent;
+  border: none;
+}
+
+.skill-group .skill-icon {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.skill-group .badge {
+  float: right;
+  top: -1px;
+  right: -1px;
+}
+
+/* Socials Section */
+
+.form-section .form-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
