@@ -12,9 +12,11 @@ import Footer from "./components/landing/Footer";
 import Landing from "./components/landing/Landing";
 import CreateProfile from "./components/Profile Builder/CreateProfile";
 import Main from "./components/Profile Builder/Main";
+import { AppProvider } from "./Context/AppContext";
 
 function App() {
   return (
+    <AppProvider>
     <Router>
       <Routes>
         <Route path="/" exact element={<Landing />} />
@@ -23,6 +25,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+    </AppProvider>
   );
 }
 

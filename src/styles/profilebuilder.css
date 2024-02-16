@@ -8,12 +8,12 @@
   width: 100%;
   max-width: 100%;
   box-shadow: none;
-  background-color: var(--primary-color);
+  background-color: var(--background);
   position: fixed;
   height: 60px !important;
   overflow: hidden;
   z-index: 10;
-  border-bottom: 1px solid var(--body-color);
+  border-bottom: 1px solid #333c47;
 }
 .main {
   overflow: hidden;
@@ -155,25 +155,55 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .left-content {
   padding-top: 60px;
-  background-color: var(--primary-color);
+  background-color: var(--background);
   height: 100lvh;
   max-height: 100lvh;
-  border-right: 1px solid var(--body-color);
+  border-right: 1px solid #333c47;
   display: flex;
   flex-direction: column;
 }
 
 .headbar {
-  border-bottom: 1px solid var(--body-color);
+  border-bottom: 1px solid #333c47;
   flex: 0 1 auto;
+  padding: 20px;
 }
 
 .headbar h3 {
   color: white;
+  font-size: 24px;
 }
 
 .headbar p {
   color: #adadad;
+  font-size: 14px;
+}
+
+.section-btn {
+  background-color: var(--secondary);
+  color: var(--white);
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.section-btn:hover {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.section-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.section-content {
+  padding: 20px;
 }
 
 .form-section {
@@ -275,13 +305,27 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .right-content {
   padding-top: 60px;
-  background-color: var(--primary-color);
+  background-color: var(--background);
   height: 100lvh;
   max-height: 100lvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-content .navbar {
+  flex: 0 1 auto;
 }
 
 .active-btn {
-  background-color: var(--pop-color);
+  background-color: var(--primary);
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .active-btn:focus {
@@ -290,12 +334,22 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .nonactive-btn {
-  border: 1px solid var(--body-color);
-  color: var(--body-color);
+  /* border: 1px solid var(--accent); */
+  background-color: var(--secondary);
+  color: white;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 .nonactive-btn:hover {
-  background-color: var(--pop-color);
+  background-color: var(--accent);
+  color: var(--white);
 }
 
 .nonactive-btn:focus {
@@ -307,38 +361,90 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   overflow-y: scroll;
 }
 
-.textarea {
+.right-content textarea {
+  color: #adadad;
+}
+
+.preview-container {
   width: 100%;
-  height: inherit;
   padding: 5px;
   font-size: 1rem;
   outline: none;
   border: none;
   background-color: transparent;
-  color: #fff !important;
+  color: #fff;
+  flex: 1 1 auto;
+  max-height: calc(100vh - var(--headbar-height));
+  overflow-y: auto;
 }
 
-.textarea ul {
+.raw-textarea {
+  width: 100%;
+  height: 100lvh;
+  padding: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  flex: 1 1 auto;
+  max-height: calc(100vh - var(--headbar-height));
+  overflow-y: auto;
+}
+
+.preview-container ul {
   margin-top: 15px;
   list-style-type: disc;
   list-style-position: inside;
-}
-
-.textarea h1 {
-  font-size: 2.25rem;
-}
-
-.textarea h2 {
-  font-size: 1.875rem;
-}
-
-.textarea p {
-  line-height: 1.625;
+  margin-bottom: 15px;
   color: #adadad;
 }
 
-.textarea img {
-  margin-top: 15px;
+.preview-container h1 {
+  font-size: 2.15rem;
+  font-weight: bold;
+}
+
+.preview-container h2 {
+  font-size: 1.775rem;
+  font-weight: bold;
+}
+
+.preview-container p {
+  line-height: 1.625;
+  color: #adadad;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.preview-container li {
+  font-size: 15px;
+}
+
+.preview-container img {
+  margin-bottom: 15px;
+}
+
+.preview-container h3 {
+  margin-bottom: 15px;
+}
+
+.markdown-container {
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--secondary);
+  flex: 1 1 auto;
+  max-height: calc(100vh - var(--headbar-height));
+  overflow-y: auto;
+}
+
+.markdown-container p {
+  line-height: 1.325;
+  color: #adadad;
+  font-size: 15px;
 }
 
 /* Skills Section */

@@ -2,9 +2,13 @@ import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import Main from './Main'
 
+import useApp from '../../Context/AppContext'
+
 const Navbar = (props) => {
 
-    const {page, setpage, nextPage, previousPage} = props
+    const { state, dispatch } = useApp()
+
+    const {page, setpage, nextPage, previousPage, introduction, setIntroduction, introductionChange} = props
     return (
         <>
             <div className="header" >
@@ -26,27 +30,62 @@ const Navbar = (props) => {
                             <span style={{ fontWeight: "normal" }} className="nav-title ">Profile<i style={{ color: '#ADB4D7', fontWeight: '700' }}>X</i></span>
                         </Link>
                     </li>
-                    <li className={page == 1 ? 'active' : ''} onClick={() => setpage(1)}>
+                    <li className={state.section === "introduction" ? 'active' : ''}
+                     onClick={() => {
+                        dispatch({
+                          type: "SHOW_SECTION",
+                          payload: "introduction",
+                        });
+                      }}
+                     >
                         <a>
                             Introduction
                         </a>
                     </li>
-                    <li className={page == 2 ? 'active' : ''} onClick={() => setpage(2)}>
+                    <li className={state.section === "skills" ? 'active' : ''} 
+                    onClick={() => {
+                        dispatch({
+                          type: "SHOW_SECTION",
+                          payload: "skills",
+                        });
+                      }}
+                    >
                         <a>
                             Skills
                         </a>
                     </li>
-                    <li className={page == 3 ? 'active' : ''} onClick={() => setpage(3)}>
+                    <li className={state.section === "socials" ? 'active' : ''} 
+                    onClick={() => {
+                        dispatch({
+                          type: "SHOW_SECTION",
+                          payload: "socials",
+                        });
+                      }}
+                    >
                         <a>
                             Socials
                         </a>
                     </li>
-                    <li className={page == 4 ? 'active' : ''} onClick={() => setpage(4)}>
+                    <li className={state.section === "badges" ? 'active' : ''} 
+                    onClick={() => {
+                        dispatch({
+                          type: "SHOW_SECTION",
+                          payload: "badges",
+                        });
+                      }}
+                    >
                         <a>
                             Badges
                         </a>
                     </li>
-                    <li className={page == 5 ? 'active' : ''} onClick={() => setpage(5)}>
+                    <li className={state.section === "support" ? 'active' : ''} 
+                    onClick={() => {
+                        dispatch({
+                          type: "SHOW_SECTION",
+                          payload: "support",
+                        });
+                      }}
+                    >
                         <a>
                             Support
                         </a>
@@ -54,7 +93,7 @@ const Navbar = (props) => {
                 </ul>
             </div>
             <div id="center" className="main center">
-                <Main page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} />
+                <Main page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} introduction={introduction} setIntroduction={setIntroduction} introductionChange={introductionChange} />
             </div>
         </>
 

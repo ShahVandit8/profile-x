@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import heroimg from "../../assets/images/landing/hero-image.svg";
+import hero from "../../assets/images/landing/hero.png";
 import dotshape from "../../assets/images/landing/dotted-shape.svg";
 import { Link } from "react-router-dom";
 
@@ -50,7 +51,7 @@ const Hero = () => {
                                     className="ud-hero-image wow fadeInUp"
                                     data-wow-delay=".25s"
                                 >
-                                    <img src={heroimg} alt="hero-image" />
+                                    <img src={hero} alt="hero-image" />
                                     <img src={dotshape} alt="shape" className="shape shape-1" />
                                     <img src={dotshape} alt="shape" className="shape shape-2" />
                                 </div>

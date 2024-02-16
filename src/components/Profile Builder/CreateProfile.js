@@ -5,17 +5,8 @@ import Navbar from './Navbar'
 
 const CreateProfile = () => {
 
-  const [page, setpage] = useState(1)
-
-  const nextPage = () => {
-    setpage(page => page + 1)
-  }
-
-  const previousPage = () => {
-    setpage(page => page - 1)
-  }
-
   const introductionDefaultValues = {
+    selected : false,
     name: "",
     shortDescription: "",
     longDescription: "",
@@ -29,6 +20,27 @@ const CreateProfile = () => {
     collaborateOn: "",
     additionalInfo: ""
   }
+
+  const [page, setpage] = useState(1)
+  const [introduction, setIntroduction] = useState(introductionDefaultValues)
+  const output = introduction.name.length> 1 ? "# " +introduction.name : ""
+  const [input, setInput] = useState(output)
+
+  const nextPage = () => {
+    setpage(page => page + 1)
+  }
+
+  const previousPage = () => {
+    setpage(page => page - 1)
+  }
+
+  const introductionChange = (e) => {
+    setIntroduction({ ...introduction, [e.target.name] : e.target.value });
+    setInput(output)
+    console.log(input);
+  }
+
+  
 
   const skillsDefaultValues = {
     core: [],
@@ -92,7 +104,7 @@ const CreateProfile = () => {
 
   return (
     <div className="profile-container">
-      <Navbar page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} />
+      <Navbar page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} introduction={introduction} setIntroduction={setIntroduction} introductionChange={introductionChange} />
     </div>
   )
 }

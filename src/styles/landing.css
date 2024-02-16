@@ -12,7 +12,7 @@
 .sticky {
   position: fixed;
   z-index: 99;
-  background-color: rgba(24, 28, 49, 0.8);
+  background-color: rgba(27, 27, 27, 0.6);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
@@ -156,7 +156,7 @@
   .navbar-nav .nav-item > a {
     display: block;
     padding: 8px 0;
-    color: var(--heading-color);
+    color: var(--secondary);
   }
 }
 
@@ -170,7 +170,7 @@
   (max-width: 767px) {
   .navbar-nav .nav-item > a:hover,
   .navbar-nav .nav-item > a.active {
-    color: var(--primary-color);
+    color: var(--background);
     opacity: 1;
   }
 }
@@ -210,12 +210,12 @@
 
 .navbar-nav .nav-item .ud-submenu .ud-submenu-link {
   padding: 7px 0;
-  color: var(--heading-color);
+  color: var(--secondary);
   font-size: 14px;
 }
 
 .navbar-nav .nav-item .ud-submenu .ud-submenu-link:hover {
-  color: var(--primary-color);
+  color: var(--background);
 }
 
 .navbar-nav .nav-item:hover > a {
@@ -226,7 +226,7 @@
 @media only screen and (min-width: 768px) and (max-width: 991px),
   (max-width: 767px) {
   .navbar-nav .nav-item:hover > a {
-    color: var(--primary-color);
+    color: var(--background);
     opacity: 1;
   }
 }
@@ -286,21 +286,21 @@
 
 .navbar-btn .ud-white-btn {
   background: white;
-  color: var(--heading-color);
+  color: var(--secondary);
 }
 
 .navbar-btn .ud-white-btn:hover {
-  background: #ADB4D7;
-  color: var(--heading-color);
+  background: #adb4d7;
+  color: var(--secondary);
 }
 
 .sticky .navbar-toggler .toggler-icon {
-  background-color: var(--heading-color);
+  background-color: var(--secondary);
 }
 
 .sticky .navbar-nav .nav-item:hover > a {
   color: var(--white);
-  opacity: 0.5
+  opacity: 0.5;
 }
 
 .sticky .navbar-nav .nav-item a {
@@ -310,31 +310,31 @@
 .sticky .navbar-nav .nav-item a.active,
 .sticky .navbar-nav .nav-item a:hover {
   color: var(--white);
-  opacity: 0.5
+  opacity: 0.5;
 }
 
 .sticky .navbar-btn .ud-main-btn.ud-login-btn {
-  color: var(--heading-color);
+  color: var(--secondary);
 }
 
 .sticky .navbar-btn .ud-main-btn.ud-login-btn:hover {
-  color: var(--primary-color);
+  color: var(--background);
   opacity: 1;
 }
 
 .sticky .navbar-btn .ud-white-btn {
   background: white;
-  color: var(--heading-color);
+  color: var(--secondary);
 }
 
 .sticky .navbar-btn .ud-white-btn:hover {
-  background: #ADB4D7;
-  color: var(--heading-color);
+  background: #adb4d7;
+  color: var(--secondary);
 }
 
 /* ===== Hero CSS ===== */
 .ud-hero {
-  background: var(--primary-color);
+  background: var(--background);
   padding-top: 180px;
 }
 
@@ -428,14 +428,12 @@
 
 .ud-hero-buttons .ud-white-btn {
   background: var(--white);
-  color: var(--heading-color);
+  color: var(--secondary);
 }
 
 .ud-hero-buttons .ud-white-btn:hover {
-  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  background: #fefefe;
-  color: var(--primary-color);
+  background: var(--primary);
+  color: var(--background);
 }
 
 .ud-hero-buttons .ud-link-btn:hover {
@@ -466,6 +464,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  border: 2px solid var(--white);
 }
 
 .ud-hero-image img {
@@ -492,6 +491,7 @@
 .ud-features {
   padding-top: 120px;
   padding-bottom: 90px;
+  background: var(--background);
 }
 
 @media (max-width: 767px) {
@@ -509,7 +509,7 @@
 .ud-section-title span {
   font-weight: 600;
   font-size: 18px;
-  color: var(--primary-color);
+  color: var(--white);
   margin-bottom: 10px;
 }
 
@@ -518,13 +518,14 @@
   font-size: 42px;
   line-height: 55px;
   text-transform: capitalize;
-  color: var(--heading-color);
+  color: var(--text);
   margin-bottom: 20px;
 }
 
 .ud-section-title p {
   font-size: 20px;
   line-height: 30px;
+  color: var(--text);
 }
 
 @media (max-width: 767px) {
@@ -556,7 +557,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 14px;
-  background: var(--primary-color);
+  background: var(--background);
   font-size: 32px;
   color: var(--white);
   position: relative;
@@ -573,7 +574,7 @@
   top: 0;
   left: 0;
   border-radius: 14px;
-  background: var(--primary-color);
+  background: var(--white);
   opacity: 0.2;
   z-index: -1;
   -webkit-transform: rotate(23deg);
@@ -587,6 +588,7 @@
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 12px;
+  color: var(--text);
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -600,20 +602,21 @@
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 40px;
+  color: var(--text);
 }
 
 .ud-single-feature .ud-feature-link {
   font-weight: 500;
-  color: var(--body-color);
+  color: var(--accent);
 }
 
 .ud-single-feature .ud-feature-link:hover {
-  color: var(--primary-color);
+  color: var(--background);
 }
 
 /* ===== About CSS ===== */
 .ud-about {
-  background: #f3f4fe;
+  background: var(--background);
   padding: 120px 0;
 }
 
@@ -624,7 +627,7 @@
 }
 
 .ud-about-wrapper {
-  background: var(--white);
+  background: var(--background);
   border: 1px solid rgba(0, 0, 0, 0.08);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,8 +668,8 @@
   font-weight: 500;
   font-size: 14px;
   color: var(--white);
-  background: var(--primary-color);
-  padding: 5px 20px;
+  background: var(--background);
+  padding: 5px 5px;
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -676,6 +679,7 @@
   font-size: 36px;
   line-height: 45px;
   margin-bottom: 30px;
+  color: var(--white);
 }
 
 @media (max-width: 767px) {
@@ -689,18 +693,37 @@
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 40px;
+  color: var(--text);
 }
 
-.ud-about-content .ud-main-btn:hover {
-  background: #2748b4;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+.ud-about-image {
+  padding: 70px;
+}
+
+.about-img {
+  height: 50lvh;
+  width: auto;
+  border: 1px solid var(--white);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
   (max-width: 767px) {
   .ud-about-image {
     text-align: center;
+    padding: 0;
+  }
+
+  .about-img {
+    height: 30lvh;
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1399px) {
+  .about-img {
+    height: 40lvh;
+    width: auto;
+    padding: 0;
   }
 }
 
@@ -749,7 +772,7 @@
   background: transparent;
   font-weight: 600;
   font-size: 18px;
-  color: var(--heading-color);
+  color: var(--secondary);
   opacity: 0.88;
   padding: 30px;
 }
@@ -780,7 +803,7 @@
   height: 42px;
   background: rgba(48, 86, 211, 0.06);
   border-radius: 10px;
-  color: var(--primary-color);
+  color: var(--background);
   margin-right: 24px;
 }
 
@@ -875,7 +898,7 @@
 .ud-brands .ud-title h6 {
   font-weight: normal;
   font-size: 12px;
-  color: var(--body-color);
+  color: var(--accent);
   display: inline-block;
   position: relative;
 }
@@ -975,7 +998,7 @@
 }
 
 .ud-single-pricing.first-item::after {
-  background: var(--primary-color);
+  background: var(--background);
   left: -2px;
   bottom: -2px;
   border-radius: 0px 55px 0px 8px;
@@ -993,7 +1016,7 @@
   padding: 10px 25px;
   background: var(--white);
   border-radius: 30px;
-  color: var(--primary-color);
+  color: var(--background);
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -1007,7 +1030,7 @@
 .ud-single-pricing .ud-pricing-header h4 {
   font-weight: 600;
   font-size: 26px;
-  color: var(--primary-color);
+  color: var(--background);
   margin-bottom: 40px;
 }
 
@@ -1028,24 +1051,24 @@
 
 .ud-single-pricing .ud-border-btn {
   border: 1px solid #d4deff;
-  color: var(--primary-color);
+  color: var(--background);
   background: var(--white);
 }
 
 .ud-single-pricing .ud-border-btn:hover {
   color: var(--white);
-  border-color: var(--primary-color);
-  background: var(--primary-color);
+  border-color: var(--background);
+  background: var(--background);
 }
 
 .ud-single-pricing .ud-white-btn {
   background: var(--white);
-  color: var(--heading-color);
+  color: var(--secondary);
 }
 
 .ud-single-pricing .ud-white-btn:hover {
   color: var(--white);
-  background: var(--heading-color);
+  background: var(--secondary);
 }
 
 /* ===== Contact CSS ===== */
@@ -1089,7 +1112,7 @@
 }
 
 .ud-contact-title span {
-  color: var(--heading-color);
+  color: var(--secondary);
   font-weight: 600;
   font-size: 15px;
   margin-bottom: 20px;
@@ -1130,7 +1153,7 @@
 
 .ud-contact-info-wrapper .ud-info-icon {
   font-size: 32px;
-  color: var(--primary-color);
+  color: var(--background);
   margin-right: 24px;
 }
 
@@ -1203,12 +1226,12 @@
 
 .ud-contact-form-wrapper .ud-form-group input:focus,
 .ud-contact-form-wrapper .ud-form-group textarea:focus {
-  border-color: var(--primary-color);
+  border-color: var(--background);
 }
 
 /* ===== Footer CSS ===== */
 .ud-footer {
-  background: var(--heading-color);
+  background: var(--secondary);
   padding-top: 100px;
   position: relative;
   z-index: 1;
@@ -1273,7 +1296,7 @@
 }
 
 .ud-widget .ud-widget-socials a:hover {
-  color: var(--primary-color);
+  color: var(--background);
 }
 
 .ud-widget .ud-widget-title {
@@ -1292,7 +1315,7 @@
 }
 
 .ud-widget .ud-widget-links a:hover {
-  color: #ADB4D7;
+  color: #adb4d7;
   padding-left: 10px;
 }
 
@@ -1352,7 +1375,7 @@
 }
 
 .ud-footer-bottom .ud-footer-bottom-left a:hover {
-  color: var(--primary-color);
+  color: var(--background);
 }
 
 .ud-footer-bottom .ud-footer-bottom-right {
@@ -1363,7 +1386,7 @@
 }
 
 .ud-footer-bottom .ud-footer-bottom-right a {
-  color: #ADB4D7;
+  color: #adb4d7;
 }
 
 .ud-footer-bottom .ud-footer-bottom-right a:hover {
@@ -1381,7 +1404,7 @@
 .ud-page-banner {
   padding-top: 130px;
   padding-bottom: 80px;
-  background: var(--primary-color);
+  background: var(--background);
   /* background-image: url("../images/banner/banner-bg.svg"); */
   background-position: center;
   background-repeat: no-repeat;
@@ -1430,11 +1453,11 @@
   border-radius: 4px;
   padding: 12px 24px;
   background: #fcfdfe;
-  color: var(--body-color);
+  color: var(--accent);
 }
 
 .ud-login-form .ud-form-group input:focus {
-  border-color: var(--primary-color);
+  border-color: var(--background);
 }
 
 .ud-socials-connect {
@@ -1444,7 +1467,7 @@
 
 .ud-socials-connect p {
   font-size: 16px;
-  color: var(--body-color);
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
@@ -1465,7 +1488,7 @@
 
 .ud-socials-connect ul li a {
   height: 45px;
-  background: var(--primary-color);
+  background: var(--background);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1507,15 +1530,15 @@
 
 .forget-pass {
   font-size: 16px;
-  color: var(--body-color);
+  color: var(--accent);
   margin-bottom: 8px;
 }
 
 .signup-option {
-  color: var(--body-color);
+  color: var(--accent);
   font-size: 16px;
 }
 
 .signup-option a {
-  color: var(--primary-color);
+  color: var(--background);
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import aboutImg from "../../assets/images/landing/about.svg";
+import aboutImg from "../../assets/images/landing/about.png";
 
 const About = () => {
     return (
@@ -12,24 +12,17 @@ const About = () => {
                         <div className="ud-about-content-wrapper">
                             <div className="ud-about-content">
                                 <span className="tag">About Us</span>
-                                <h2>Brilliant Platform to Build Professional Resume Faster.</h2>
+                                <h2>Brilliant Platform to Build Professional GitHub Profile.</h2>
                                 <p>
-                                    At <b>ResumeX</b>, we redefine resume-building with innovation and
-                                    user-centric design, crafting personalized and impactful
-                                    resumes for professionals seeking to stand out confidently.
+                                    ProfileX is a user-friendly platform for creating attractive GitHub profile READMEs. Customize your profile with templates, themes, and widgets. Stand out with ProfileX's advanced features. Try it today!
                                 </p>
                                 <p>
-                                    Committed to simplicity and excellence, we revolutionize
-                                    talent presentation, making every career journey unique and
-                                    successful at ResumeX.
+                                    Showcase your skills and projects with ProfileX's intuitive interface. Connect with the coding community and make a lasting impression. ProfileX: the ultimate GitHub profile README generator.
                                 </p>
-                                <a href="javascript:void(0)" className="ud-main-btn">
-                                    Learn More
-                                </a>
                             </div>
                         </div>
                         <div className="ud-about-image">
-                            <img src={aboutImg} alt="about-image" />
+                            <img src={aboutImg} className='about-img' alt="about-image" />
                         </div>
                     </div>
                 </div>

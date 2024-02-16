@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
-import logoWhite from "../../assets/images/logo/logo-white.png";
-import logoBlue from "../../assets/images/logo/logo-blue.png";
-
 const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
@@ -17,13 +14,6 @@ const Navbar = () => {
             } else {
                 udHeader.classList.remove("sticky");
             }
-
-            // === logo change
-            //   if (udHeader.classList.contains("sticky")) {
-            //     logo.src = "./assets/images/logo/logo-blue.png";
-            //   } else {
-            //     logo.src = "./assets/images/logo/logo-white.png";
-            //   }
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -81,7 +71,7 @@ const Navbar = () => {
                                                     className="ud-main-btn ud-white-btn text-white"
                                                     to="/create-profile"
                                                 >
-                                                    Create Profile
+                                                    Build Profile
                                                 </Link>
                                             </li>
                                         </ul>
@@ -91,7 +81,7 @@ const Navbar = () => {
                                             className="ud-main-btn ud-white-btn"
                                             to="/create-profile"
                                         >
-                                            Create Profile
+                                            Build Profile
                                         </Link>
                                     </div>
                                 </nav>
