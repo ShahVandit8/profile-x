@@ -15,7 +15,7 @@ const Badges = () => {
             onClick={() => {
               dispatch({
                 type: "SHOW_SECTION",
-                payload: "socials",
+                payload: "skills",
               });
             }}
             className="btn btn-sm section-btn me-2" type="button">

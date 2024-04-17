@@ -28,7 +28,7 @@ const Introduction = () => {
             onClick={() => {
               dispatch({
                 type: "SHOW_SECTION",
-                payload: "skills",
+                payload: "socials",
               });
             }}
             className="btn btn-sm section-btn me-2" style={{ float: 'right' }} type="button">
@@ -209,7 +209,7 @@ const Introduction = () => {
                 onClick={() => {
                   dispatch({
                     type: "SHOW_SECTION",
-                    payload: "skills",
+                    payload: "socials",
                   });
                 }}
                 className="btn btn-sm section-btn me-2" style={{ float: 'right' }} type="button">

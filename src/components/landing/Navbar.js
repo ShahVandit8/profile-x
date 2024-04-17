@@ -2,7 +2,13 @@ import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
+import useApp from '../../Context/AppContext.js';
+
 const Navbar = () => {
+
+    const { state, dispatch } = useApp()
+
+
     useEffect(() => {
         const handleScroll = () => {
             const udHeader = document.querySelector(".ud-header");
@@ -83,6 +89,38 @@ const Navbar = () => {
                                         >
                                             Build Profile
                                         </Link>
+                                    </div>
+                                    <div>
+                                        <button className="btn theme-button"
+                                            onClick={() => {
+                                                if (state.theme === "dark") {
+                                                    dispatch({
+                                                        type: "CHANGE_THEME",
+                                                        payload: "light",
+                                                    });
+                                                }
+                                                else if (state.theme === "light") {
+                                                    dispatch({
+                                                        type: "CHANGE_THEME",
+                                                        payload: "dark",
+                                                    });
+                                                }
+                                            }}
+                                        >
+                                            {
+                                                state.theme === "dark" ? 
+                                                <i class="fa-solid fa-moon"></i>
+                                                :
+                                                state.theme === "light" ?
+                                                <i className="lni lni-sun" ></i>
+                                                :
+                                                <></>
+                                            }
+                                            {/* <i class="fa-regular fa-sun"></i> */}
+                                            {/* <i class="fa-solid fa-moon"></i> */}
+                                            {/* <i className="lni lni-sun" ></i> */}
+                                            {/* <i className="lni lni-moon" ></i> */}
+                                        </button>
                                     </div>
                                 </nav>
                             </div>

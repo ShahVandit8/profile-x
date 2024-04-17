@@ -4,11 +4,10 @@ import Main from './Main'
 
 import useApp from '../../Context/AppContext'
 
-const Navbar = (props) => {
+const Navbar = () => {
 
     const { state, dispatch } = useApp()
 
-    const {page, setpage, nextPage, previousPage, introduction, setIntroduction, introductionChange} = props
     return (
         <>
             <div className="header" >
@@ -93,7 +92,7 @@ const Navbar = (props) => {
                 </ul>
             </div>
             <div id="center" className="main center">
-                <Main page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} introduction={introduction} setIntroduction={setIntroduction} introductionChange={introductionChange} />
+                <Main  />
             </div>
         </>
 

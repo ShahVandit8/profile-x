@@ -15,7 +15,7 @@ const Socials = () => {
             onClick={() => {
               dispatch({
                 type: "SHOW_SECTION",
-                payload: "skills",
+                payload: "introduction",
               });
             }}
             className="btn btn-sm section-btn me-2" type="button">
@@ -26,7 +26,7 @@ const Socials = () => {
             onClick={() => {
               dispatch({
                 type: "SHOW_SECTION",
-                payload: "badges",
+                payload: "skills",
               });
             }}
             className="btn btn-sm section-btn me-2" style={{ float: 'right' }} type="button">
@@ -189,7 +189,7 @@ const Socials = () => {
                 onClick={() => {
                   dispatch({
                     type: "SHOW_SECTION",
-                    payload: "skills",
+                    payload: "introduction",
                   });
                 }}
                 className="btn btn-sm section-btn me-2" type="button">
@@ -200,7 +200,7 @@ const Socials = () => {
                 onClick={() => {
                   dispatch({
                     type: "SHOW_SECTION",
-                    payload: "badges",
+                    payload: "skills",
                   });
                 }}
                 className="btn btn-sm section-btn me-2" style={{ float: 'right' }} type="button">

@@ -1,4 +1,5 @@
 export const initialState = {
+    theme: "dark",
     section: "introduction",
     renderMode: "preview",
     // Introduction State
@@ -208,6 +209,9 @@ const AppReducer = (state, action) => {
 
     switch (type) {
 
+        case "POPULATE_STATE":
+            return action.value
+
         case "SHOW_SECTION":
             return { ...state, section: action.payload }
 
@@ -218,11 +222,14 @@ const AppReducer = (state, action) => {
             return {
                 ...state,
                 introduction: {
-                  ...state.introduction,
-                  [payload.title]: payload.value,
+                    ...state.introduction,
+                    [payload.title]: payload.value,
                 },
-              };
-    
+            };
+
+        case "CHANGE_THEME":
+            return { ...state, theme: payload };
+
         default:
             throw new Error();
     }

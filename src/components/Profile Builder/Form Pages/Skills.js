@@ -15,7 +15,7 @@ const Skills = () => {
             onClick={() => {
               dispatch({
                 type: "SHOW_SECTION",
-                payload: "introduction",
+                payload: "socials",
               });
             }}
             className="btn btn-sm section-btn me-2" type="button">
@@ -26,7 +26,7 @@ const Skills = () => {
             onClick={() => {
               dispatch({
                 type: "SHOW_SECTION",
-                payload: "socials",
+                payload: "badges",
               });
             }}
             className="btn btn-sm section-btn me-2" style={{ float: 'right' }} type="button">
@@ -74,7 +74,7 @@ const Skills = () => {
                 onClick={() => {
                   dispatch({
                     type: "SHOW_SECTION",
-                    payload: "introduction",
+                    payload: "socials",
                   });
                 }}
                 className="btn btn-sm section-btn me-2" type="button">
@@ -85,7 +85,7 @@ const Skills = () => {
                 onClick={() => {
                   dispatch({
                     type: "SHOW_SECTION",
-                    payload: "socials",
+                    payload: "badges",
                   });
                 }}
                 className="btn btn-sm section-btn me-2" style={{ float: 'right' }} type="button">

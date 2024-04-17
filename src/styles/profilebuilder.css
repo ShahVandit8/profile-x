@@ -2,9 +2,11 @@
   overflow: hidden !important;
 }
 
-.header {
-  display: block;
+.dark .header {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
+  padding-left: 18px;
   width: 100%;
   max-width: 100%;
   box-shadow: none;
@@ -15,143 +17,123 @@
   z-index: 10;
   border-bottom: 1px solid #333c47;
 }
-.main {
-  overflow: hidden;
+
+.light .header {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
-  /* height: 100%; */
-  /* margin-top: 60px; */
-}
-.mainInner {
-  display: table;
-  height: 100lvh;
-  max-height: 100lvh;
+  padding-left: 18px;
   width: 100%;
-  text-align: center;
-}
-.mainInner div {
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 3em;
-  font-weight: bold;
-  letter-spacing: 1.25px;
-}
-#sidebarMenu {
-  height: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  background-color: var(--light-background);
   position: fixed;
-  left: 0;
-  width: 250px;
-  margin-top: 60px;
-  transform: translateX(-251px);
-  transition: transform 250ms ease-in-out;
-  background: #0f0f0f;
+  height: 60px !important;
+  overflow: hidden;
+  z-index: 10;
+  border-bottom: 1px solid var(--border);
 }
-.sidebarMenuInner {
+
+/* New Side Bar Dark */
+
+.dark .sidebar {
+  border-right: 1px solid #333c47;
+  height: 100lvh;
+  background: var(--background);
+  padding-top: 70px;
+  padding-right: 0px;
+}
+
+.dark .sidebar h1 {
+  display: block;
+  padding: 10px 20px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 400;
   margin: 0;
-  padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 25px;
 }
 
-.sidebarMenuInner .side-logo {
-  pointer-events: none;
-}
-
-.sidebarMenuInner li {
-  list-style: none;
-  color: #fff;
-  text-transform: uppercase;
-  padding: 12px;
-  cursor: pointer;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
-}
-.sidebarMenuInner li a {
-  color: inherit;
-  text-transform: uppercase;
-  font-size: 14px;
-  cursor: pointer;
+.dark .sidebar a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--text);
   text-decoration: none;
 }
 
-.sidebarMenuInner li:hover {
-  text-decoration: none;
-  background-color: #adb4d7;
-  color: #0f0f0f;
+.dark .sidebar a:hover {
+  color: var(--text);
+  transition: 3s ease-in-out;
 }
 
-.sidebarMenuInner .active {
-  text-decoration: none;
-  background-color: #adb4d7;
-  color: #0f0f0f;
+.dark .sidebar img {
+  height: 30px;
 }
 
-input[type="checkbox"]:checked ~ #sidebarMenu {
-  transform: translateX(0);
+.dark .sidebar span {
+  margin-left: 15px;
 }
 
-input[type="checkbox"] {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  display: none;
-}
-.sidebarIconToggle {
-  transition: all 0.3s;
-  box-sizing: border-box;
+.dark .sidebar .list-items:hover {
+  background-color: var(--secondary);
+  border-left: 3px solid var(--accent);
   cursor: pointer;
-  position: absolute;
-  z-index: 99;
-  height: 100%;
-  width: 100%;
-  top: 22px;
-  left: 15px;
-  height: 22px;
-  width: 22px;
-}
-.spinner {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-}
-.horizontal {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  position: relative;
-  float: left;
-  margin-top: 3px;
-}
-.diagonal.part-1 {
-  position: relative;
-  transition: all 0.3s;
-  box-sizing: border-box;
-  float: left;
-}
-.diagonal.part-2 {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  position: relative;
-  float: left;
-  margin-top: 3px;
-}
-input[type="checkbox"]:checked ~ .sidebarIconToggle > .horizontal {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  opacity: 0;
-}
-input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  transform: rotate(135deg);
-  margin-top: 8px;
-}
-input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  transform: rotate(-135deg);
-  margin-top: -9px;
 }
 
-/* Main CSS */
+.dark .sidebar .sidebar-list .active {
+  background-color: var(--secondary);
+  border-left: 3px solid var(--primary);
+}
+
+/* New Side Bar Light*/
+
+.light .sidebar {
+  border-right: 1px solid var(--border);
+  height: 100lvh;
+  background: var(--light-background);
+  padding-top: 70px;
+  padding-right: 0px;
+}
+
+.light .sidebar a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--light-text);
+  text-decoration: none;
+}
+
+.light .sidebar a:hover {
+  color: var(--light-text);
+  transition: 3s ease-in-out;
+}
+
+.light .sidebar img {
+  height: 30px;
+}
+
+.light .sidebar span {
+  margin-left: 15px;
+}
+
+
+.light .sidebar .list-items:hover {
+  background-color: #dddfeb;
+  border-left: 3px solid var(--primary);
+  cursor: pointer;
+}
+
+.light .sidebar .sidebar-list .active {
+  background-color: #dddfeb;
+  border-left: 3px solid var(--accent);
+}
+
+/*** Main CSS ***/
+
+.content {
+  overflow-y: scroll;
+}
+
+/* Input Side */
 
 .left-content {
   padding-top: 60px;
@@ -162,6 +144,18 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   display: flex;
   flex-direction: column;
 }
+
+.light .left-content {
+  padding-top: 60px;
+  background-color: var(--light-background);
+  height: 100lvh;
+  max-height: 100lvh;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Headbar */
 
 .headbar {
   border-bottom: 1px solid #333c47;
@@ -205,6 +199,53 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .section-content {
   padding: 20px;
 }
+
+/* Section Headbar Light */
+
+.light .headbar {
+  border-bottom: 1px solid var(--border);
+  flex: 0 1 auto;
+  padding: 20px;
+}
+
+.light .headbar h3 {
+  color: var(--light-text);
+  font-size: 24px;
+}
+
+.light .headbar p {
+  color: var(--light-text);
+  font-size: 14px;
+}
+
+.light .section-btn {
+  background-color: var(--light-button);
+  color: var(--light-text);
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 13px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.light .section-btn:hover {
+  background-color: #d3d6db;
+  color: var(--light-text);
+}
+
+.light .section-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.light .section-content {
+  padding: 20px;
+}
+
+/* Section Forms */
 
 .form-section {
   width: 100%;
@@ -303,6 +344,174 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   margin-bottom: 15px;
 }
 
+/* Section Forms Light */
+
+.light .form-section {
+  width: 100%;
+  /* height: auto; */
+  margin-top: 15px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--light-text) !important;
+  flex: 1 1 auto;
+  max-height: calc(100vh - var(--headbar-height));
+  overflow-y: auto;
+}
+
+.light .form-section .text-input {
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  background-color: var(--light-button);
+}
+
+.light .form-section .text-input:focus {
+  border: 1px solid var(--border);
+  outline: none !important;
+  transition: none !important;
+}
+
+.light .input-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  background-color: var(--light-button);
+}
+
+.light .input-box .prefix {
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--light-text);
+}
+
+.light .input-box input {
+  /* flex-grow: 1; */
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding-left: 2px;
+  font-size: 15px;
+  background-color: var(--light-button);
+}
+
+.light .input-box:focus-within {
+  border-color: #777;
+}
+
+.light .form-section .textarea-input {
+  width: 100%;
+  height: 5rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  background-color: var(--light-button);
+}
+
+.light .form-section .textarea-input:focus {
+  border: 1px solid var(--border);
+  outline: none !important;
+  transition: none !important;
+}
+
+.light .form-section h4 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* Skills Section */
+
+.skill-group {
+  background-color: #262626;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.skill-group p {
+  color: #fff;
+}
+
+.skill-group .skills {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 10px;
+}
+
+.skill-group .skill-button {
+  background: transparent;
+  border: none;
+}
+
+.skill-group .skill-icon {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.skill-group .badge {
+  float: right;
+  top: -1px;
+  right: -1px;
+}
+
+/* Skills Section Light */
+
+.light .skill-group {
+  background-color: var(--light-button);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.light .skill-group p {
+  color: var(--light-text);
+}
+
+.light .skill-group .skills {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 10px;
+}
+
+.light .skill-group .skill-button {
+  background: transparent;
+  border: none;
+}
+
+.light .skill-group .skill-icon {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.light .skill-group .badge {
+  float: right;
+  top: -1px;
+  right: -1px;
+}
+
+
+/* Right Preview Container */
+
 .right-content {
   padding-top: 60px;
   background-color: var(--background);
@@ -355,10 +564,6 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .nonactive-btn:focus {
   outline: none;
   box-shadow: none;
-}
-
-.content {
-  overflow-y: scroll;
 }
 
 .right-content textarea {
@@ -445,45 +650,154 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   line-height: 1.325;
   color: #adadad;
   font-size: 15px;
+  white-space: pre-line;
+  word-break: break-all;
 }
 
-/* Skills Section */
 
-.skill-group {
-  background-color: #262626;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
+/* Right Preview Container Light */
 
-.skill-group p {
-  color: #fff;
-}
-
-.skill-group .skills {
+.light .right-content {
+  padding-top: 60px;
+  background-color: var(--light-background);
+  height: 100lvh;
+  max-height: 100lvh;
   display: flex;
-  gap: 0.5rem;
-  margin-top: 10px;
+  flex-direction: column;
 }
 
-.skill-group .skill-button {
-  background: transparent;
-  border: none;
+.light .right-content .navbar {
+  flex: 0 1 auto;
 }
 
-.skill-group .skill-icon {
-  background-repeat: no-repeat;
-  background-size: cover;
+.light .active-btn {
+  background-color: var(--primary);
   display: inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
-.skill-group .badge {
-  float: right;
-  top: -1px;
-  right: -1px;
+.light .active-btn:focus {
+  outline: none;
+  box-shadow: none;
 }
+
+.light .nonactive-btn {
+  /* border: 1px solid var(--accent); */
+  background-color: var(--light-button);
+  color: var(--light-text);
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.light .nonactive-btn:hover {
+  background-color: #d3d6db;
+  color: var(--light-text);
+}
+
+.light .nonactive-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.light .right-content textarea {
+  color: var(--background);
+}
+
+.light .preview-container {
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--light-text);
+  flex: 1 1 auto;
+  max-height: calc(100vh - var(--headbar-height));
+  overflow-y: auto;
+}
+
+.light .raw-textarea {
+  width: 100%;
+  height: 100lvh;
+  padding: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  flex: 1 1 auto;
+  max-height: calc(100vh - var(--headbar-height));
+  overflow-y: auto;
+}
+
+.light .preview-container ul {
+  margin-top: 15px;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.light .preview-container h1 {
+  font-size: 2.15rem;
+  font-weight: bold;
+}
+
+.light .preview-container h2 {
+  font-size: 1.775rem;
+  font-weight: bold;
+}
+
+.light .preview-container p {
+  line-height: 1.625;
+  color: var(--accent);
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.light .preview-container li {
+  font-size: 15px;
+}
+
+.light .preview-container img {
+  margin-bottom: 15px;
+}
+
+.light .preview-container h3 {
+  margin-bottom: 15px;
+}
+
+.light .markdown-container {
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--accent);
+  flex: 1 1 auto;
+  max-height: calc(100vh - var(--headbar-height));
+  overflow-y: auto;
+}
+
+.light .markdown-container p {
+  line-height: 1.325;
+  color: var(--accent);
+  font-size: 15px;
+}
+
+
 
 /* Socials Section */
 

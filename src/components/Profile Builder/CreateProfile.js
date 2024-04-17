@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import "../../styles/profilebuilder.css"
 import "../../styles/icons.css"
-import Navbar from './Navbar'
+import Main from './Main'
+
+import useApp from '../../Context/AppContext.js';
 
 const CreateProfile = () => {
+
+  const { state, dispatch } = useApp()
 
   const introductionDefaultValues = {
     selected : false,
@@ -104,7 +108,9 @@ const CreateProfile = () => {
 
   return (
     <div className="profile-container">
-      <Navbar page={page} setpage={setpage} nextPage={nextPage} previousPage={previousPage} introduction={introduction} setIntroduction={setIntroduction} introductionChange={introductionChange} />
+      <div className={state.theme === "dark" ? "dark" : "light"}>
+      <Main />
+      </div>
     </div>
   )
 }

@@ -1,11 +1,19 @@
 import React, { useEffect } from "react";
+import useApp from '../../Context/AppContext.js';
 
-import heroimg from "../../assets/images/landing/hero-image.svg";
+
 import hero from "../../assets/images/landing/hero.png";
 import dotshape from "../../assets/images/landing/dotted-shape.svg";
+import dotshapedark from "../../assets/images/landing/dotted-shape-dark.svg";
+import mockdark from "../../assets/images/landing/mock-dark.png";
+import mocklight from "../../assets/images/landing/mock-light.png";
+
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+
+    const { state, dispatch } = useApp()
+
     return (
         <div>
             <>
@@ -42,7 +50,8 @@ const Hero = () => {
                                                 className="ud-main-btn ud-link-btn"
                                             >
                                                 <i class="fa-brands fa-github"></i> &nbsp;
-                                                GitHub <i className="lni lni-arrow-right" />
+                                                GitHub
+                                                {/* <i className="lni lni-arrow-right" /> */}
                                             </a>
                                         </li>
                                     </ul>
@@ -51,9 +60,9 @@ const Hero = () => {
                                     className="ud-hero-image wow fadeInUp"
                                     data-wow-delay=".25s"
                                 >
-                                    <img src={hero} alt="hero-image" />
-                                    <img src={dotshape} alt="shape" className="shape shape-1" />
-                                    <img src={dotshape} alt="shape" className="shape shape-2" />
+                                    <img src={state.theme === "dark" ? mocklight : mockdark} alt="hero-image" />
+                                    <img src={state.theme === "dark" ? dotshape : dotshapedark} alt="shape" className="shape shape-1" />
+                                    <img src={state.theme === "dark" ? dotshape : dotshapedark} alt="shape" className="shape shape-2" />
                                 </div>
                             </div>
                         </div>

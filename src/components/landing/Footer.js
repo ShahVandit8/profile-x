@@ -27,8 +27,7 @@ const Footer = () => {
                             <div className="col-md-8">
                                 <div className="ud-widget">
                                     <Link className="navbar-brand" to="/">
-                                        <span className="nav-title">Profile<i style={{ color: '#ADB4D7', fontWeight: '700' }}>X</i></span>
-                                        {/* <img src={logoWhite} className="nav-logo" alt="Logo" /> */}
+                                        <span className="nav-title" style={{ color: '#fff'}}>Profile<i style={{ color: '#ADB4D7', fontWeight: '700' }}>X</i></span>
                                     </Link>
                                     <p className="ud-widget-desc">
                                         Brilliant Platform to Build GitHub Profile Faster.

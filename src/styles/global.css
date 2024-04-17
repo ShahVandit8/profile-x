@@ -13,8 +13,18 @@
   --primary: #ADB4D7;
   --secondary: #262626;
   --accent: #333C47;
-  color-scheme: dark;
+  --border: #adadad;
+
+  --light-text: #1b1b1b;
+  --light-background: #F3F8FF;
+  --light-primary: #ADB4D7;
+  --light-secondary: #262626;
+  --light-accent: #333C47;
+  --light-button: #DEE1E6;
+
+  color-scheme: light dark;
 }
+
 
 body {
   font-family: var(--font);
@@ -29,6 +39,10 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.light {
+  color-scheme: light;
 }
 
 img {
@@ -151,3 +165,21 @@ p {
     padding-right: 20px;
   }
 }
+
+.theme-button {
+  background: transparent;
+  color: var(--white);
+  margin-left: 10px;
+  font-size: 20px;
+  width: 50px;
+}
+
+.theme-button:hover {
+  color: var(--white);
+}
+
+.theme-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
