@@ -2,6 +2,7 @@ export const initialState = {
     theme: "dark",
     section: "introduction",
     renderMode: "preview",
+    sidebar: "open",
     // Introduction State
     introduction: {
         name: "",
@@ -198,7 +199,6 @@ export const initialState = {
         },
     },
     support: "",
-    sidebarOpen: false,
     popOutMenuOpen: false,
     modal: false,
 };
@@ -229,6 +229,9 @@ const AppReducer = (state, action) => {
 
         case "CHANGE_THEME":
             return { ...state, theme: payload };
+        
+        case "SIDEBAR_TOGGLE":
+            return { ...state, sidebar: payload };
 
         default:
             throw new Error();
