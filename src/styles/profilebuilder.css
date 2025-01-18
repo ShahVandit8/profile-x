@@ -987,11 +987,13 @@
 }
 
 .markdown-container p {
+  font-family: monospace, monospace;
   line-height: 1.325;
   color: #adadad;
   font-size: 15px;
   white-space: pre-line;
   word-break: break-all;
+  word-spacing: -1px;
 }
 
 
@@ -1132,9 +1134,13 @@
 }
 
 .light .markdown-container p {
+  font-family: monospace, monospace;
   line-height: 1.325;
   color: var(--accent);
   font-size: 15px;
+  white-space: pre-line;
+  word-break: break-all;
+  word-spacing: -1px;
 }
 
 

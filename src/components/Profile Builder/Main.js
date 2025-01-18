@@ -8,6 +8,7 @@ import Socials from './Form Pages/Socials.js';
 import Badges from './Form Pages/Badges.js';
 import Support from './Form Pages/Support.js';
 import Preview from './Preview.js';
+import RenderedMarkdown from "./RenderedMarkdown";
 
 import logoDark from '../../assets/images/logo/logo-dark.png'
 import logoLight from '../../assets/images/logo/logo-light.png'
@@ -74,6 +75,9 @@ const Main = () => {
   const supportRef = useRef(null);
 
   const markdownRef = useRef();
+
+  const previewRef = useRef(null);
+  const renderedMarkdownRef = useRef(null);
 
   const [copyStatus, setCopyStatus] = useState("Copy");
 
@@ -367,22 +371,23 @@ const Main = () => {
                     state.renderMode === "preview" ?
                       <Preview ref={introductionRef} />
                       :
-                      <div className="markdown-container" ref={markdownRef}>
-                        {!renderedMarkdown ? (
-                          <div>You have not rendered any code yet</div>
-                        ) : (
-                          <>
-                            {
-                              renderedMarkdown.introduction ? (
-                                <p>
-                                  {renderedMarkdown.introduction}
-                                </p>
-                              ) : null
-                            }
-                          </>
-                        )}
+                      <RenderedMarkdown ref={renderedMarkdownRef} />
+                      // <div className="markdown-container" ref={markdownRef}>
+                      //   {!renderedMarkdown ? (
+                      //     <div>You have not rendered any code yet</div>
+                      //   ) : (
+                      //     <>
+                      //       {
+                      //         renderedMarkdown.introduction ? (
+                      //           <p>
+                      //             {renderedMarkdown.introduction}
+                      //           </p>
+                      //         ) : null
+                      //       }
+                      //     </>
+                      //   )}
 
-                      </div>
+                      // </div>
                   }
                 </div>
 
