@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import { NavHashLink } from 'react-router-hash-link';
 import useApp from '../../Context/AppContext.js';
 import Introduction from './Form Pages/Introduction.js';
 import Skills from './Form Pages/Skills.js';
@@ -9,6 +7,7 @@ import Badges from './Form Pages/Badges.js';
 import Support from './Form Pages/Support.js';
 import Preview from './Preview.js';
 import RenderedMarkdown from "./RenderedMarkdown";
+import Modal from "./Modal";
 
 import logoDark from '../../assets/images/logo/logo-dark.png'
 import logoLight from '../../assets/images/logo/logo-light.png'
@@ -18,51 +17,7 @@ let TurndownService = require("turndown").default;
 const Main = () => {
 
   const { state, dispatch } = useApp()
-  const [mounted, setMounted] = useState(false);
-  const [renderedMarkdown, setRenderedMarkdown] = useState({
-    introduction: "",
-    skillsTitle: "",
-    skills: {
-      core: [],
-      frontend: [],
-      backend: [],
-      other: [],
-      software: [],
-      web3: [],
-      cloud: [],
-    },
-    socials: {
-      behance: "",
-      codepen: "",
-      codesandbox: "",
-      devdotto: "",
-      discord: "",
-      dribbble: "",
-      facebook: "",
-      github: "",
-      hashnode: "",
-      instagram: "",
-      linkedin: "",
-      polywork: "",
-      medium: "",
-      rss: "",
-      stackoverflow: "",
-      twitter: "",
-      youtube: "",
-    },
-    badges: {
-      twitterFollowers: false,
-      twitchStatus: false,
-      githubStatsCard: false,
-      githubVisits: false,
-      githubFollowers: false,
-      githubCommitsGraph: false,
-      githubStreak: false,
-      topLangsCard: false,
-      reposCard: false,
-    },
-    support: ""
-  });
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Section Refs
   const introductionRef = useRef(null);
@@ -73,8 +28,6 @@ const Main = () => {
   const badgesTitleRef = useRef(null);
   const badgesRef = useRef(null);
   const supportRef = useRef(null);
-
-  const markdownRef = useRef();
 
   const previewRef = useRef(null);
   const renderedMarkdownRef = useRef(null);
@@ -102,30 +55,42 @@ const Main = () => {
     }
   });
 
-  useEffect(() => {
-    if (introductionRef.current) {
-      let htmlOfElement = introductionRef.current.innerHTML;
-      turndownService.remove('p')
-      setRenderedMarkdown((renderedMarkdown) => ({
-        ...renderedMarkdown,
-        "introduction": turndownService.turndown(htmlOfElement),
-      }));
-    }
-  }, [state])
-
-
-
   const copyMarkdown = async (copyText) => {
+    // try {
+    //   await navigator.clipboard.writeText(copyText);
+    //   setCopyStatus("Copied");
+    //   const timer = setTimeout(() => {
+    //     setCopyStatus("Copy");
+    //   }, 1000);
+    //   return () => clearTimeout(timer);
+    // } catch (err) {
+    //   setCopyStatus("Failed to copy!");
+    // }
+
     try {
-      await navigator.clipboard.writeText(copyText);
-      setCopyStatus("Copied");
-      const timer = setTimeout(() => {
-        setCopyStatus("Copy");
-      }, 1000);
-      return () => clearTimeout(timer);
+      if (renderedMarkdownRef.current) {
+        if (renderedMarkdownRef.current.innerText) {
+          const copyText = renderedMarkdownRef.current.innerText;
+          await navigator.clipboard.writeText(copyText);
+          setCopyStatus("Copied");
+
+          // Open the success modal
+          setIsModalOpen(true);
+
+          const timer = setTimeout(() => {
+            setCopyStatus("Copy");
+          }, 2000);
+
+          return () => clearTimeout(timer);
+        }
+      }
     } catch (err) {
-      setCopyStatus("Failed to copy!");
+      setCopyStatus("Copy");
     }
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Close the modal
   };
 
   const toggleSidebar = () => {
@@ -145,11 +110,6 @@ const Main = () => {
       alert("Something wronge happened!!!")
     }
   }
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <>
       <div className={state.theme === "dark" ? "dark" : "light"}>
@@ -356,7 +316,7 @@ const Main = () => {
                           }))
                         })
                         markdown.then(() => {
-                          copyMarkdown(markdownRef.current.innerText);
+                          copyMarkdown(renderedMarkdownRef.current.innerText);
                         })
                       }
                       }
@@ -369,37 +329,17 @@ const Main = () => {
                 <div className='content p-3'>
                   {
                     state.renderMode === "preview" ?
-                      <Preview ref={introductionRef} />
+                      <Preview ref={previewRef} />
                       :
                       <RenderedMarkdown ref={renderedMarkdownRef} />
-                      // <div className="markdown-container" ref={markdownRef}>
-                      //   {!renderedMarkdown ? (
-                      //     <div>You have not rendered any code yet</div>
-                      //   ) : (
-                      //     <>
-                      //       {
-                      //         renderedMarkdown.introduction ? (
-                      //           <p>
-                      //             {renderedMarkdown.introduction}
-                      //           </p>
-                      //         ) : null
-                      //       }
-                      //     </>
-                      //   )}
-
-                      // </div>
                   }
                 </div>
-
               </div>
-              {/* <textarea className="textarea" /> */}
             </div>
           </div>
-
-
-
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </>
   )
 }

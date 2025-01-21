@@ -227,9 +227,21 @@ const AppReducer = (state, action) => {
                 },
             };
 
+        case "ADD_SOCIAL_PROFILE":
+            return {
+                ...state,
+                socials: {
+                    ...state.socials,
+                    [action.payload.title]: {
+                        ...state.socials[action.payload.title],
+                        linkSuffix: action.payload.value,
+                    },
+                },
+            };
+
         case "CHANGE_THEME":
             return { ...state, theme: payload };
-        
+
         case "SIDEBAR_TOGGLE":
             return { ...state, sidebar: payload };
 

@@ -1,9 +1,29 @@
-import React from 'react'
+import React, { useRef, useContext, forwardRef } from 'react'
 import useApp from '../../../Context/AppContext';
 
-const Socials = () => {
+const Socials = forwardRef(({ }, ref) => {
 
   const { state, dispatch } = useApp()
+
+  const behanceRef = useRef();
+  const codesandboxRef = useRef();
+  const codepenRef = useRef();
+  const devdottoRef = useRef();
+  const discordRef = useRef();
+  const dribbbleRef = useRef();
+  const facebookRef = useRef();
+  const githubRef = useRef();
+  const hashnodeRef = useRef();
+  const polyworkRef = useRef();
+  const instagramRef = useRef();
+  const linkedinRef = useRef();
+  const mediumRef = useRef();
+  const rssRef = useRef();
+  const stackoverflowRef = useRef();
+  const threadsRef = useRef();
+  const twitchRef = useRef();
+  const twitterRef = useRef();
+  const youtubeRef = useRef();
 
   return (
     <>
@@ -39,15 +59,22 @@ const Socials = () => {
         <form className="form-section">
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/github-dark.svg" alt="github" className='form-icon' /> GitHub Profile:</span>
+            <span className="d-block"><img src={state.theme === "dark" ? "icons/socials/github-dark.svg" : "icons/socials/github.svg"} alt="github" className='form-icon' /> GitHub Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.github.com/</p>
-              <input type="text" placeholder="username" />
+              <input type="text" placeholder="username" value={state.socials.github.linkSuffix} ref={githubRef}
+                onChange={() =>
+                  dispatch({
+                    type: "ADD_SOCIAL_PROFILE",
+                    payload: { title: "github", value: githubRef.current.value },
+                  })
+                }
+              />
             </div>
           </div>
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/twitter-dark.svg" alt="github" className='form-icon' />  X Profile:</span>
+            <span className="d-block"><img src={state.theme === "dark" ? "icons/socials/twitter-dark.svg" : "icons/socials/twitter.svg"} alt="twitter" className='form-icon' />  X Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.x.com/</p>
               <input type="text" placeholder="username" />
@@ -55,7 +82,7 @@ const Socials = () => {
           </div>
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/devdotto-dark.svg" alt="devdotto" className='form-icon' /> Dev.to Profile:</span>
+            <span className="d-block"><img src={state.theme === "dark" ? "icons/socials/devdotto-dark.svg" : "icons/socials/devdotto.svg"} alt="devdotto" className='form-icon' /> Dev.to Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.dev.to/</p>
               <input type="text" placeholder="username" />
@@ -63,7 +90,7 @@ const Socials = () => {
           </div>
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/codepen-dark.svg" alt="codepen" className='form-icon' /> Codepen Profile:</span>
+            <span className="d-block"><img src={state.theme === "dark" ? "icons/socials/codepen-dark.svg" : "icons/socials/codepen.svg"} alt="codepen" className='form-icon' /> Codepen Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.codepen.io/</p>
               <input type="text" placeholder="username" />
@@ -71,7 +98,7 @@ const Socials = () => {
           </div>
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/codesandbox-dark.svg" alt="codesandbox" className='form-icon' /> Codesandbox Profile:</span>
+            <span className="d-block"><img src={state.theme === "dark" ? "icons/socials/codesandbox-dark.svg" : "icons/socials/codesandbox.svg"} alt="codesandbox" className='form-icon' /> Codesandbox Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.codesandbox.io/u/</p>
               <input type="text" placeholder="username" />
@@ -87,7 +114,7 @@ const Socials = () => {
           </div>
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/linkedin-dark.svg" alt="Linkedin" className='form-icon' /> Linkedin Profile:</span>
+            <span className="d-block"><img src="icons/socials/linkedin.svg" alt="Linkedin" className='form-icon' /> Linkedin Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.linkedin.com/in/</p>
               <input type="text" placeholder="username" />
@@ -95,7 +122,7 @@ const Socials = () => {
           </div>
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/facebook-dark.svg" alt="Facebook" className='form-icon' /> Facebook Profile:</span>
+            <span className="d-block"><img src="icons/socials/facebook.svg" alt="Facebook" className='form-icon' /> Facebook Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.facebook.com/</p>
               <input type="text" placeholder="username" />
@@ -111,7 +138,7 @@ const Socials = () => {
           </div>
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/threads-dark.svg" alt="threads" className='form-icon' /> Threads Profile:</span>
+            <span className="d-block"><img src={state.theme === "dark" ? "icons/socials/threads-dark.svg" : "icons/socials/threads.svg"} alt="threads" className='form-icon' /> Threads Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.threads.net/@</p>
               <input type="text" placeholder="username" />
@@ -144,7 +171,7 @@ const Socials = () => {
           </div>
 
           <div className="form-field">
-            <span className="d-block"><img src="icons/socials/medium-dark.svg" alt="medium" className='form-icon' /> Medium Profile:</span>
+            <span className="d-block"><img src={state.theme === "dark" ? "icons/socials/medium-dark.svg" : "icons/socials/medium.svg"} alt="medium" className='form-icon' /> Medium Profile:</span>
             <div class="input-box">
               <p class="prefix">https://www.medium.com/</p>
               <input type="text" placeholder="username" />
@@ -215,5 +242,6 @@ const Socials = () => {
     </>
   )
 }
+)
 
 export default Socials

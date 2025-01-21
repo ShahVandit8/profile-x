@@ -3,7 +3,7 @@ import useApp from '../../Context/AppContext'
 
 const Preview = forwardRef(({}, ref) => {
 
-    const { state, dispatch } = useApp()
+    const { state } = useApp()
 
     return (
         <div className="preview-container" ref={ref}>
@@ -117,6 +117,15 @@ const Preview = forwardRef(({}, ref) => {
                         ⚡&nbsp; Fun fact about me {state.introduction.funfact}
                     </li>
                 ) : null}
+
+                {
+                    (state.socials.github.linkSuffix.trim().length || 
+                    state.socials.twitter.linkSuffix.trim().length || 
+                    state.socials.threads.linkSuffix.trim().length || 
+                    state.socials.hashnode.linkSuffix.trim().length) 
+                     ? (<h5>Socials</h5>) 
+                     : (<></>)
+                }
 
             </ul>
         </div>
