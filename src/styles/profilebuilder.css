@@ -954,6 +954,11 @@
   font-weight: bold;
 }
 
+.preview-container h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
 .preview-container p {
   line-height: 1.625;
   color: #adadad;

@@ -21,43 +21,59 @@ const RenderedMarkdown = forwardRef(({}, ref) => {
   }
 
   // Add location (if available) and other list items with single line breaks
-  const listItems = [];
+  const allLists = [];
+
+  const introductionList = [];
+  const socialList = [];
 
   if (state.introduction.location) {
-    listItems.push(`- 🌍 I'm from ${state.introduction.location}`);
+    introductionList.push(`- 🌍 I'm from ${state.introduction.location}`);
   }
 
   if (state.introduction.email) {
-    listItems.push(`- 📫 Reach me at [${state.introduction.email}](mailto:${state.introduction.email})`);
+    introductionList.push(`- 📫 Reach me at [${state.introduction.email}](mailto:${state.introduction.email})`);
   }
 
   if (state.introduction.portfolioLink) {
-    listItems.push(`- 👨‍💻 Check out my portfolio at [MyPortfolio](http://${state.introduction.portfolioLink})`);
+    introductionList.push(`- 👨‍💻 Check out my portfolio at [MyPortfolio](http://${state.introduction.portfolioLink})`);
   }
 
   if (state.introduction.resumeLink) {
-    listItems.push(`- 📄 Check out my resume at [MyResume](http://${state.introduction.resumeLink})`);
+    introductionList.push(`- 📄 Check out my resume at [MyResume](http://${state.introduction.resumeLink})`);
   }
 
   if (state.introduction.workingOnTitle) {
     const link = state.introduction.workingOnLink ? `(${state.introduction.workingOnLink})` : "";
-    listItems.push(`- 🔭 I'm currently working on [${state.introduction.workingOnTitle}]${link}`);
+    introductionList.push(`- 🔭 I'm currently working on [${state.introduction.workingOnTitle}]${link}`);
   }
 
   if (state.introduction.learning) {
-    listItems.push(`- 🌱 I'm currently learning ${state.introduction.learning}`);
+    introductionList.push(`- 🌱 I'm currently learning ${state.introduction.learning}`);
   }
 
   if (state.introduction.askmeabout) {
-    listItems.push(`- 💬 Ask me about ${state.introduction.askmeabout}`);
+    introductionList.push(`- 💬 Ask me about ${state.introduction.askmeabout}`);
   }
 
   if (state.introduction.funfact) {
-    listItems.push(`- ⚡ Fun fact about me: ${state.introduction.funfact}`);
+    introductionList.push(`- ⚡ Fun fact about me: ${state.introduction.funfact}`);
   }
 
+  introductionList.push("")
+
+  allLists.push(introductionList.join("\n"));
+
+  if(state.socials.github.linkSuffix.trim().length ||
+  state.socials.twitter.linkSuffix.trim().length ||
+  state.socials.threads.linkSuffix.trim().length ||
+  state.socials.hashnode.linkSuffix.trim().length){
+    socialList.push(`### Social`)
+  }
+
+  allLists.push(socialList);
+
   // Now join the lists with a single line break
-  const finalListMarkdown = listItems.join("\n");
+  const finalListMarkdown = allLists.join("\n");
 
   // Join everything (name, subtitle, long description and list) with double line breaks
   const finalMarkdown = [
