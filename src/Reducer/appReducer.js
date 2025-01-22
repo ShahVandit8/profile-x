@@ -188,7 +188,16 @@ export const initialState = {
             showIcons: true,
         },
     },
-    support: "",
+    support: {
+        buymeacoffee: {
+            linkSuffix: "",
+            previewIMG: "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+        },
+        kofi: {
+            previewIMG: "https://storage.ko-fi.com/cdn/kofi2.png?v=3",
+            linkSuffix: "",
+          }
+    },
     popOutMenuOpen: false,
     modal: false,
 };
@@ -224,6 +233,18 @@ const AppReducer = (state, action) => {
                     ...state.socials,
                     [action.payload.title]: {
                         ...state.socials[action.payload.title],
+                        linkSuffix: action.payload.value,
+                    },
+                },
+            };
+
+        case "ADD_SUPPORT":
+            return {
+                ...state,
+                support: {
+                    ...state.support,
+                    [action.payload.title]: {
+                        ...state.support[action.payload.title],
                         linkSuffix: action.payload.value,
                     },
                 },

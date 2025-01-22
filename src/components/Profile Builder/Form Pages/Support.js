@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useRef, forwardRef } from 'react'
 import useApp from '../../../Context/AppContext';
 
-const Support = () => {
+const Support = forwardRef(({ }, ref) => {
 
   const { state, dispatch } = useApp()
+
+  const buymeacoffeeRef = useRef();
+  const kofiRef = useRef();
+
 
   return (
     <>
@@ -30,7 +34,14 @@ const Support = () => {
             <span className="d-block"><img src="icons/support/buymeacoffee.svg" alt="buymeacoffee" className='form-icon' />Buy Me a Coffee:</span>
             <div class="input-box">
               <p class="prefix">https://www.buymeacoffee.com/</p>
-              <input type="text" placeholder="username" />
+              <input type="text" placeholder="username" value={state.support.buymeacoffee.linkSuffix} ref={buymeacoffeeRef}
+                onChange={() =>
+                  dispatch({
+                    type: "ADD_SUPPORT",
+                    payload: { title: "buymeacoffee", value: buymeacoffeeRef.current.value },
+                  })
+                }
+              />
             </div>
           </div>
 
@@ -38,7 +49,14 @@ const Support = () => {
             <span className="d-block"><img src="icons/support/kofi.svg" alt="github" className='form-icon' />Ko-fi:</span>
             <div class="input-box">
               <p class="prefix"><nobr>https://ko-fi.com/</nobr></p>
-              <input type="text" placeholder="username" />
+              <input type="text" placeholder="username" value={state.support.kofi.linkSuffix} ref={kofiRef}
+                onChange={() =>
+                  dispatch({
+                    type: "ADD_SUPPORT",
+                    payload: { title: "kofi", value: kofiRef.current.value },
+                  })
+                }
+              />
             </div>
           </div>
 
@@ -62,5 +80,6 @@ const Support = () => {
     </>
   )
 }
+)
 
 export default Support
