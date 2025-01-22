@@ -25,6 +25,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
 
   const introductionList = [];
   const socialList = [];
+  const supportList = [];
 
   if (state.introduction.location) {
     introductionList.push(`- 🌍 I'm from ${state.introduction.location}`);
@@ -254,9 +255,40 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
     );
   }
 
-
+  socialList.push("")
 
   allLists.push(socialList.join("\n"));
+
+
+  if (state.support.buymeacoffee.linkSuffix.trim().length ||
+    state.support.kofi.linkSuffix.trim().length
+  ) {
+    supportList.push("### Support")
+    supportList.push("")
+  }
+
+  if (state.support.buymeacoffee.linkSuffix.trim().length) {
+    supportList.push(
+      `<a href="https://www.buymeacoffee.com/${state.support.buymeacoffee.linkSuffix}" style="margin-right:10px" target="_blank" rel="noreferrer">
+      <picture>
+      <img width="150" src="${state.support.buymeacoffee.previewIMG}" alt="buymeacoffee" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.support.kofi.linkSuffix.trim().length) {
+    supportList.push(
+      `<a href="https://ko-fi.com/${state.support.kofi.linkSuffix}" style="margin-right:10px" target="_blank" rel="noreferrer">
+      <picture>
+      <img width="150" src="${state.support.kofi.previewIMG}" alt="kofi" />
+      </picture>
+      </a>`
+    );
+  }
+
+  allLists.push(supportList.join("\n"));
+
 
   // Now join the lists with a single line break
   const finalListMarkdown = allLists.join("\n");
