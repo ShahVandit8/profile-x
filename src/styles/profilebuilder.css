@@ -942,6 +942,7 @@
   list-style-position: inside;
   margin-bottom: 15px;
   color: #adadad;
+  margin-bottom: 15px;
 }
 
 .preview-container h1 {
@@ -955,6 +956,7 @@
 }
 
 .preview-container h3 {
+  margin-top: 15px;
   font-size: 1.25rem;
   font-weight: bold;
 }

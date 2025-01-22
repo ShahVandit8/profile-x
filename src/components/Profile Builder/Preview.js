@@ -228,7 +228,7 @@ const Preview = forwardRef(({ }, ref) => {
             }
             {
                 state.socials.hashnode.linkSuffix ? (
-                    <a href={`https://`+ state.socials.hashnode.linkSuffix + `.hashnode.dev`} target="_blank" rel="noreferrer">
+                    <a href={`https://` + state.socials.hashnode.linkSuffix + `.hashnode.dev`} target="_blank" rel="noreferrer">
                         <img height="30" width="30" style={{ marginRight: "10px" }} src={state.socials.hashnode.path} alt="hashnode" />
                     </a>
                 ) : (<></>)
@@ -258,6 +258,29 @@ const Preview = forwardRef(({ }, ref) => {
                 state.socials.twitch.linkSuffix ? (
                     <a href={`https://www.twitch.tv/` + state.socials.twitch.linkSuffix} target="_blank" rel="noreferrer">
                         <img height="30" width="30" style={{ marginRight: "10px" }} src={state.socials.twitch.path} alt="twitch" />
+                    </a>
+                ) : (<></>)
+            }
+
+            {
+                (state.support.buymeacoffee.linkSuffix.trim().length ||
+                    state.support.kofi.linkSuffix.trim().length
+                )
+                    ? (<h3>Support</h3>)
+                    : (<></>)
+            }
+
+            {
+                state.support.buymeacoffee.linkSuffix ? (
+                    <a href={`https://www.buymeacoffee.com/` + state.support.buymeacoffee.linkSuffix} target="_blank" rel="noreferrer">
+                        <img width="150" style={{ marginRight: "10px" }} src={state.support.buymeacoffee.previewIMG} alt="buymeacoffee" />
+                    </a>
+                ) : (<></>)
+            }
+            {
+                state.support.kofi.linkSuffix ? (
+                    <a href={`https://ko-fi.com/` + state.support.kofi.linkSuffix} target="_blank" rel="noreferrer">
+                        <img width="150" style={{ marginRight: "10px" }} src={state.support.kofi.previewIMG} alt="kofi" />
                     </a>
                 ) : (<></>)
             }
