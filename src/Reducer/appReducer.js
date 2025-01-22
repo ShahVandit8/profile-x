@@ -32,9 +32,9 @@ export const initialState = {
     // Socials State
     socials: {
         github: {
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg",
+            path: "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/socials/github.svg",
             darkPath:
-                "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg",
+                "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/socials/github-dark.svg",
             linkPrefix: "https://www.github.com/",
             linkSuffix: "",
         },
@@ -138,11 +138,6 @@ export const initialState = {
         stackoverflow: {
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/stackoverflow.svg",
             linkPrefix: "https://www.stackoverflow.com/users/",
-            linkSuffix: "",
-        },
-        rss: {
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/rss.svg",
-            linkPrefix: "https://",
             linkSuffix: "",
         },
     },

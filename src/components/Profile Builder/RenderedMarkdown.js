@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import useApp from "../../Context/AppContext";
 
-const RenderedMarkdown = forwardRef(({}, ref) => {
+const RenderedMarkdown = forwardRef(({ }, ref) => {
   const { state } = useApp();
 
   // Start with an empty array to hold markdown lines
@@ -63,14 +63,55 @@ const RenderedMarkdown = forwardRef(({}, ref) => {
 
   allLists.push(introductionList.join("\n"));
 
-  if(state.socials.github.linkSuffix.trim().length ||
-  state.socials.twitter.linkSuffix.trim().length ||
-  state.socials.threads.linkSuffix.trim().length ||
-  state.socials.hashnode.linkSuffix.trim().length){
+  if (state.socials.github.linkSuffix.trim().length ||
+    state.socials.twitter.linkSuffix.trim().length ||
+    state.socials.threads.linkSuffix.trim().length ||
+    state.socials.hashnode.linkSuffix.trim().length) {
     socialList.push(`### Social`)
+    socialList.push("")
   }
 
-  allLists.push(socialList);
+  if (state.socials.github.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.github.com/${state.socials.github.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.github.darkPath}" alt="github" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.twitter.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.x.com/${state.socials.github.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.twitter.darkPath}" alt="Twitter" />
+      </picture>
+    </a>`
+    );
+  }
+
+  if (state.socials.devdotto.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.dev.to/${state.socials.devdotto.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.devdotto.darkPath}" alt="devdotto" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.codepen.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.dev.to/${state.socials.codepen.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.codepen.darkPath}" alt="devdotto" />
+      </picture>
+      </a>`
+    );
+  }
+
+  allLists.push(socialList.join("\n"));
 
   // Now join the lists with a single line break
   const finalListMarkdown = allLists.join("\n");
