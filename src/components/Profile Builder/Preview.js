@@ -127,7 +127,6 @@ const Preview = forwardRef(({ }, ref) => {
                     state.socials.medium.linkSuffix.trim().length ||
                     state.socials.devdotto.linkSuffix.trim().length ||
                     state.socials.linkedin.linkSuffix.trim().length ||
-                    state.socials.polywork.linkSuffix.trim().length ||
                     state.socials.twitch.linkSuffix.trim().length ||
                     state.socials.youtube.linkSuffix.trim().length ||
                     state.socials.discord.linkSuffix.trim().length ||
@@ -259,13 +258,6 @@ const Preview = forwardRef(({ }, ref) => {
                 state.socials.twitch.linkSuffix ? (
                     <a href={`https://www.twitch.tv/` + state.socials.twitch.linkSuffix} target="_blank" rel="noreferrer">
                         <img height="30" width="30" style={{ marginRight: "10px" }} src={state.socials.twitch.path} alt="twitch" />
-                    </a>
-                ) : (<></>)
-            }
-            {
-                state.socials.polywork.linkSuffix ? (
-                    <a href={`https://www.polywork.com/` + state.socials.polywork.linkSuffix} target="_blank" rel="noreferrer">
-                        <img height="30" width="30" style={{ marginRight: "10px" }} src={state.socials.polywork.path} alt="polywork" />
                     </a>
                 ) : (<></>)
             }

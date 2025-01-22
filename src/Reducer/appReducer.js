@@ -79,11 +79,6 @@ export const initialState = {
             linkPrefix: "https://www.linkedin.com/in/",
             linkSuffix: "",
         },
-        polywork: {
-            path: "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/socials/polywork.svg",
-            linkPrefix: "https://www.polywork.com/",
-            linkSuffix: "",
-        },
         twitch: {
             path: "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/socials/twitch.svg",
             linkPrefix: "https://www.twitch.tv/",

@@ -66,7 +66,20 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
   if (state.socials.github.linkSuffix.trim().length ||
     state.socials.twitter.linkSuffix.trim().length ||
     state.socials.threads.linkSuffix.trim().length ||
-    state.socials.hashnode.linkSuffix.trim().length) {
+    state.socials.hashnode.linkSuffix.trim().length ||
+    state.socials.medium.linkSuffix.trim().length ||
+    state.socials.devdotto.linkSuffix.trim().length ||
+    state.socials.linkedin.linkSuffix.trim().length ||
+    state.socials.twitch.linkSuffix.trim().length ||
+    state.socials.youtube.linkSuffix.trim().length ||
+    state.socials.discord.linkSuffix.trim().length ||
+    state.socials.instagram.linkSuffix.trim().length ||
+    state.socials.facebook.linkSuffix.trim().length ||
+    state.socials.dribbble.linkSuffix.trim().length ||
+    state.socials.behance.linkSuffix.trim().length ||
+    state.socials.codesandbox.linkSuffix.trim().length ||
+    state.socials.codepen.linkSuffix.trim().length ||
+    state.socials.stackoverflow.linkSuffix.trim().length) {
     socialList.push(`### Social`)
     socialList.push("")
   }
@@ -103,13 +116,145 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
 
   if (state.socials.codepen.linkSuffix.trim().length) {
     socialList.push(
-      `<a href="https://www.dev.to/${state.socials.codepen.linkSuffix}" target="_blank" rel="noreferrer">
+      `<a href="https://www.codepen.io/${state.socials.codepen.linkSuffix}" target="_blank" rel="noreferrer">
       <picture>
-      <img height="30" width="30" src="${state.socials.codepen.darkPath}" alt="devdotto" />
+      <img height="30" width="30" src="${state.socials.codepen.darkPath}" alt="codepen" />
       </picture>
       </a>`
     );
   }
+
+  if (state.socials.codesandbox.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.codesandbox.io/u/${state.socials.codesandbox.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.codesandbox.darkPath}" alt="codesandbox" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.stackoverflow.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.stackoverflow.com/user/${state.socials.stackoverflow.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.stackoverflow.path}" alt="stackoverflow" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.linkedin.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.linkedin.com/in/${state.socials.linkedin.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.linkedin.path}" alt="linkedin" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.facebook.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.facebook.com/${state.socials.facebook.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.facebook.path}" alt="facebook" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.instagram.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.instagram.com/${state.socials.instagram.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.instagram.path}" alt="instagram" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.threads.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.threads.net/@${state.socials.threads.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.threads.darkPath}" alt="threads" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.dribbble.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.dribbble.com/${state.socials.dribbble.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.dribbble.path}" alt="dribbble" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.behance.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.behance.com/${state.socials.behance.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.behance.path}" alt="behance" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.hashnode.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://${state.socials.hashnode.linkSuffix}.hashnode.dev" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.hashnode.path}" alt="hashnode" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.medium.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.medium.com/${state.socials.medium.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.medium.darkPath}" alt="medium" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.youtube.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.youtube.com/@${state.socials.youtube.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.youtube.path}" alt="youtube" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.discord.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.discord.com/user/${state.socials.discord.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.discord.path}" alt="discord" />
+      </picture>
+      </a>`
+    );
+  }
+
+  if (state.socials.twitch.linkSuffix.trim().length) {
+    socialList.push(
+      `<a href="https://www.twitch.tv/${state.socials.twitch.linkSuffix}" target="_blank" rel="noreferrer">
+      <picture>
+      <img height="30" width="30" src="${state.socials.twitch.path}" alt="twitch" />
+      </picture>
+      </a>`
+    );
+  }
+
+
 
   allLists.push(socialList.join("\n"));
 

@@ -11,6 +11,7 @@ import Modal from "./Modal";
 
 import logoDark from '../../assets/images/logo/logo-dark.png'
 import logoLight from '../../assets/images/logo/logo-light.png'
+import { Link } from 'react-router-dom';
 
 let TurndownService = require("turndown").default;
 
@@ -126,9 +127,6 @@ const Main = () => {
                 </span>
                 <div className="text header-text">
                   <nobr><span className="main">Profile<i style={state.theme === "light" ? { color: '#1B1B1B', fontWeight: '700' } : { color: '#ADB4D7', fontWeight: '700' }}>X</i></span></nobr>
-
-                  {/* <span className="main">Phishing-X</span> */}
-                  {/* <span className="sub">Component</span> */}
                 </div>
               </div>
               <i className="bx bx-chevron-right toggle"
@@ -138,7 +136,7 @@ const Main = () => {
             <div className="menu-bar m-0">
               <div className="menu">
                 <ul className="menu-links">
-                  <li className={state.section === "introduction" ? 'list-items active' : 'list-items'}
+                  <li className={state.section === "introduction" ? 'list-items active' : 'list-items'} title="Introduction"
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -151,7 +149,7 @@ const Main = () => {
                       <span className="text nav-text">Introduction</span>
                     </a>
                   </li>
-                  <li className={state.section === "socials" ? 'list-items active' : 'list-items'}
+                  <li className={state.section === "socials" ? 'list-items active' : 'list-items'} title="Socials"
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -164,7 +162,7 @@ const Main = () => {
                       <span className="text nav-text">Socials</span>
                     </a>
                   </li>
-                  <li className={state.section === "skills" ? 'list-items active' : 'list-items'}
+                  <li className={state.section === "skills" ? 'list-items active' : 'list-items'} title="Skills"
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -177,7 +175,7 @@ const Main = () => {
                       <span className="text nav-text">Skills</span>
                     </a>
                   </li>
-                  <li className={state.section === "badges" ? 'list-items active' : 'list-items'}
+                  <li className={state.section === "badges" ? 'list-items active' : 'list-items'} title="Badges"
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -190,7 +188,7 @@ const Main = () => {
                       <span className="text nav-text">Badges</span>
                     </a>
                   </li>
-                  <li className={state.section === "support" ? 'list-items active' : 'list-items'}
+                  <li className={state.section === "support" ? 'list-items active' : 'list-items'} title="Support"
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -206,13 +204,13 @@ const Main = () => {
                 </ul>
               </div>
               <div className="bottom-content">
-                <li className="">
-                  <a href="" >
+                <li className="" title="Go Back Home">
+                  <Link to="/" >
                     <i className="bx bx-log-out icons" />
-                    <nobr><span className="text nav-text">Log Out</span></nobr>
-                  </a>
+                    <nobr><span className="text nav-text">Go Home</span></nobr>
+                  </Link>
                 </li>
-                <li className="" style={{ cursor: 'pointer' }}
+                <li className="" style={{ cursor: 'pointer' }} title="Toggle Theme"
                   onClick={() => {
                     if (state.theme === "dark") {
                       dispatch({

@@ -314,21 +314,6 @@ const Socials = forwardRef(({ }, ref) => {
             </div>
           </div>
 
-          <div className="form-field">
-            <span className="d-block"><img src="icons/socials/polywork.svg" alt="polywork" className='form-icon' /> Polywork Profile:</span>
-            <div class="input-box">
-              <p class="prefix">https://www.polywork.com/</p>
-              <input type="text" placeholder="username" value={state.socials.polywork.linkSuffix} ref={polyworkRef}
-                onChange={() =>
-                  dispatch({
-                    type: "ADD_SOCIAL_PROFILE",
-                    payload: { title: "polywork", value: polyworkRef.current.value },
-                  })
-                }
-              />
-            </div>
-          </div>
-
           <div className="button-grop">
             <div className=" d-flex justify-content-between mt-3">
               <button
