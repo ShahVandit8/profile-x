@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
-   --font: "Inter", sans-serif;
+  --font: "Inter", sans-serif;
   /* --body-color: #637381; */
   /* --heading-color: #212b36;  */
   /* --primary-color: #181C31; */
@@ -10,21 +10,20 @@
   --white: #ffffff;
   --text: #e5faf8;
   --background: #1b1b1b;
-  --primary: #ADB4D7;
+  --primary: #adb4d7;
   --secondary: #262626;
-  --accent: #333C47;
+  --accent: #333c47;
   --border: #adadad;
 
   --light-text: #1b1b1b;
-  --light-background: #F3F8FF;
-  --light-primary: #ADB4D7;
+  --light-background: #f3f8ff;
+  --light-primary: #adb4d7;
   --light-secondary: #262626;
-  --light-accent: #333C47;
-  --light-button: #DEE1E6;
+  --light-accent: #333c47;
+  --light-button: #dee1e6;
 
   color-scheme: light dark;
 }
-
 
 body {
   font-family: var(--font);
@@ -183,3 +182,83 @@ p {
   box-shadow: none;
 }
 
+/* ===== Mobile Pop CSS ===== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-overlay-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(189, 187, 187, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.popup-ptag {
+  color: var(--text);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.popup-ptag-light {
+  color: var(--light-text);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.popup-span {
+  font-size: 30px;
+}
+
+.popup-i {
+  font-family: 700;
+  color: var(--primary);
+}
+
+.popup-popup {
+  background: var(--background);
+  color: var(--text);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+}
+
+.popup-popup-light {
+  background: var(--light-background);
+  color: var(--light-text);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+}
+
+.popup-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #adb4d7;
+  color: #1b1b1b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
