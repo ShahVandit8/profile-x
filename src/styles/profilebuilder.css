@@ -788,8 +788,10 @@
 
 .skill-group .skills {
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.7rem;
   margin-top: 10px;
+  padding: 0.3rem;
 }
 
 .skill-group .skill-button {
@@ -802,8 +804,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 2.1rem;
+  width: 2.1rem;
 }
 
 .skill-group .tick-icon {
@@ -858,8 +860,10 @@
 
 .light .skill-group .skills {
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.7rem;
   margin-top: 10px;
+  padding: 0.3rem;
 }
 
 .light .skill-group .skill-button {
@@ -872,8 +876,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 2.1rem;
+  width: 2.1rem;
 }
 
 .light .skill-group .badge {

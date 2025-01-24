@@ -38,26 +38,13 @@ const Skills = () => {
       </div>
       <div className="content section-content">
         <form className="form-section">
-          <IconSection title="Programming Languages" iconType="core" />
-          <div className="skill-group">
-            <p>💻 Fontend Development</p>
-          </div>
-          <div className="skill-group">
-            <p>💻 Backend Development</p>
-          </div>
-          <div className="skill-group">
-            <p>💻 Softwares</p>
-          </div>
-          <div className="skill-group">
-            <p>💻 Web3</p>
-          </div>
-          <div className="skill-group">
-            <p>💻 Cloud</p>
-          </div>
-          <div className="skill-group">
-            <p>💻 Other</p>
-          </div>
-
+          <IconSection title="Core" iconType="core" />
+          <IconSection title="Frontend Tools and Frameworks" iconType="frontend" />
+          <IconSection title="Backend and Database" iconType="backend" />
+          <IconSection title="UI/UX" iconType="software" />
+          <IconSection title="Web3" iconType="web3" />
+          <IconSection title="Cloud and Devops" iconType="cloud" />
+          <IconSection title="Other" iconType="other" />
           <div className="button-grop">
             <div className=" d-flex justify-content-between mt-3">
               <button

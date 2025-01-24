@@ -238,12 +238,6 @@ export const iconData = {
             link: "https://dart.dev/",
         },
         {
-            name: "Git",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg",
-            iTag: "git",
-            link: "https://git-scm.com/",
-        },
-        {
             name: "Go",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/go-colored.svg",
             iTag: "go",
@@ -374,6 +368,12 @@ export const iconData = {
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg",
             iTag: "css3",
             link: "https://www.w3.org/TR/CSS/#css",
+        },
+        {
+            name: "Flutter",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flutter-colored.svg",
+            iTag: "flutter",
+            link: "https://flutter.dev/",
         },
         {
             name: "Sass",
@@ -518,24 +518,12 @@ export const iconData = {
             link: "https://appwrite.io/",
         },
         {
-            name: "Heroku",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/heroku-colored.svg",
-            iTag: "heroku",
-            link: "https://www.heroku.com/",
-        },
-        {
             name: "Flask",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flask-colored.svg",
             darkPath:
                 "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flask-colored-dark.svg",
             iTag: "flask",
             link: "https://flask.palletsprojects.com/en/2.0.x/",
-        },
-        {
-            name: "Render",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/render-colored.svg",
-            iTag: "render",
-            link: "https://render.com/",
         },
         {
             name: "Supabase",
@@ -545,6 +533,18 @@ export const iconData = {
         },
     ],
     other: [
+        {
+            name: "Git",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg",
+            iTag: "git",
+            link: "https://git-scm.com/",
+        },
+        {
+            name: "GitHub",
+            path: "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/socials/github.svg",
+            iTag: "github",
+            link: "https://github.com/",
+        },
         {
             name: ".NET",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dot-net-colored.svg",
@@ -564,12 +564,6 @@ export const iconData = {
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg",
             iTag: "laravel",
             link: "https://laravel.com/",
-        },
-        {
-            name: "Flutter",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/flutter-colored.svg",
-            iTag: "flutter",
-            link: "https://flutter.dev/",
         },
         {
             name: "Amazon Web Services",
@@ -848,6 +842,18 @@ export const iconData = {
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg",
             iTag: "googlecloud",
             link: "https://cloud.google.com/",
+        },
+        {
+            name: "Heroku",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/heroku-colored.svg",
+            iTag: "heroku",
+            link: "https://www.heroku.com/",
+        },
+        {
+            name: "Render",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/render-colored.svg",
+            iTag: "render",
+            link: "https://render.com/",
         },
     ],
 };
