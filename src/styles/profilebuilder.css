@@ -793,6 +793,7 @@
 }
 
 .skill-group .skill-button {
+  position: relative;
   background: transparent;
   border: none;
 }
@@ -803,6 +804,37 @@
   display: inline-block;
   height: 2.5rem;
   width: 2.5rem;
+}
+
+.skill-group .tick-icon {
+  position: absolute;
+  top: -0.25rem; /* Adjust as needed to position the tick */
+  right: -0.25rem; /* Adjust as needed to position the tick */
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+.skill-group .skill-button .tooltip {
+  position: absolute;
+  bottom: -2rem; /* Places the tooltip below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333; /* Dark background for the tooltip */
+  color: white; /* White text for visibility */
+  font-size: 0.75rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+  pointer-events: none; /* Prevent hover issues */
+}
+
+.skill-group .skill-button:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 .skill-group .badge {

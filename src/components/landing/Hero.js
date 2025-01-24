@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import useApp from '../../Context/AppContext.js';
-
-
-import hero from "../../assets/images/landing/hero.png";
 import dotshape from "../../assets/images/landing/dotted-shape.svg";
 import dotshapedark from "../../assets/images/landing/dotted-shape-dark.svg";
 import mockdark from "../../assets/images/landing/mock-dark.png";
@@ -44,14 +41,13 @@ const Hero = () => {
                                         </li>
                                         <li>
                                             <a
-                                                href="https://github.com/uideck/play-bootstrap"
-                                                rel="nofollow noopener"
+                                                href="https://github.com/ShahVandit8/profile-x"
+                                                rel="nofollow noopener noreferrer"
                                                 target="_blank"
                                                 className="ud-main-btn ud-link-btn"
                                             >
                                                 <i class="fa-brands fa-github"></i> &nbsp;
                                                 GitHub
-                                                {/* <i className="lni lni-arrow-right" /> */}
                                             </a>
                                         </li>
                                     </ul>

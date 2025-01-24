@@ -6,7 +6,7 @@
     background-image: url(/public/icons/skills/c.svg)
 }
 
-.c-colored {
+.c.colored {
     background-image: url(/public/icons/skills/c-colored.svg)
 }
 
@@ -14,7 +14,7 @@
     background-image: url(/public/icons/skills/cplusplus.svg)
 }
 
-.cplusplus-colored {
+.cplusplus.colored {
     background-image: url(/public/icons/skills/cplusplus-colored.svg)
 }
 
