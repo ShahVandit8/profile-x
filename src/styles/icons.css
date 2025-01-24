@@ -3,24 +3,803 @@
 }
 
 .c {
-    background-image: url(/public/icons/skills/c.svg)
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/c.svg)
 }
 
 .c.colored {
-    background-image: url(/public/icons/skills/c-colored.svg)
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/c-colored.svg)
 }
 
 .cplusplus {
-    background-image: url(/public/icons/skills/cplusplus.svg)
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/cplusplus.svg)
 }
 
 .cplusplus.colored {
-    background-image: url(/public/icons/skills/cplusplus-colored.svg)
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/cplusplus-colored.svg)
 }
 
+.csharp {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/csharp.svg)
+}
 
-/* Socials icons */
+.csharp.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/csharp-colored.svg)
+}
 
-.github {
-    background-image: url(/public/icons/socials/github-dark.svg);
+.coffeescript {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/coffeescript.svg)
+}
+
+.dark .coffeescript.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/coffeescript-colored-dark.svg) 
+}
+
+.coffeescript.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/coffeescript-colored.svg)
+}
+
+.dart {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/dart.svg)
+}
+
+.dart.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/dart-colored.svg)
+}
+
+.git {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/git.svg)
+}
+
+.git.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/git-colored.svg)
+}
+
+.go {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/go.svg)
+}
+
+.go.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/go-colored.svg)
+}
+
+.java {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/java.svg)
+}
+
+.java.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/java-colored.svg);
+}
+
+.javascript {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/javascript.svg);
+}
+
+.javascript.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/javascript-colored.svg);
+}
+
+.kotlin {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/kotlin.svg);
+}
+
+.kotlin.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/kotlin-colored.svg);
+}
+
+.perl {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/perl.svg);
+}
+
+.perl.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/perl-colored.svg);
+}
+
+.php {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/php.svg);
+}
+
+.php.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/php-colored.svg);
+}
+
+.python {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/python.svg);
+}
+
+.python.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/python-colored.svg);
+}
+
+.rlang {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/rlang.svg);
+}
+
+.rlang.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/rlang-colored.svg);
+}
+
+.ruby {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ruby.svg);
+}
+
+.ruby.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ruby-colored.svg);
+}
+
+.rust {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/rust.svg);
+}
+
+.rust.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/rust-colored.svg);
+}
+
+.swift {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/swift.svg);
+}
+
+.swift.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/swift-colored.svg);
+}
+
+.typescript {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/typescript.svg);
+}
+
+.typescript.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/typescript-colored.svg);
+}
+
+.html5 {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/html5.svg);
+}
+
+.html5.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/html5-colored.svg);
+}
+
+.react {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/react.svg);
+}
+
+.react.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/react-colored.svg);
+}
+
+.nextjs {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nextjs.svg);
+}
+
+.nextjs.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nextjs-colored.svg);
+}
+
+.vuejs {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/vuejs.svg);
+}
+
+.vuejs.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/vuejs-colored.svg);
+}
+
+.nuxtjs {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nuxtjs.svg);
+}
+
+.nuxtjs.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nuxtjs-colored.svg);
+}
+
+.gatsby {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/gatsby.svg);
+}
+
+.gatsby.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/gatsby-colored.svg);
+}
+
+.angularjs {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/angularjs.svg);
+}
+
+.angularjs.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/angularjs-colored.svg);
+}
+
+.jquery {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/jquery.svg);
+}
+
+.jquery.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/jquery-colored.svg);
+}
+
+.css3 {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/css3.svg);
+}
+
+.css3.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/css3-colored.svg);
+}
+
+.sass {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/sass.svg);
+}
+
+.sass.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/sass-colored.svg);
+}
+
+.tailwindcss {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/tailwindcss.svg);
+}
+
+.tailwindcss.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/tailwindcss-colored.svg);
+}
+
+.chakra {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/chakra.svg);
+}
+
+.chakra.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/chakra-colored.svg);
+}
+
+.bootstrap {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/bootstrap.svg);
+}
+
+.bootstrap.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/bootstrap-colored.svg);
+}
+
+.materialui {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/materialui.svg);
+}
+
+.materialui.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/materialui-colored.svg);
+}
+
+.redux {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/redux.svg);
+}
+
+.redux.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/redux-colored.svg);
+}
+
+.webpack {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/webpack.svg);
+}
+
+.webpack.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/webpack-colored.svg);
+}
+
+.babel {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/babel.svg);
+}
+
+.babel.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/babel-colored.svg);
+}
+
+.svelte {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/svelte.svg);
+}
+
+.svelte.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/svelte-colored.svg);
+}
+
+.vite {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/vite.svg);
+}
+
+.vite.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/vite-colored.svg);
+}
+
+.remix {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/remix.svg);
+}
+
+.remix.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/remix-colored.svg);
+}
+
+.nodejs {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nodejs.svg);
+}
+
+.nodejs.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nodejs-colored.svg);
+}
+
+.express {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/express.svg);
+}
+
+.express.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/express-colored.svg);
+}
+
+.graphql {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/graphql.svg);
+}
+
+.graphql.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/graphql-colored.svg);
+}
+
+.oracle {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/oracle.svg);
+}
+
+.oracle.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/oracle-colored.svg);
+}
+
+.nestjs {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nestjs.svg);
+}
+
+.nestjs.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nestjs-colored.svg);
+}
+
+.mongodb {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/mongodb.svg);
+}
+
+.mongodb.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/mongodb-colored.svg);
+}
+
+.mysql {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/mysql.svg);
+}
+
+.mysql.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/mysql-colored.svg);
+}
+
+.postgresql {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/postgresql.svg);
+}
+
+.postgresql.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/postgresql-colored.svg);
+}
+
+.firebase {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/firebase.svg);
+}
+
+.firebase.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/firebase-colored.svg);
+}
+
+.appwrite {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/appwrite.svg);
+}
+
+.appwrite.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/appwrite-colored.svg);
+}
+
+.heroku {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/heroku.svg);
+}
+
+.heroku.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/heroku-colored.svg);
+}
+
+.flask {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flask.svg);
+}
+
+.flask.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flask-colored.svg);
+}
+
+.render {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/render.svg);
+}
+
+.render.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/render-colored.svg);
+}
+
+.dot-net {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/dot-net.svg);
+}
+
+.dot-net.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/dot-net-colored.svg);
+}
+
+.django {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/django.svg);
+}
+
+.django.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/django-colored.svg);
+}
+
+.laravel {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/laravel.svg);
+}
+
+.laravel.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/laravel-colored.svg);
+}
+
+.flutter {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flutter.svg);
+}
+
+.flutter.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flutter-colored.svg);
+}
+
+.aws {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aws.svg);
+}
+
+.aws.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aws-colored.svg);
+}
+
+.arduino {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/arduino.svg);
+}
+
+.arduino.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/arduino-colored.svg);
+}
+
+.blender {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/blender.svg);
+}
+
+.blender.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/blender-colored.svg);
+}
+
+.digitalocean {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/digitalocean.svg);
+}
+
+.digitalocean.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/digitalocean-colored.svg);
+}
+
+.docker {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/docker.svg);
+}
+
+.docker.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/docker-colored.svg);
+}
+
+.linux {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/linux.svg);
+}
+
+.linux.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/linux-colored.svg);
+}
+
+.macos {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/macos.svg);
+}
+
+.macos.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/macos-colored.svg);
+}
+
+.pytorch {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/pytorch.svg);
+}
+
+.pytorch.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/pytorch-colored.svg);
+}
+
+.raspberrypi {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/raspberrypi.svg);
+}
+
+.raspberrypi.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/raspberrypi-colored.svg);
+}
+
+.tensorflow {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/tensorflow.svg');
+}
+
+.tensorflow.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/tensorflow-colored.svg');
+}
+
+/** Software icons **/
+
+.photoshop {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/photoshop.svg');
+}
+
+.photoshop.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/photoshop-colored.svg');
+}
+
+.illustrator {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/illustrator.svg');
+}
+
+.illustrator.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/illustrator-colored.svg');
+}
+
+.aftereffects {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aftereffects.svg');
+}
+
+.aftereffects.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aftereffects-colored.svg');
+}
+
+.premierepro {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/premierepro.svg');
+}
+
+.premierepro.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/premierepro-colored.svg');
+}
+
+.xd {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/xd.svg');
+}
+
+.xd.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/xd-colored.svg');
+}
+
+.figma {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/figma.svg');
+}
+
+.figma.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/figma-colored.svg');
+}
+
+.sketch {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/sketch.svg');
+}
+
+.sketch.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/sketch-colored.svg');
+}
+
+/** Web3 icons **/
+
+.fastapi {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/fastapi.svg');
+}
+
+.fastapi.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/fastapi-colored.svg');
+}
+
+.supabase {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/supabase.svg');
+}
+
+.supabase.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/supabase-colored.svg');
+}
+
+.uniswap {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/uniswap.svg');
+}
+
+.uniswap.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/uniswap-colored.svg');
+}
+
+.aave {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aave.svg');
+}
+
+.aave.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aave-colored.svg');
+}
+
+.sushiswap {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/sushiswap.svg');
+}
+
+.sushiswap.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/sushiswap-colored.svg');
+}
+
+.metamask {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/metamask.svg');
+}
+
+.metamask.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/metamask-colored.svg');
+}
+
+.argent {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/argent.svg');
+}
+
+.argent.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/argent-colored.svg');
+}
+
+.nansen {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nansen.svg');
+}
+
+.nansen.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nansen-colored.svg');
+}
+
+.chainlink {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/chainlink.svg');
+}
+
+.chainlink.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/chainlink-colored.svg');
+}
+
+.the-graph {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/the-graph.svg');
+}
+
+.the-graph.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/the-graph-colored.svg');
+}
+
+.ethers {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ethers.svg');
+}
+
+.ethers.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ethers-colored.svg');
+}
+
+.web3js {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/web3js.svg');
+}
+
+.web3js.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/web3js-colored.svg');
+}
+
+.alchemy {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/alchemy.svg');
+}
+
+.alchemy.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/alchemy-colored.svg');
+}
+
+.hardhat {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/hardhat.svg');
+}
+
+.hardhat.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/hardhat-colored.svg');
+}
+
+.truffle {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/truffle.svg');
+}
+
+.truffle.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/truffle-colored.svg');
+}
+
+.ipfs {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ipfs.svg');
+}
+
+.ipfs.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ipfs-colored.svg');
+}
+
+.filebase {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/filebase.svg');
+}
+
+.filebase.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/filebase-colored.svg');
+}
+
+.arweave {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/arweave.svg');
+}
+
+.arweave.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/arweave-colored.svg');
+}
+
+.ethereum {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ethereum.svg');
+}
+
+.ethereum.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ethereum-colored.svg');
+}
+
+.polygon {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/polygon.svg');
+}
+
+.polygon.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/polygon-colored.svg');
+}
+
+.arbitrum {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/arbitrum.svg');
+}
+
+.arbitrum.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/arbitrum-colored.svg');
+}
+
+.avalanche {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/avalanche.svg');
+}
+
+.avalanche.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/avalanche-colored.svg');
+}
+
+.near {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/near.svg');
+}
+
+.near.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/near-colored.svg');
+}
+
+.flow {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flow.svg');
+}
+
+.flow.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flow-colored.svg');
+}
+
+.solana {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/solana.svg');
+}
+
+.solana.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/solana-colored.svg');
+}
+
+.terra {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/terra.svg');
+}
+
+.terra.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/terra-colored.svg');
+}
+
+/** Cloud icons **/
+
+.googlecloud {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/googlecloud.svg');
+}
+
+.googlecloud.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/googlecloud-colored.svg');
 }

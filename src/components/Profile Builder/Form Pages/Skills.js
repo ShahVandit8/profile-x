@@ -38,41 +38,6 @@ const Skills = () => {
       </div>
       <div className="content section-content">
         <form className="form-section">
-          {/* <div className="skill-group">
-            <p>💻 Programming Languages</p>
-            <div className="skills">
-              <button className="skill-button" data-toggle="tooltip" data-placement="bottom" title="C">
-                <i className="skill-icon c"></i>
-              </button>
-              <button className="skill-button" data-toggle="tooltip" data-placement="bottom" title="C++">
-                <i className="skill-icon cplusplus"></i>
-              </button>
-            </div>
-            <div className="skills">
-              <button className="skill-button" data-toggle="tooltip" data-placement="bottom" title="C">
-                <i className="skill-icon c"></i>
-              </button>
-              <button className="skill-button" data-toggle="tooltip" data-placement="bottom" title="C++">
-                <i className="skill-icon cplusplus colored"></i>
-                <span className="tick-icon">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="10" cy="10" r="9" fill="#ADB4D7" stroke="white" stroke-width="2" />
-                    <path
-                      fill="white"
-                      fill-rule="evenodd"
-                      d="M13.707 8.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-
-          </div> */}
           <IconSection title="Programming Languages" iconType="core" />
           <div className="skill-group">
             <p>💻 Fontend Development</p>

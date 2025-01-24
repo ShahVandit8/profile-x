@@ -802,8 +802,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2.25rem;
+  width: 2.25rem;
 }
 
 .skill-group .tick-icon {
@@ -863,6 +863,7 @@
 }
 
 .light .skill-group .skill-button {
+  position: relative;
   background: transparent;
   border: none;
 }
@@ -871,8 +872,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2.25rem;
+  width: 2.25rem;
 }
 
 .light .skill-group .badge {
