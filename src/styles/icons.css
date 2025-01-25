@@ -134,6 +134,10 @@
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/rust-colored.svg);
 }
 
+.dark .rust.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/rust-colored-dark.svg) 
+}
+
 .swift {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/swift.svg);
 }
@@ -172,6 +176,10 @@
 
 .nextjs.colored {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nextjs-colored.svg);
+}
+
+.dark .nextjs.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nextjs-colored-dark.svg) 
 }
 
 .vuejs {
@@ -286,6 +294,10 @@
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/babel-colored.svg);
 }
 
+.dark .babel.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/babel-colored-dark.svg) 
+}
+
 .svelte {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/svelte.svg);
 }
@@ -310,6 +322,10 @@
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/remix-colored.svg);
 }
 
+.dark .remix.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/remix-colored-dark.svg) 
+}
+
 .nodejs {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/nodejs.svg);
 }
@@ -324,6 +340,10 @@
 
 .express.colored {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/express-colored.svg);
+}
+
+.dark .express.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/express-colored-dark.svg) 
 }
 
 .graphql {
@@ -390,6 +410,10 @@
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/appwrite-colored.svg);
 }
 
+.dark .appwrite.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/appwrite-colored-dark.svg) 
+}
+
 .heroku {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/heroku.svg);
 }
@@ -404,6 +428,10 @@
 
 .flask.colored {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flask-colored.svg);
+}
+
+.dark .flask.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flask-colored-dark.svg) 
 }
 
 .render {
@@ -430,6 +458,10 @@
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/django-colored.svg);
 }
 
+.dark .django.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/django-colored-dark.svg) 
+}
+
 .laravel {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/laravel.svg);
 }
@@ -452,6 +484,10 @@
 
 .aws.colored {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aws-colored.svg);
+}
+
+.dark .aws.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aws-colored-dark.svg) 
 }
 
 .arduino {
@@ -500,6 +536,10 @@
 
 .macos.colored {
     background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/macos-colored.svg);
+}
+
+.dark .macos.colored {
+    background-image: url(https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/macos-colored-dark.svg) 
 }
 
 .pytorch {
@@ -552,12 +592,20 @@
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aftereffects-colored.svg');
 }
 
+.dark .aftereffects.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/aftereffects-colored-dark.svg');
+}
+
 .premierepro {
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/premierepro.svg');
 }
 
 .premierepro.colored {
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/premierepro-colored.svg');
+}
+
+.dark .premierepro.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/premierepro-colored-dark.svg');
 }
 
 .xd {
@@ -714,6 +762,10 @@
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ipfs-colored.svg');
 }
 
+.dark .ipfs.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/ipfs-colored-dark.svg');
+}
+
 .filebase {
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/filebase.svg');
 }
@@ -728,6 +780,10 @@
 
 .arweave.colored {
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/arweave-colored.svg');
+}
+
+.dark .arweave.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/arweave-colored-dark.svg');
 }
 
 .ethereum {
@@ -770,6 +826,10 @@
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/near-colored.svg');
 }
 
+.dark .near.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/near-colored-dark.svg');
+}
+
 .flow {
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/flow.svg');
 }
@@ -802,4 +862,20 @@
 
 .googlecloud.colored {
     background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/googlecloud-colored.svg');
+}
+
+.netlify {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/netlify.svg');
+}
+
+.netlify.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/netlify-colored.svg');
+}
+
+.github {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/github.svg');
+}
+
+.github.colored {
+    background-image: url('https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/github-colored.svg');
 }

@@ -120,6 +120,72 @@ const Preview = forwardRef(({ }, ref) => {
             </ul>
 
             {
+                (state.skills.core.length ||
+                    state.skills.frontend.length ||
+                    state.skills.backend.length ||
+                    state.skills.software.length ||
+                    state.skills.web3.length ||
+                    state.skills.cloud.length ||
+                    state.skills.other.length
+                )
+                    ? (<h3>Skills</h3>)
+                    : (<></>)
+            }
+
+
+            <div
+                className={`d-flex flex-wrap gap-1.5 ${state.skills.core.length < 1 &&
+                    state.skills.frontend.length < 1 &&
+                    state.skills.backend.length < 1 &&
+                    state.skills.other.length < 1 &&
+                    state.skills.software.length < 1 &&
+                    state.skills.web3.length < 1 &&
+                    state.skills.cloud.length < 1
+                    ? "mb-0"
+                    : "mb-4"
+                    }`}
+            >
+                {/* Icons Display */}
+                {Object.values(state.skills).some((arr) => arr.length > 0) ? (
+                    <div className="d-flex gap-1.5 flex-wrap">
+                        {Object.values(state.skills)
+                            .flat()
+                            .map((icon) => {
+                                return (
+                                    <div key={`${icon.path}`} className="position-relative m-1">
+                                        <a
+                                            href={`${icon.link}`}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            {icon.darkPath ? (
+                                                <img
+                                                    src={
+                                                        state.theme === "dark"
+                                                            ? `https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/${icon.iTag}-colored-dark.svg`
+                                                            : `https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/${icon.iTag}-colored.svg`
+                                                    }
+                                                    alt={`${icon.name}`}
+                                                    width="36"
+                                                    height="36"
+                                                />
+                                            ) : (
+                                                <img
+                                                    src={`https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/${icon.iTag}-colored.svg`}
+                                                    alt={`${icon.name}`}
+                                                    width="36"
+                                                    height="36"
+                                                />
+                                            )}
+                                        </a>
+                                    </div>
+                                );
+                            })}
+                    </div>
+                ) : null}
+            </div>
+
+            {
                 (state.socials.github.linkSuffix.trim().length ||
                     state.socials.twitter.linkSuffix.trim().length ||
                     state.socials.threads.linkSuffix.trim().length ||

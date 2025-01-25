@@ -462,6 +462,26 @@ export const iconData = {
             link: "https://expressjs.com/",
         },
         {
+            name: ".NET",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dot-net-colored.svg",
+            iTag: "dot-net",
+            link: "https://dotnet.microsoft.com/en-us/",
+        },
+        {
+            name: "Django",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored.svg",
+            darkPath:
+                "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored-dark.svg",
+            iTag: "django",
+            link: "https://www.djangoproject.com/",
+        },
+        {
+            name: "Laravel",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg",
+            iTag: "laravel",
+            link: "https://laravel.com/",
+        },
+        {
             name: "Fast API",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/fastapi-colored.svg",
             iTag: "fastapi",
@@ -540,62 +560,10 @@ export const iconData = {
             link: "https://git-scm.com/",
         },
         {
-            name: "GitHub",
-            path: "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/socials/github.svg",
-            iTag: "github",
-            link: "https://github.com/",
-        },
-        {
-            name: ".NET",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/dot-net-colored.svg",
-            iTag: "dot-net",
-            link: "https://dotnet.microsoft.com/en-us/",
-        },
-        {
-            name: "Django",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored.svg",
-            darkPath:
-                "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/django-colored-dark.svg",
-            iTag: "django",
-            link: "https://www.djangoproject.com/",
-        },
-        {
-            name: "Laravel",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg",
-            iTag: "laravel",
-            link: "https://laravel.com/",
-        },
-        {
-            name: "Amazon Web Services",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg",
-            darkPath:
-                "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored-dark.svg",
-            iTag: "aws",
-            link: "https://aws.amazon.com",
-        },
-        {
             name: "Arduino",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/arduino-colored.svg",
             iTag: "arduino",
             link: "https://store.arduino.cc/?gclid=Cj0KCQjw2eilBhCCARIsAG0Pf8uueBifykWcsSS4LPESeGQfxGVKJYnzV7bz471XfknQJy_1VINVWM8aAkLtEALw_wcB",
-        },
-        {
-            name: "Blender",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/blender-colored.svg",
-            iTag: "blender",
-            link: "https://www.blender.org/",
-        },
-        {
-            name: "Digital Ocean",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/digitalocean-colored.svg",
-            iTag: "digitalocean",
-            link: "https://www.digitalocean.com",
-        },
-        {
-            name: "Docker",
-            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg",
-            iTag: "docker",
-            link: "https://www.docker.com/",
         },
         {
             name: "Linux",
@@ -634,16 +602,12 @@ export const iconData = {
         {
             name: "Photoshop",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/photoshop-colored.svg",
-            darkPath:
-                "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/photoshop-colored-dark.svg",
             iTag: "photoshop",
             link: "https://www.adobe.com/uk/products/photoshop.html",
         },
         {
             name: "Illustrator",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/illustrator-colored.svg",
-            darkPath:
-                "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/illustrator-colored-dark.svg",
             iTag: "illustrator",
             link: "https://www.adobe.com/uk/products/illustrator.html",
         },
@@ -666,8 +630,6 @@ export const iconData = {
         {
             name: "XD",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/xd-colored.svg",
-            darkPath:
-                "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/xd-colored-dark.svg",
             iTag: "xd",
             link: "https://www.adobe.com/uk/products/xd.html",
         },
@@ -682,6 +644,12 @@ export const iconData = {
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/sketch-colored.svg",
             iTag: "sketch",
             link: "https://www.sketch.com/",
+        },
+        {
+            name: "Blender",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/blender-colored.svg",
+            iTag: "blender",
+            link: "https://www.blender.org/",
         },
     ],
     web3: [
@@ -844,6 +812,14 @@ export const iconData = {
             link: "https://cloud.google.com/",
         },
         {
+            name: "Amazon Web Services",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored.svg",
+            darkPath:
+                "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/aws-colored-dark.svg",
+            iTag: "aws",
+            link: "https://aws.amazon.com",
+        },
+        {
             name: "Heroku",
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/heroku-colored.svg",
             iTag: "heroku",
@@ -854,6 +830,24 @@ export const iconData = {
             path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/render-colored.svg",
             iTag: "render",
             link: "https://render.com/",
+        },
+        {
+            name: "Netlify",
+            path: "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/netlify.svg",
+            iTag: "netlify",
+            link: "https://www.netlify.com/",
+        },
+        {
+            name: "Digital Ocean",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/digitalocean-colored.svg",
+            iTag: "digitalocean",
+            link: "https://www.digitalocean.com",
+        },
+        {
+            name: "Docker",
+            path: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg",
+            iTag: "docker",
+            link: "https://www.docker.com/",
         },
     ],
 };
