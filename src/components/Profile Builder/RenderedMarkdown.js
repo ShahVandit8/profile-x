@@ -24,6 +24,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
   const allLists = [];
 
   const introductionList = [];
+  const skillsList = [];
   const socialList = [];
   const supportList = [];
 
@@ -63,6 +64,48 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
   introductionList.push("")
 
   allLists.push(introductionList.join("\n"));
+
+  if (state.skills.core.length >= 1 ||
+    state.skills.frontend.length >= 1 ||
+    state.skills.backend.length >= 1 ||
+    state.skills.other.length >= 1 ||
+    state.skills.software.length >= 1 ||
+    state.skills.web3.length >= 1 ||
+    state.skills.cloud.length >= 1){
+      skillsList.push(`### Skills`);
+      skillsList.push("");
+    }
+  
+  if (state.skills.core.length >= 1 ||
+    state.skills.frontend.length >= 1 ||
+    state.skills.backend.length >= 1 ||
+    state.skills.other.length >= 1 ||
+    state.skills.software.length >= 1 ||
+    state.skills.web3.length >= 1 ||
+    state.skills.cloud.length >= 1) {
+      if (Object.values(state.skills).some((arr) => arr.length > 0)) {
+        Object.values(state.skills).flat().forEach((icon) => {
+          if(icon.darkPath){
+            skillsList.push(
+              `<a href="${icon.link}" target="_blank" rel="noreferrer"><picture>
+              <img height="36" width="36" src="${icon.darkPath}" alt="${icon.name}" />
+              </picture></a>`
+            );
+          }
+          else {
+            skillsList.push(
+              `<a href="${icon.link}" target="_blank" rel="noreferrer"><picture>
+              <img height="36" width="36" src="${icon.path}" alt="${icon.name}" />
+              </picture></a>`
+            );
+          }
+        });
+      }
+  }
+
+  skillsList.push("")  
+  allLists.push(skillsList.join("\n"));
+  
 
   if (state.socials.github.linkSuffix.trim().length ||
     state.socials.twitter.linkSuffix.trim().length ||
