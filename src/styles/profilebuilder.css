@@ -462,9 +462,6 @@
   transform: translateY(-50%);
 }
 
-
-
-
 /*** Main CSS ***/
 
 .content {
@@ -886,7 +883,6 @@
   right: -1px;
 }
 
-
 /* Right Preview Container */
 
 .right-content {
@@ -1040,7 +1036,6 @@
   word-spacing: -1px;
 }
 
-
 /* Right Preview Container Light */
 
 .light .right-content {
@@ -1187,8 +1182,6 @@
   word-spacing: -1px;
 }
 
-
-
 /* Socials Section */
 
 .form-section .form-icon {
@@ -1196,10 +1189,6 @@
   width: 20px;
   margin-right: 5px;
 }
-
-
-
-
 
 /* Copy Modal */
 /* Overlay */
@@ -1278,7 +1267,6 @@
   margin-right: 10px;
 }
 
-
 /* Content */
 .modal-content {
   display: flex;
@@ -1339,7 +1327,6 @@
   color: var(--light-text);
 }
 
-
 .modal-list {
   list-style: disc;
   padding-left: 20px;
@@ -1347,8 +1334,8 @@
 }
 
 .modal-list li {
-  margin-top: 4px ;
-  margin-bottom: 4px ;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 .modal-icon {
@@ -1366,4 +1353,80 @@
   font-size: 0.75rem;
   margin-top: 10px;
   color: #666;
+}
+
+/* Badge Section CSS */
+
+.badgeStyleButton button {
+  background-color: var(--secondary);
+  padding: 10px;
+  font-size: small;
+}
+
+.light .badgeStyleButton button {
+  background-color: var(--light-button);
+  padding: 10px;
+  font-size: small;
+}
+
+.badgeStyleButton button:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.badgeStyleButton button:hover {
+  background-color: #414141;
+}
+
+.light .badgeStyleButton button:hover {
+  background-color: #d3d6db;
+
+}
+
+.badgeStyleButton .color-selector {
+  border-bottom: 2px solid var(--secondary);
+  border-left: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary);
+}
+
+.light .badgeStyleButton .color-selector {
+  border-bottom: 2px solid var(--light-button);
+  border-left: 2px solid var(--light-button);
+  border-right: 2px solid var(--light-button);
+}
+
+.badgeStyleButton .color-display {
+  border: 1px solid var(--secondary);
+}
+
+.light .badgeStyleButton .color-display {
+  border: 1px solid var(--light-button);
+}
+
+.badgeStyleButton .stylebadgetext{
+  color: var(--white);
+}
+
+.light .badgeStyleButton .stylebadgetext{
+  color: var(--light-text);
+}
+
+.badgeStyleButton .stylebadgetext-mute{
+  color: var(--white);
+  opacity: 50%;
+}
+
+.light .badgeStyleButton .stylebadgetext-mute{
+  color: var(--light-text);
+  opacity: 50%;
+}
+
+.badgeStyleButton .stylebadgetext-mute:hover{
+  color: var(--white);
+  opacity: 100%;
+}
+
+.light .badgeStyleButton .stylebadgetext-mute:hover{
+  color: var(--light-text);
+  opacity: 100%;
 }

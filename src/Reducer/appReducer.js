@@ -1027,11 +1027,6 @@ export const colorStore = {
             bgColor: "bg-[#22272e]",
             hex: "22272e",
         },
-        {
-            colorName: "zinc-dark",
-            bgColor: "bg-[#27272a]",
-            hex: "27272a",
-        },
     ],
 };
 
@@ -1104,6 +1099,20 @@ const AppReducer = (state, action) => {
                     ...state.badges,
                     cardStyle: {
                         ...state.badges.cardStyle,
+                        [action.payload.keyToToggle]:
+                            !state.badges.cardStyle[action.payload.keyToToggle],
+                    },
+                },
+            };
+
+        case "STYLE_BADGES":
+            return {
+                ...state,
+                badges: {
+                    ...state.badges,
+                    cardStyle: {
+                        ...state.badges.cardStyle,
+                        [action.payload.keyToStyle]: [action.payload.color],
                         [action.payload.keyToToggle]:
                             !state.badges.cardStyle[action.payload.keyToToggle],
                     },
