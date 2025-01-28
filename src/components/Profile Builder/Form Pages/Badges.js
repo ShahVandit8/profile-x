@@ -6,7 +6,7 @@ import { colorStore } from '../../../Reducer/appReducer.js';
 const Badges = () => {
 
   const { state, dispatch } = useApp()
-  const { badgesShowing, setBadgeShowing } = useState(false)
+  const [ badgesShowing, setBadgeShowing ] = useState(true);
 
   const handleStyleBadge = (e) => {
     console.log(e.currentTarget.name)
@@ -65,7 +65,9 @@ const Badges = () => {
 
           <article className="mb-0">
             <span className="d-block mb-2">Style badges:</span>
-
+            {!badgesShowing ? (
+              <p className="stylebadgesubtext mb-2">Select a badge below to customise.</p>
+            ) : null}
             <article className="row row-cols-1 g-2 mb-4 row-cols-xl-2">
               <BadgeStyleButton
                 colorList={colorStore.lightColors}
@@ -105,6 +107,23 @@ const Badges = () => {
               />
             </article>
           </article>
+            <article className="d-flex flex-column mb-4">
+            <h4 className="mb-2">GitHub</h4>
+            {!state.socials.github.linkSuffix ? (
+              <p className="stylebadgesubtext mb-2">
+                Please{" "}
+                <a className='style-anchor' onClick={() => {
+                    dispatch({
+                      type: "SHOW_SECTION",
+                      payload: "socials",
+                    });
+                  }}>
+                  add your GitHub profile
+                </a>{" "}
+                in the socials section.
+              </p>
+            ) : null}
+            </article>
         </form>
       </div>
     </>

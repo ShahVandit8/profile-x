@@ -21,7 +21,7 @@ const BadgeStyleButton = ({
                     name={badgeKeyToHide}
                     type='button'
                     className='btn btn-sm'
-                // disabled={!badgesShowing}
+                    disabled={!badgesShowing}
                 >
                     <div className="d-flex">
                         <div
@@ -31,10 +31,7 @@ const BadgeStyleButton = ({
                             &nbsp;
                         </div>
                         <span
-                            className={`d-flex justify-content-start ${state.theme === "dark"
-                                ? "text-white"
-                                : "text-dark"
-                                }`}
+                            className={`d-flex justify-content-start stylebadgetitle ${!badgesShowing?"text-muted": ""}`}
                         >
                             {badgeText}
                         </span>

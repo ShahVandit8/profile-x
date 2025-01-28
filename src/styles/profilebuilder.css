@@ -1357,6 +1357,30 @@
 
 /* Badge Section CSS */
 
+.stylebadgesubtext{
+  font-size: small;
+  color: var(--primary);
+}
+
+.light .stylebadgesubtext{
+  font-size: small;
+  color: var(--light-text);
+}
+
+.stylebadgesubtext .style-anchor{
+  color: #3382ed;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.badgeStyleButton .stylebadgetitle {
+  color: var(--white);
+}
+
+.light .badgeStyleButton .stylebadgetitle {
+  color: var(--light-text);
+}
+
 .badgeStyleButton button {
   background-color: var(--secondary);
   padding: 10px;
