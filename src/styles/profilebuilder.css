@@ -1357,17 +1357,17 @@
 
 /* Badge Section CSS */
 
-.stylebadgesubtext{
+.stylebadgesubtext {
   font-size: small;
   color: var(--primary);
 }
 
-.light .stylebadgesubtext{
+.light .stylebadgesubtext {
   font-size: small;
   color: var(--light-text);
 }
 
-.stylebadgesubtext .style-anchor{
+.stylebadgesubtext .style-anchor {
   color: #3382ed;
   text-decoration: underline;
   cursor: pointer;
@@ -1404,7 +1404,6 @@
 
 .light .badgeStyleButton button:hover {
   background-color: #d3d6db;
-
 }
 
 .badgeStyleButton .color-selector {
@@ -1427,30 +1426,229 @@
   border: 1px solid var(--light-button);
 }
 
-.badgeStyleButton .stylebadgetext{
+.badgeStyleButton .stylebadgetext {
   color: var(--white);
 }
 
-.light .badgeStyleButton .stylebadgetext{
+.light .badgeStyleButton .stylebadgetext {
   color: var(--light-text);
 }
 
-.badgeStyleButton .stylebadgetext-mute{
+.badgeStyleButton .stylebadgetext-mute {
   color: var(--white);
   opacity: 50%;
 }
 
-.light .badgeStyleButton .stylebadgetext-mute{
+.light .badgeStyleButton .stylebadgetext-mute {
   color: var(--light-text);
   opacity: 50%;
 }
 
-.badgeStyleButton .stylebadgetext-mute:hover{
+.badgeStyleButton .stylebadgetext-mute:hover {
   color: var(--white);
   opacity: 100%;
 }
 
-.light .badgeStyleButton .stylebadgetext-mute:hover{
+.light .badgeStyleButton .stylebadgetext-mute:hover {
   color: var(--light-text);
   opacity: 100%;
+}
+
+
+
+.badgetoggle {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--secondary); /* Dark background */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.light .badgetoggle {
+  background-color: var(--light-button);
+}
+
+.badgetoggle:hover {
+  background-color: #414141; /* Dark background */
+}
+
+.light .badgetoggle:hover {
+  background-color: #d3d6db;
+}
+
+.disabled-label {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.enabled-label {
+  opacity: 1;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked {
+  background-color: var(--primary); /* Custom blue */
+  border-color: var(--primary);
+}
+
+.custom-checkbox:checked::after {
+  content: "✔";
+  font-size: 12px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* font-weight: bold; */
+}
+
+.light .custom-checkbox:checked::after {
+  color: black;
+}
+
+.selected-badge {
+  background-color: var(--primary) !important;
+}
+
+.selected-badge:hover {
+  background-color: var(--primary) !important;
+}
+
+.selected-text {
+  color: black !important;
+}
+
+.badge-text {
+  color: var(--text);
+}
+
+.light .badge-text {
+  color: var(--light-text);
+}
+
+/* Badge Selection Container */
+.badge-selection-container {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background-color: var(--background); /* Dark Background */
+  transition: all 0.2s ease-in-out;
+}
+
+.light .badge-selection-container {
+  background-color: var(--light-background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.badge-selection-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.light .badge-selection-title {
+  color: var(--light-text);
+}
+
+/* Checkbox Labels */
+.badge-checkbox {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--secondary);
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.light .badge-checkbox {
+  background-color: var(--light-button);
+  color: var(--light-text);
+}
+
+/* Checkbox Checked State */
+.badge-checkbox.active {
+  background-color: #414141;
+  border-color: #414141;
+  color: #ffffff;
+}
+
+.light .badge-checkbox.active {
+  background-color: #c7cad3;
+  border-color: #d3d6db;
+  color: black;
+}
+
+/* Hover Effect */
+.badge-checkbox:hover {
+  background-color: #414141;
+}
+
+.light .badge-checkbox:hover {
+  background-color: #c7cad3;
+}
+
+/* Checkbox Inside Label */
+.badge-checkbox input {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .badge-checkbox {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+}
+
+.badge-checkbox .checkbox-element {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.badge-checkbox .checkbox-element:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.light .badge-checkbox .checkbox-element:checked {
+  background-color: #c7cad3;
+  border-color: #c7cad3;
+}
+
+.badge-checkbox .checkbox-element:checked::after {
+  content: "✔";
+  font-size: 12px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

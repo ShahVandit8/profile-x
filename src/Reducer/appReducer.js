@@ -1119,6 +1119,31 @@ const AppReducer = (state, action) => {
                 },
             };
 
+        case "TOGGLE_BADGE":
+            return {
+                ...state,
+                badges: {
+                    ...state.badges,
+                    [action.payload.title]: {
+                        ...state.badges[action.payload.title],
+                        selected: !state.badges[action.payload.title].selected,
+                    },
+                },
+            };
+
+        case "TOGGLE_GITHUB_STATS":
+            return {
+                ...state,
+                badges: {
+                    ...state.badges,
+                    githubStatsCard: {
+                        ...state.badges.githubStatsCard,
+                        [action.payload.keyToHide]:
+                            !state.badges.githubStatsCard[action.payload.keyToHide],
+                    },
+                },
+            };
+
         case "ADD_SUPPORT":
             return {
                 ...state,
