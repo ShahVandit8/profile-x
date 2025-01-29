@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import useApp from '../../../Context/AppContext';
 import BadgeStyleButton from '../misc/BadgeStyleButton';
 import { colorStore } from '../../../Reducer/appReducer.js';
@@ -8,7 +8,25 @@ import ToggleBadgeElementCheckbox from '../misc/ToggleBadgeElementCheckbox.js';
 const Badges = () => {
 
   const { state, dispatch } = useApp()
-  const [badgesShowing, setBadgeShowing] = useState(true);
+  const [badgesShowing, setBadgeShowing] = useState(false);
+
+  useEffect(() => {
+    if (state.badges.githubCommitsGraph.selected ||
+      state.badges.githubFollowers.selected ||
+      state.badges.githubStatsCard.selected ||
+      state.badges.githubStreak.selected ||
+      state.badges.githubVisits.selected ||
+      state.badges.reposCard.selected ||
+      state.badges.topLangsCard.selected ||
+      state.badges.twitchStatus.selected ||
+      state.badges.twitterFollowers.selected) {
+      console.log("Yes it is selected")
+      setBadgeShowing(true);
+    }
+    else {
+      setBadgeShowing(false);
+    }
+  }, [state]);
 
   const handleStyleBadge = (e) => {
     console.log(e.currentTarget.name)
@@ -40,9 +58,9 @@ const Badges = () => {
     });
   }
 
-  const handleBadgeElementToggle = (e) => { 
+  const handleBadgeElementToggle = (e) => {
     dispatch({
-      type:"TOGGLE_GITHUB_STATS",
+      type: "TOGGLE_GITHUB_STATS",
       payload: {
         keyToHide: e.currentTarget.name,
       },
@@ -127,8 +145,8 @@ const Badges = () => {
               />
             </article>
           </article>
-          <article className="d-flex flex-column mb-4">
-            <h4 className="mb-2">GitHub</h4>
+          <article className="d-flex flex-column mb-3">
+            <h4 className="mb-3">GitHub</h4>
             {!state.socials.github.linkSuffix ? (
               <p className="stylebadgesubtext mb-2">
                 Please{" "}
@@ -143,7 +161,7 @@ const Badges = () => {
                 in the socials section.
               </p>
             ) : null}
-            <article className="mb-4">
+            <article className="mb-3">
               <BadgeCheckboxButton
                 badgeType={"githubStatsCard"}
                 profileLink={"github"}
@@ -177,9 +195,104 @@ const Badges = () => {
                   ))}
                 </div>
               </article>
-
             </article>
+
+            <article className="mb-3">
+              <BadgeCheckboxButton
+                badgeType={"githubStreak"}
+                profileLink={"github"}
+                badgeText={"Commit Streak"}
+                handleBadgeToggle={handleBadgeToggle}
+              />
+            </article>
+
+            <article className="mb-3">
+              <BadgeCheckboxButton
+                badgeType={"githubCommitsGraph"}
+                profileLink={"github"}
+                badgeText={"Commits Graph"}
+                handleBadgeToggle={handleBadgeToggle}
+              />
+            </article>
+
+            <article className="mb-3">
+              <BadgeCheckboxButton
+                badgeType={"topLangsCard"}
+                profileLink={"github"}
+                badgeText={"Top Languages"}
+                handleBadgeToggle={handleBadgeToggle}
+              />
+            </article>
+
+            {/* Repository Card */}
+            <article className="mb-3">
+              <BadgeCheckboxButton
+                badgeType={"reposCard"}
+                profileLink={"github"}
+                badgeText={"Top Repositories"}
+                handleBadgeToggle={handleBadgeToggle}
+              />
+            </article>
+
+            <article className="mb-3">
+              <BadgeCheckboxButton
+                badgeType={"githubFollowers"}
+                profileLink={"github"}
+                badgeText={"Follower Count"}
+                handleBadgeToggle={handleBadgeToggle}
+              />
+            </article>
+
           </article>
+
+          <article className="d-flex flex-column mb-3">
+            <h4 className="mb-3">X (Twitter)</h4>
+            {!state.socials.twitter.linkSuffix ? (
+              <p className="stylebadgesubtext mb-2">
+                Please{" "}
+                <a className='style-anchor' onClick={() => {
+                  dispatch({
+                    type: "SHOW_SECTION",
+                    payload: "socials",
+                  });
+                }}>
+                  add your X profile
+                </a>{" "}
+                in the socials section.
+              </p>
+            ) : null}
+            <BadgeCheckboxButton
+              badgeType={"twitterFollowers"}
+              profileLink={"twitter"}
+              badgeText={"Follower Count"}
+              handleBadgeToggle={handleBadgeToggle}
+            />
+          </article>
+
+          <article className="d-flex flex-column mb-3">
+            <h4 className="mb-3">Twitch</h4>
+            {!state.socials.twitch.linkSuffix ? (
+              <p className="stylebadgesubtext mb-2">
+                Please{" "}
+                <a className='style-anchor' onClick={() => {
+                  dispatch({
+                    type: "SHOW_SECTION",
+                    payload: "socials",
+                  });
+                }}>
+                  add your Twitch profile
+                </a>{" "}
+                in the socials section.
+              </p>
+            ) : null}
+            <BadgeCheckboxButton
+              badgeType={"twitchStatus"}
+              profileLink={"twitch"}
+              badgeText={"Streaming Status"}
+              handleBadgeToggle={handleBadgeToggle}
+            />
+          </article>  
+          <br />
           <div className="button-grop">
             <div className=" d-flex justify-content-between mt-3">
               <button

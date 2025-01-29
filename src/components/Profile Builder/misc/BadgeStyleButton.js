@@ -20,8 +20,7 @@ const BadgeStyleButton = ({
                     onClick={handleStyleBadge}
                     name={badgeKeyToHide}
                     type='button'
-                    className='btn btn-sm'
-                    disabled={!badgesShowing}
+                    className={`btn btn-sm ${badgesShowing ? "enabled-label" : "disabled-label"}`}
                 >
                     <div className="d-flex">
                         <div
