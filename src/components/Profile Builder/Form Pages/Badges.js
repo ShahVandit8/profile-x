@@ -371,7 +371,7 @@ const Badges = () => {
             <BadgeCheckboxButton
               badgeType={"twitterFollowers"}
               profileLink={"twitter"}
-              badgeText={"Follower Count"}
+              badgeText={"Follow Button"}
               handleBadgeToggle={handleBadgeToggle}
             />
           </article>
