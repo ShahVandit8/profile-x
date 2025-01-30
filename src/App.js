@@ -42,7 +42,7 @@ const CreateProfileWithPopup = () => {
           </div>
         </div>
       )}
-      {!showPopup && <CreateProfile />} {/* Show the CreateProfile component only when popup is dismissed */}
+      {!showPopup && <CreateProfile />}
     </>
   );
 };
@@ -55,7 +55,6 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Landing />} />
           <Route path="create-profile" element={<CreateProfileWithPopup />} >
-            {/* <Route path="" element={<Main />} /> */}
           </Route>
         </Routes>
       </Router>

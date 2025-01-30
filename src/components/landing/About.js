@@ -1,8 +1,12 @@
 import React from 'react'
-
-import aboutImg from "../../assets/images/landing/about.png";
+import useApp from '../../Context/AppContext';
+import aboutDark from "../../assets/images/landing/about-img.png";
+import aboutLight from "../../assets/images/landing/about-light.png";
 
 const About = () => {
+
+    const { state } = useApp();
+
     return (
         <>
             {/* ====== About Start ====== */}
@@ -22,7 +26,7 @@ const About = () => {
                             </div>
                         </div>
                         <div className="ud-about-image">
-                            <img src={aboutImg} className='about-img' alt="about-image" />
+                            <img src={state.theme === "dark" ? aboutLight : aboutDark} className="about-img" alt="about-image" />
                         </div>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ import useApp from '../../Context/AppContext.js';
 
 const Landing = () => {
 
-  const { state, dispatch } = useApp()
+  const { state } = useApp()
 
   return (
     <div className={state.theme === "dark" ? "dark" : "light"}>

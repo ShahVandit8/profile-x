@@ -36,7 +36,7 @@ const Footer = () => {
                             </div>
                             <div className="col-md-4">
                                 <p className="ud-footer-bottom-right">
-                                    Project Developed By &nbsp;
+                                    Project Developed with ❤️ and ☕ By&nbsp;
                                     <a href="https://github.com/ShahVandit8" rel="nofollow">
                                         Vandit Shah
                                     </a>

@@ -1,7 +1,7 @@
-import React, { useRef, useContext, forwardRef } from 'react'
+import React, { useRef, forwardRef } from 'react'
 import useApp from '../../../Context/AppContext';
 
-const Socials = forwardRef(({ }, ref) => {
+const Socials = forwardRef(({ }) => {
 
   const { state, dispatch } = useApp()
 
@@ -14,11 +14,9 @@ const Socials = forwardRef(({ }, ref) => {
   const facebookRef = useRef();
   const githubRef = useRef();
   const hashnodeRef = useRef();
-  const polyworkRef = useRef();
   const instagramRef = useRef();
   const linkedinRef = useRef();
   const mediumRef = useRef();
-  const rssRef = useRef();
   const stackoverflowRef = useRef();
   const threadsRef = useRef();
   const twitchRef = useRef();
@@ -257,7 +255,7 @@ const Socials = forwardRef(({ }, ref) => {
           <div className="form-field">
             <span className="d-block"><img src={state.theme === "dark" ? "icons/socials/medium-dark.svg" : "icons/socials/medium.svg"} alt="medium" className='form-icon' /> Medium Profile:</span>
             <div class="input-box">
-              <p class="prefix">https://www.medium.com/</p>
+              <p class="prefix">https://www.medium.com/@</p>
               <input type="text" placeholder="username" value={state.socials.medium.linkSuffix} ref={mediumRef}
                 onChange={() =>
                   dispatch({
@@ -287,7 +285,7 @@ const Socials = forwardRef(({ }, ref) => {
           <div className="form-field">
             <span className="d-block"><img src="icons/socials/discord.svg" alt="discord" className='form-icon' /> Discord Code:</span>
             <div class="input-box">
-              <p class="prefix">https://www.discord.com/user/</p>
+              <p class="prefix">https://www.discord.com/users/</p>
               <input type="text" placeholder="username" value={state.socials.discord.linkSuffix} ref={discordRef}
                 onChange={() =>
                   dispatch({

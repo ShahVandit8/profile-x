@@ -825,7 +825,6 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  border: 2px solid var(--white);
 }
 
 .dark .ud-hero-image img {
@@ -985,7 +984,6 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  border: 2px solid var(--white);
 }
 
 .light .ud-hero-image img {
@@ -1341,9 +1339,8 @@
 }
 
 .dark .about-img {
-  height: 50lvh;
+  height: 60lvh;
   width: auto;
-  border: 1px solid var(--white);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
@@ -1453,9 +1450,8 @@
 }
 
 .light .about-img {
-  height: 50lvh;
+  height: 60lvh;
   width: auto;
-  border: 1px solid var(--light-text);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),

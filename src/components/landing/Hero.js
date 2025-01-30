@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import useApp from '../../Context/AppContext.js';
 import dotshape from "../../assets/images/landing/dotted-shape.svg";
 import dotshapedark from "../../assets/images/landing/dotted-shape-dark.svg";
-import mockdark from "../../assets/images/landing/mock-dark.png";
-import mocklight from "../../assets/images/landing/mock-light.png";
+import mockdark from "../../assets/images/landing/hero-dark.png";
+import mocklight from "../../assets/images/landing/hero-light.png";
 
 import { Link } from "react-router-dom";
 
 const Hero = () => {
 
-    const { state, dispatch } = useApp()
+    const { state } = useApp()
 
     return (
         <div>

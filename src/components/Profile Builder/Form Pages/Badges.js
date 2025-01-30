@@ -1,14 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import useApp from '../../../Context/AppContext';
 import BadgeStyleButton from '../misc/BadgeStyleButton';
 import { colorStore } from '../../../Reducer/appReducer.js';
 import BadgeCheckboxButton from '../misc/BadgeCheckboxButton.js';
 import ToggleBadgeElementCheckbox from '../misc/ToggleBadgeElementCheckbox.js';
+import AddRepoInput from '../misc/AddRepoInput.js';
+import DeleteRepo from '../misc/DeleteRepo.js';
+import AddRepo from '../misc/AddRepo.js';
 
 const Badges = () => {
 
   const { state, dispatch } = useApp()
   const [badgesShowing, setBadgeShowing] = useState(false);
+
+  // Repo Card Refs
+  const repoOneRef = useRef();
+  const repoTwoRef = useRef();
+  const repoThreeRef = useRef();
+  const repoFourRef = useRef();
 
   useEffect(() => {
     if (state.badges.githubCommitsGraph.selected ||
@@ -20,7 +29,6 @@ const Badges = () => {
       state.badges.topLangsCard.selected ||
       state.badges.twitchStatus.selected ||
       state.badges.twitterFollowers.selected) {
-      console.log("Yes it is selected")
       setBadgeShowing(true);
     }
     else {
@@ -232,6 +240,105 @@ const Badges = () => {
                 badgeText={"Top Repositories"}
                 handleBadgeToggle={handleBadgeToggle}
               />
+
+              <article
+                className={`toprepo-container d-flex flex-column overflow-hidden ${state.badges.reposCard.selected ? "d-block" : "d-none translate-up"
+                  }`}
+              >
+                <p className="badge-selection-title mb-0">
+                  Find Repositories
+                </p>
+                <p className="toprepo-subtext mb-2">
+                  The repository must be the same as it is on your GitHub (including
+                  hyphens, NOT case-sensitive).
+                </p>
+
+                <article className="row g-2 mb-3">
+                  <div className="col-12">
+                    <AddRepoInput
+                      ref={repoOneRef}
+                      section={"reposCard"}
+                      type={"repoOne"}
+                      placeholder={"repo-name"}
+                      action={"ADD_REPO"}
+                    />
+                  </div>
+
+                  {state.badges.reposCard.repoTwo != null ? (
+                    <article className="flex gap-x-2 h-9.5 input-group">
+                      <AddRepoInput
+                        ref={repoTwoRef}
+                        section={"reposCard"}
+                        type={"repoTwo"}
+                        placeholder={"repo-name"}
+                        action={"ADD_REPO"}
+                      />
+                      <DeleteRepo
+                        type={"repoTwo"}
+                      />
+                    </article>
+                  ) : null}
+
+                  {state.badges.reposCard.repoThree != null ? (
+                    <article className="flex gap-x-2 h-9.5 input-group">
+                      <AddRepoInput
+                        ref={repoThreeRef}
+                        section={"reposCard"}
+                        type={"repoThree"}
+                        placeholder={"repo-name"}
+                        action={"ADD_REPO"}
+                      />
+                      <DeleteRepo
+                        type={"repoThree"}
+                      />
+                    </article>
+                  ) : null}
+
+                  {state.badges.reposCard.repoFour != null ? (
+                    <article className="flex gap-x-2 h-9.5 input-group">
+                      <AddRepoInput
+                        ref={repoFourRef}
+                        section={"reposCard"}
+                        type={"repoFour"}
+                        placeholder={"repo-name"}
+                        action={"ADD_REPO"}
+                      />
+                      <DeleteRepo
+                        type={"repoFour"}
+                      />
+                    </article>
+                  ) : null}
+
+                </article>
+
+                {state.badges.reposCard.repoTwo != null ? null : (
+                  <>
+                    <AddRepo
+                      repoNumberToAdd={"repoTwo"}
+                    />
+                  </>
+                )}
+
+                {state.badges.reposCard.repoThree != null ||
+                  state.badges.reposCard.repoTwo == null ? null : (
+                  <>
+                    <AddRepo
+                      repoNumberToAdd={"repoThree"}
+                    />
+                  </>
+                )}
+
+                {state.badges.reposCard.repoFour != null ||
+                  state.badges.reposCard.repoTwo == null ||
+                  state.badges.reposCard.repoThree == null ? null : (
+                  <>
+                    <AddRepo
+                      repoNumberToAdd={"repoFour"}
+                    />
+                  </>
+                )}
+              </article>
+
             </article>
 
             <article className="mb-3">
@@ -291,7 +398,7 @@ const Badges = () => {
               badgeText={"Streaming Status"}
               handleBadgeToggle={handleBadgeToggle}
             />
-          </article>  
+          </article>
           <br />
           <div className="button-grop">
             <div className=" d-flex justify-content-between mt-3">

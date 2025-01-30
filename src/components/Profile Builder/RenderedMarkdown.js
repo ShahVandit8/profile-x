@@ -4,7 +4,6 @@ import useApp from "../../Context/AppContext";
 const RenderedMarkdown = forwardRef(({ }, ref) => {
   const { state } = useApp();
 
-  // Start with an empty array to hold markdown lines
   let markdownContent = [];
 
   // Add name and subtitle (if available)
@@ -24,8 +23,10 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
   const allLists = [];
 
   const introductionList = [];
+  const badgefollowList = [];
   const skillsList = [];
   const socialList = [];
+  const badgeList = [];
   const supportList = [];
 
   if (state.introduction.location) {
@@ -45,8 +46,13 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
   }
 
   if (state.introduction.workingOnTitle) {
-    const link = state.introduction.workingOnLink ? `(${state.introduction.workingOnLink})` : "";
-    introductionList.push(`- 🔭 I'm currently working on [${state.introduction.workingOnTitle}]${link}`);
+    if (state.introduction.workingOnLink) {
+      const link = state.introduction.workingOnLink ? `(${state.introduction.workingOnLink})` : "";
+      introductionList.push(`- 🔭 I'm currently working on [${state.introduction.workingOnTitle}]${link}`);
+    }
+    else {
+      introductionList.push(`- 🔭 I'm currently working on ${state.introduction.workingOnTitle}`);
+    }
   }
 
   if (state.introduction.learning) {
@@ -61,21 +67,34 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
     introductionList.push(`- ⚡ Fun fact about me: ${state.introduction.funfact}`);
   }
 
-  introductionList.push("")
+  introductionList.push(" ")
 
   allLists.push(introductionList.join("\n"));
 
-  if (state.skills.core.length >= 1 ||
-    state.skills.frontend.length >= 1 ||
-    state.skills.backend.length >= 1 ||
-    state.skills.other.length >= 1 ||
-    state.skills.software.length >= 1 ||
-    state.skills.web3.length >= 1 ||
-    state.skills.cloud.length >= 1){
-      skillsList.push(`### Skills`);
-      skillsList.push("");
-    }
-  
+  if (state.badges.githubFollowers.selected) {
+    badgefollowList.push(
+      `<a href="${state.socials.github.linkPrefix}${state.socials.github.linkSuffix}" target="_blank" rel="noreferrer"><img
+                  src="https://img.shields.io/github/followers/${state.socials.github.linkSuffix}?logo=github&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}" /></a> &nbsp;`
+    )
+  }
+
+  if (state.badges.twitterFollowers.selected) {
+    badgefollowList.push(
+      `<a href="${state.socials.twitter.linkPrefix}${state.socials.twitter.linkSuffix}" target="_blank" rel="noreferrer"><img
+                  src="https://img.shields.io/twitter/follow/${state.socials.twitter.linkSuffix}?logo=x&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}" /></a> &nbsp;`
+
+    )
+  }
+
+  if (state.badges.twitchStatus.selected) {
+    badgefollowList.push(
+      `<a href="${state.socials.twitch.linkPrefix}${state.socials.twitch.linkSuffix}" target="_blank" rel="noreferrer"><img
+                  src="https://img.shields.io/twitch/status/${state.socials.twitch.linkSuffix}?logo=twitch&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}&label=TWITCH+STATUS" /></a> &nbsp;`
+    )
+  }
+
+  allLists.push(badgefollowList.join("\n"));
+
   if (state.skills.core.length >= 1 ||
     state.skills.frontend.length >= 1 ||
     state.skills.backend.length >= 1 ||
@@ -83,29 +102,40 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
     state.skills.software.length >= 1 ||
     state.skills.web3.length >= 1 ||
     state.skills.cloud.length >= 1) {
-      if (Object.values(state.skills).some((arr) => arr.length > 0)) {
-        Object.values(state.skills).flat().forEach((icon) => {
-          if(icon.darkPath){
-            skillsList.push(
-              `<a href="${icon.link}" target="_blank" rel="noreferrer"><picture>
-              <img height="36" width="36" src="${icon.darkPath}" alt="${icon.name}" />
-              </picture></a>`
-            );
-          }
-          else {
-            skillsList.push(
-              `<a href="${icon.link}" target="_blank" rel="noreferrer"><picture>
-              <img height="36" width="36" src="${icon.path}" alt="${icon.name}" />
-              </picture></a>`
-            );
-          }
-        });
-      }
+    skillsList.push(`### Skills`);
+    skillsList.push("");
   }
 
-  skillsList.push("")  
+  if (state.skills.core.length >= 1 ||
+    state.skills.frontend.length >= 1 ||
+    state.skills.backend.length >= 1 ||
+    state.skills.other.length >= 1 ||
+    state.skills.software.length >= 1 ||
+    state.skills.web3.length >= 1 ||
+    state.skills.cloud.length >= 1) {
+    if (Object.values(state.skills).some((arr) => arr.length > 0)) {
+      Object.values(state.skills).flat().forEach((icon) => {
+        if (icon.darkPath) {
+          skillsList.push(
+            `<a href="${icon.link}" target="_blank" rel="noreferrer"><picture>
+              <img height="36" width="36" src="${icon.darkPath}" alt="${icon.name}" />
+              </picture></a> &nbsp;`
+          );
+        }
+        else {
+          skillsList.push(
+            `<a href="${icon.link}" target="_blank" rel="noreferrer"><picture>
+              <img height="36" width="36" src="${icon.path}" alt="${icon.name}" />
+              </picture></a> &nbsp;`
+          );
+        }
+      });
+    }
+  }
+
+  skillsList.push("")
   allLists.push(skillsList.join("\n"));
-  
+
 
   if (state.socials.github.linkSuffix.trim().length ||
     state.socials.twitter.linkSuffix.trim().length ||
@@ -134,7 +164,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.github.darkPath}" alt="github" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -144,7 +174,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.twitter.darkPath}" alt="Twitter" />
       </picture>
-    </a>`
+    </a> &nbsp;`
     );
   }
 
@@ -154,7 +184,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.devdotto.darkPath}" alt="devdotto" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -164,7 +194,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.codepen.darkPath}" alt="codepen" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -174,7 +204,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.codesandbox.darkPath}" alt="codesandbox" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -184,7 +214,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.stackoverflow.path}" alt="stackoverflow" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -194,7 +224,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.linkedin.path}" alt="linkedin" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -204,7 +234,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.facebook.path}" alt="facebook" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -214,7 +244,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.instagram.path}" alt="instagram" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -224,7 +254,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.threads.darkPath}" alt="threads" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -234,7 +264,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.dribbble.path}" alt="dribbble" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -244,7 +274,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.behance.path}" alt="behance" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -254,37 +284,37 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.hashnode.path}" alt="hashnode" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
   if (state.socials.medium.linkSuffix.trim().length) {
     socialList.push(
-      `<a href="https://www.medium.com/${state.socials.medium.linkSuffix}" target="_blank" rel="noreferrer">
+      `<a href="https://www.medium.com/@${state.socials.medium.linkSuffix}" target="_blank" rel="noreferrer">
       <picture>
       <img height="30" width="30" src="${state.socials.medium.darkPath}" alt="medium" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
   if (state.socials.youtube.linkSuffix.trim().length) {
     socialList.push(
-      `<a href="https://www.youtube.com/@${state.socials.youtube.linkSuffix}" target="_blank" rel="noreferrer">
+      `<a class="margin-right: 10px" href="https://www.youtube.com/@${state.socials.youtube.linkSuffix}" target="_blank" rel="noreferrer">
       <picture>
       <img height="30" width="30" src="${state.socials.youtube.path}" alt="youtube" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
   if (state.socials.discord.linkSuffix.trim().length) {
     socialList.push(
-      `<a href="https://www.discord.com/user/${state.socials.discord.linkSuffix}" target="_blank" rel="noreferrer">
+      `<a href="https://www.discord.com/users/${state.socials.discord.linkSuffix}" target="_blank" rel="noreferrer">
       <picture>
       <img height="30" width="30" src="${state.socials.discord.path}" alt="discord" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
@@ -294,13 +324,103 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       <picture>
       <img height="30" width="30" src="${state.socials.twitch.path}" alt="twitch" />
       </picture>
-      </a>`
+      </a> &nbsp;`
     );
   }
 
   socialList.push("")
 
   allLists.push(socialList.join("\n"));
+
+  if (state.badges.githubCommitsGraph.selected ||
+    state.badges.githubStatsCard.selected ||
+    state.badges.githubStreak.selected ||
+    state.badges.reposCard.selected ||
+    state.badges.topLangsCard.selected) {
+    badgeList.push("### Badges")
+  }
+
+  if (state.badges.githubStatsCard.selected ||
+    state.badges.githubCommitsGraph.selected ||
+    state.badges.githubStreak.selected ||
+    state.badges.topLangsCard.selected) {
+    badgeList.push(`#### My GitHub Stats`);
+    badgeList.push(" ")
+  }
+
+  if (state.badges.githubStatsCard.selected) {
+    badgeList.push(
+      `<a
+                      href="http://www.github.com/${state.socials.github.linkSuffix
+      }"><img src="https://github-readme-stats.vercel.app/api?username=${state.socials.github.linkSuffix
+      }&show_icons=true&hide=${state.badges.githubStatsCard.stars ? "" : "stars,"
+      }${state.badges.githubStatsCard.commits ? "" : "commits,"}${state.badges.githubStatsCard.prs ? "" : "prs,"
+      }${state.badges.githubStatsCard.issues ? "" : "issues,"}${state.badges.githubStatsCard.contribs ? "" : "contribs"
+      }${state.badges.githubStatsCard.privateCommits
+        ? "&count_private=true"
+        : ""
+      }&title_color=${state.badges.cardStyle.titleColor
+      }&text_color=${state.badges.cardStyle.textColor}&icon_color=${state.badges.cardStyle.iconColor
+      }&bg_color=${state.badges.cardStyle.bgColor
+      }&hide_border=true&show_icons=true" alt="${state.socials.github.linkSuffix
+      }'s GitHub stats" /></a> <br/>`
+    );
+  }
+
+  if (state.badges.githubStreak.selected) {
+    badgeList.push("<br/>")
+    badgeList.push(
+      `<a href="http://www.github.com/${state.socials.github.linkSuffix}"><img
+          src="https://streak-stats.demolab.com/?user=${state.socials.github.linkSuffix
+      }&stroke=${state.badges.cardStyle.textColor
+      }&background=${state.badges.cardStyle.bgColor
+      }&ring=${state.badges.cardStyle.titleColor
+      }&fire=${state.badges.cardStyle.titleColor
+      }&currStreakNum=${state.badges.cardStyle.textColor
+      }&currStreakLabel=${state.badges.cardStyle.titleColor
+      }&sideNums=${state.badges.cardStyle.textColor
+      }&sideLabels=${state.badges.cardStyle.textColor
+      }&dates=${state.badges.cardStyle.textColor}&hide_border=true" /></a> <br/>`
+    );
+  }
+
+  if (state.badges.githubCommitsGraph.selected) {
+    badgeList.push("<br/>")
+    badgeList.push(
+      `<a href="http://www.github.com/${state.socials.github.linkSuffix}"><img width="75%" src="https://github-readme-activity-graph.vercel.app/graph?username=${state.socials.github.linkSuffix}&bg_color=${state.badges.cardStyle.bgColor}&color=${state.badges.cardStyle.textColor}&line=${state.badges.cardStyle.iconColor}&point=${state.badges.cardStyle.textColor}&area_color=${state.badges.cardStyle.bgColor}&area=true&hide_border=true&custom_title=GitHub%20Commits%20Graph" /></a> <br/>`
+    );
+  }
+
+  if (state.badges.topLangsCard.selected) {
+    badgeList.push("<br/>")
+    badgeList.push(
+      `<a href="https://github.com/${state.socials.github.linkSuffix}" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=${state.socials.github.linkSuffix}&langs_count=10&title_color=${state.badges.cardStyle.titleColor}&text_color=${state.badges.cardStyle.textColor}&icon_color=${state.badges.cardStyle.iconColor}&bg_color=${state.badges.cardStyle.bgColor}&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a> <br/>`
+    );
+  }
+
+  if (state.badges.reposCard.selected) {
+    badgeList.push(" ")
+    badgeList.push('#### Top Repositories')
+    badgeList.push(" ")
+  }
+
+  if (state.badges.reposCard.selected) {
+    if (state.badges.reposCard.repoOne) {
+      badgeList.push(`<div><a style="margin-bottom: 10px" href="https://github.com/${state.socials.github.linkSuffix}/${state.badges.reposCard.repoOne}" ><img  width="40%" src="https://github-readme-stats.vercel.app/api/pin/?username=${state.socials.github.linkSuffix}&repo=${state.badges.reposCard.repoOne}&title_color=${state.badges.cardStyle.titleColor}&text_color=${state.badges.cardStyle.textColor}&icon_color=${state.badges.cardStyle.iconColor}&bg_color=${state.badges.cardStyle.bgColor}&hide_border=true&locale=en" /></a></div>`)
+    }
+    if (state.badges.reposCard.repoTwo) {
+      badgeList.push(`<div><a style="margin-bottom: 10px" href="https://github.com/${state.socials.github.linkSuffix}/${state.badges.reposCard.repoTwo}" ><img width="40%" src="https://github-readme-stats.vercel.app/api/pin/?username=${state.socials.github.linkSuffix}&repo=${state.badges.reposCard.repoTwo}&title_color=${state.badges.cardStyle.titleColor}&text_color=${state.badges.cardStyle.textColor}&icon_color=${state.badges.cardStyle.iconColor}&bg_color=${state.badges.cardStyle.bgColor}&hide_border=true&locale=en" /></a></div>`)
+    }
+    if (state.badges.reposCard.repoThree) {
+      badgeList.push(`<div><a style="margin-bottom: 10px" href="https://github.com/${state.socials.github.linkSuffix}/${state.badges.reposCard.repoThree}" ><img width="40%" src="https://github-readme-stats.vercel.app/api/pin/?username=${state.socials.github.linkSuffix}&repo=${state.badges.reposCard.repoThree}&title_color=${state.badges.cardStyle.titleColor}&text_color=${state.badges.cardStyle.textColor}&icon_color=${state.badges.cardStyle.iconColor}&bg_color=${state.badges.cardStyle.bgColor}&hide_border=true&locale=en" /></a></div>`)
+    }
+    if (state.badges.reposCard.repoFour) {
+      badgeList.push(`<div><a style="margin-bottom: 10px" href="https://github.com/${state.socials.github.linkSuffix}/${state.badges.reposCard.repoFour}" ><img width="40%" src="https://github-readme-stats.vercel.app/api/pin/?username=${state.socials.github.linkSuffix}&repo=${state.badges.reposCard.repoFour}&title_color=${state.badges.cardStyle.titleColor}&text_color=${state.badges.cardStyle.textColor}&icon_color=${state.badges.cardStyle.iconColor}&bg_color=${state.badges.cardStyle.bgColor}&hide_border=true&locale=en" /></a></div>`)
+    }
+  }
+
+  badgeList.push(" ")
+  allLists.push(badgeList.join("\n"));
 
 
   if (state.support.buymeacoffee.linkSuffix.trim().length ||
@@ -332,11 +452,9 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
 
   allLists.push(supportList.join("\n"));
 
-
-  // Now join the lists with a single line break
   const finalListMarkdown = allLists.join("\n");
 
-  // Join everything (name, subtitle, long description and list) with double line breaks
+
   const finalMarkdown = [
     ...markdownContent,
     finalListMarkdown
@@ -344,7 +462,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
 
   return (
     <div className="markdown-container" ref={ref}>
-      <p>{finalMarkdown}</p> {/* Using <pre> to retain markdown formatting */}
+      <p>{finalMarkdown}</p>
     </div>
   );
 });

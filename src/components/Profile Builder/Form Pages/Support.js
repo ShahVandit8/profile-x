@@ -1,13 +1,11 @@
 import React, { useRef, forwardRef } from 'react'
 import useApp from '../../../Context/AppContext';
 
-const Support = forwardRef(({ }, ref) => {
+const Support = forwardRef(({ }) => {
 
   const { state, dispatch } = useApp()
-
   const buymeacoffeeRef = useRef();
   const kofiRef = useRef();
-
 
   return (
     <>

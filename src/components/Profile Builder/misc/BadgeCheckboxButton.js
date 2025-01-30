@@ -8,7 +8,7 @@ const BadgeCheckboxButton = ({
     handleBadgeToggle,
 }) => {
 
-    const { state, dispatch } = useApp();
+    const { state } = useApp();
 
     return (
         <>

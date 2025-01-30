@@ -20,16 +20,6 @@ const Main = () => {
   const { state, dispatch } = useApp()
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Section Refs
-  const introductionRef = useRef(null);
-  const skillsTitleRef = useRef(null);
-  const skillsRef = useRef(null);
-  const socialsTitleRef = useRef(null);
-  const socialsRef = useRef(null);
-  const badgesTitleRef = useRef(null);
-  const badgesRef = useRef(null);
-  const supportRef = useRef(null);
-
   const previewRef = useRef(null);
   const renderedMarkdownRef = useRef(null);
 
@@ -57,17 +47,6 @@ const Main = () => {
   });
 
   const copyMarkdown = async (copyText) => {
-    // try {
-    //   await navigator.clipboard.writeText(copyText);
-    //   setCopyStatus("Copied");
-    //   const timer = setTimeout(() => {
-    //     setCopyStatus("Copy");
-    //   }, 1000);
-    //   return () => clearTimeout(timer);
-    // } catch (err) {
-    //   setCopyStatus("Failed to copy!");
-    // }
-
     try {
       if (renderedMarkdownRef.current) {
         if (renderedMarkdownRef.current.innerText) {

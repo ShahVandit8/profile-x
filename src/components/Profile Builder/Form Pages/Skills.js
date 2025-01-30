@@ -4,7 +4,7 @@ import IconSection from '../misc/IconSection';
 
 const Skills = () => {
 
-  const { state, dispatch } = useApp()
+  const { dispatch } = useApp()
 
   return (
     <>

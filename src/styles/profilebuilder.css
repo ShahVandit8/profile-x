@@ -30,6 +30,13 @@
   border-right: 1px solid #333c47;
 }
 
+@media only screen and (max-width: 600px) {
+  .dark .sidebar {
+    width: 96%;
+    z-index: 999;
+  }
+}
+
 .dark .sidebar header {
   position: relative;
   margin-top: 20px;
@@ -259,6 +266,13 @@
   transition: all 0.2s ease;
   /* box-shadow: 15px 0px 17px -3px rgba(0,0,0,0.1); */
   border-bottom: 1px solid var(--border);
+}
+
+@media only screen and (max-width: 600px) {
+  .light .sidebar {
+    width: 96%;
+    z-index: 1000;
+  }
 }
 
 .light .sidebar header {
@@ -898,6 +912,16 @@
   flex: 0 1 auto;
 }
 
+@media only screen and (max-width: 600px) {
+  .right-content {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .light .right-content {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
 .active-btn {
   background-color: var(--primary);
   display: inline-block;
@@ -1211,6 +1235,7 @@
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 0px 20px 20px 20px;
+  border-top: 4px solid var(--primary);
 }
 
 .light .modal-container {
@@ -1218,6 +1243,7 @@
   border-radius: 4px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 0px 20px 20px 20px;
+  border-top: 4px solid var(--primary);
 }
 
 /* Header */
@@ -1238,15 +1264,11 @@
   font-size: 15px;
   border-radius: 5px;
   padding: 5px 10px;
+  font-weight: 300;
 }
 
-.btn-close {
-  margin-left: auto;
-  background: var(--primary);
-}
-
-.btn-close:hover {
-  background: var(--primary);
+.clbtn-light {
+  background-color: var(--light-button);
 }
 
 .btn-sponsor {
@@ -1271,23 +1293,25 @@
 .modal-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
   background-color: var(--background);
   color: var(--text);
   border: none;
   padding: 10px;
   margin-top: 10px;
+  font-size: 15px;
 }
 
 .light .modal-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
   background-color: var(--light-background);
   color: var(--light-text);
   border: none;
   padding: 10px;
   margin-top: 10px;
+  font-size: 15px;
 }
 
 @media (min-width: 768px) {
@@ -1307,10 +1331,12 @@
 
 .modal-content .modal-p {
   color: var(--primary);
+  font-size: 15px;
 }
 
 .light .modal-content .modal-p {
   color: var(--light-text);
+  font-size: 15px;
 }
 
 .modal-bold {
@@ -1500,6 +1526,11 @@
   cursor: pointer;
 }
 
+.light .custom-checkbox {
+  background-color: var(--border);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .custom-checkbox:checked {
   background-color: var(--primary); /* Custom blue */
   border-color: var(--primary);
@@ -1651,4 +1682,77 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Github Top Repo CSS */
+.toprepo-container {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background-color: var(--background); /* Dark Background */
+  transition: all 0.2s ease-in-out;
+}
+
+.light .toprepo-container {
+  background-color: var(--light-background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.toprepo-subtext {
+  font-size: small;
+  color: var(--primary);
+}
+
+.light .toprepo-subtext {
+  font-size: small;
+  color: var(--light-text);
+}
+
+/* Custom transition effect */
+.translate-up {
+  transform: translateY(-12px);
+  opacity: 0;
+  transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+/* Custom input styling */
+
+.toprepo-input {
+  height: 32px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 6px;
+  background-color: var(--secondary) !important;
+  color: var(--text) !important;
+  border: none;
+}
+
+.light .toprepo-input {
+  background-color: var(--light-button) !important;
+  color: var(--light-text) !important;
+}
+
+.toprepo-subtext::placeholder {
+  color: var(--text);
+}
+
+.toprepo-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+/* Spacing fix for DeleteRepo buttons */
+.d-flex.gap-2 {
+  align-items: center;
+}
+
+/* Bootstrap-compatible rounded bottom corners */
+.rounded-bottom {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.toprepo-add {
+  background-color: var(--primary);
 }

@@ -41,7 +41,6 @@ const Navbar = () => {
                                 <nav className="navbar navbar-expand-lg">
                                     <Link className="navbar-brand" to="/">
                                         <span className="nav-title">Profile<i style={{ color: '#ADB4D7', fontWeight: '700' }}>X</i></span>
-                                        {/* <img src={logoWhite} className="nav-logo" alt="Logo" /> */}
                                     </Link>
                                     <button
                                         className="navbar-toggler"
@@ -116,10 +115,6 @@ const Navbar = () => {
                                                 :
                                                 <></>
                                             }
-                                            {/* <i class="fa-regular fa-sun"></i> */}
-                                            {/* <i class="fa-solid fa-moon"></i> */}
-                                            {/* <i className="lni lni-sun" ></i> */}
-                                            {/* <i className="lni lni-moon" ></i> */}
                                         </button>
                                     </div>
                                 </nav>

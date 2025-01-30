@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useApp from "../../Context/AppContext";
 
 const Modal = ({ isOpen, onClose }) => {
+    const { state } = useApp();
+
     if (!isOpen) return null;
 
     return (
@@ -11,13 +14,13 @@ const Modal = ({ isOpen, onClose }) => {
                     <Link className="navbar-brand" style={{ marginTop: '10px' }} to="/">
                         <span style={{ fontWeight: "normal" }} className="nav-title ">Profile<i style={{ color: '#ADB4D7', fontWeight: '700' }}>X</i></span>
                     </Link>
-                    <button onClick={onClose} className="clbtn btn-close">
+                    <button onClick={onClose} className={state.theme==='dark' ? 'btn clbtn btn-secondary' : 'btn clbtn clbtn-light'}>
                         Close
                     </button>
                 </div>
-                <div className="modal-content raw">
+                <div className="modal-content">
                     <div className="modal-left col-6">
-                        <h2>🎉 Success! Code Copied.</h2>
+                        <h3>🎉 Success! Code Copied.</h3>
                         <p className="modal-p">
                         Your code is ready, and with just a few clicks, you'll have a sleek new GitHub profile.
                         </p>

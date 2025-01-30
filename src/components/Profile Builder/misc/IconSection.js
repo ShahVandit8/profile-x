@@ -41,9 +41,6 @@ const IconSection = ({ title, iconType }) => {
             <div className="skill-group">
                 <p>💻 {title}</p>
                 <div className="skills">
-                    {/* <button className="skill-button" data-toggle="tooltip" data-placement="bottom" title="C">
-                        <i className="skill-icon c"></i>
-                    </button> */}
                     {iconData[iconType].map((icon, index) => {
                         return (
                             <button
