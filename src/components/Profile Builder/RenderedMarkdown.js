@@ -353,7 +353,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
       `<a
                       href="http://www.github.com/${state.socials.github.linkSuffix
       }"><img src="https://github-readme-stats.vercel.app/api?username=${state.socials.github.linkSuffix
-      }&show_icons=true&hide=${state.badges.githubStatsCard.stars ? "" : "stars,"
+      }&hide=${state.badges.githubStatsCard.stars ? "" : "stars,"
       }${state.badges.githubStatsCard.commits ? "" : "commits,"}${state.badges.githubStatsCard.prs ? "" : "prs,"
       }${state.badges.githubStatsCard.issues ? "" : "issues,"}${state.badges.githubStatsCard.contribs ? "" : "contribs"
       }${state.badges.githubStatsCard.privateCommits
