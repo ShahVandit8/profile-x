@@ -38,6 +38,10 @@ body {
   color-scheme: light;
 }
 
+.dark {
+  color-scheme: dark;
+}
+
 img {
   max-width: 100%;
 }

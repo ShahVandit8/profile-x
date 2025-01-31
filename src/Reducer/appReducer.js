@@ -2,7 +2,7 @@ export const initialState = {
     theme: "dark",
     section: "introduction",
     renderMode: "preview",
-    sidebar: "open",
+    sidebar: "close",
     // Introduction State
     introduction: {
         name: "",
