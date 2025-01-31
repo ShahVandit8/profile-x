@@ -1276,6 +1276,11 @@
   background-color: var(--light-button);
 }
 
+.clbtn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .btn-sponsor {
   background: var(--primary);
   color: black;
@@ -1284,8 +1289,8 @@
 }
 
 .btn-sponsor:focus {
-  text-decoration: none;
-  border: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .btn-sponsor img {
