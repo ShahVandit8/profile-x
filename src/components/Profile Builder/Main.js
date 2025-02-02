@@ -12,6 +12,7 @@ import Modal from "./Modal";
 import logoDark from '../../assets/images/logo/logo-dark.png'
 import logoLight from '../../assets/images/logo/logo-light.png'
 import { Link } from 'react-router-dom';
+import FinishSection from './Form Pages/Finish.js';
 
 let TurndownService = require("turndown").default;
 
@@ -254,6 +255,9 @@ const Main = () => {
                           state.section === "support" ?
                             <Support />
                             :
+                            state.section === "finish" ?
+                              <FinishSection />
+                              :
                             <></>
                 }
               </div>

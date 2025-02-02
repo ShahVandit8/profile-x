@@ -507,6 +507,7 @@
 
 .headbar {
   border-bottom: 1px solid #333c47;
+  background-color: transparent;
   flex: 0 1 auto;
   padding: 20px;
   padding-left: 25px;
@@ -1490,8 +1491,6 @@
   opacity: 100%;
 }
 
-
-
 .badgetoggle {
   display: flex;
   align-items: center;
@@ -1751,7 +1750,6 @@
   box-shadow: none !important;
 }
 
-
 /* Spacing fix for DeleteRepo buttons */
 .d-flex.gap-2 {
   align-items: center;
@@ -1765,4 +1763,75 @@
 
 .toprepo-add {
   background-color: var(--primary);
+}
+
+/* Finish Section  */
+
+.finish-section {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.light .finish-section {
+  color: #000;
+}
+
+.fs-content {
+  text-align: center;
+  max-width: 80%;
+}
+
+.fs-content .form-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+}
+
+.finish-heading p {
+  color: var(--text) !important;
+  font-weight: 300;
+}
+
+.light .finish-heading p {
+  color: var(--dark-text) !important;
+}
+
+.cta-box {
+  background-color: transparent;
+  border: 1px solid #dee2e6;
+  color: var(--primary) !important;
+}
+
+.light .cta-box {
+  border: 1px solid var(--light-text);
+  color: var(--light-text) !important;
+}
+
+.support-buttons {
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.support-btn {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  padding: 6px 12px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease-in-out;
+  font-size: medium;
+}
+
+.light .support-btn {
+  color: var(--light-text);
+}
+
+.support-btn:hover {
+  background-color: var(--primary);
+  border: 2px solid var(--primary);
+  color: black;
 }

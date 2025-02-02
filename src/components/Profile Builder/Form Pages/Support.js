@@ -24,6 +24,17 @@ const Support = forwardRef(({ }) => {
             <i class="fa-solid fa-arrow-left me-2"></i>
             Previous section
           </button>
+          <button
+                onClick={() => {
+                  dispatch({
+                    type: "SHOW_SECTION",
+                    payload: "finish",
+                  });
+                }}
+                className="btn btn-sm section-btn me-2" style={{ float: 'right' }} type="button">
+                Next section
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+              </button>
         </div>
       </div>
       <div className="content section-content">
@@ -70,6 +81,17 @@ const Support = forwardRef(({ }) => {
                 className="btn btn-sm section-btn me-2" type="button">
                 <i class="fa-solid fa-arrow-left me-2"></i>
                 Previous section
+              </button>
+              <button
+                onClick={() => {
+                  dispatch({
+                    type: "SHOW_SECTION",
+                    payload: "finish",
+                  });
+                }}
+                className="btn btn-sm section-btn me-2" style={{ float: 'right' }} type="button">
+                Next section
+                <i class="fa-solid fa-arrow-right ms-2"></i>
               </button>
             </div>
           </div>
