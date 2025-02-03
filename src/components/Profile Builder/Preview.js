@@ -384,7 +384,7 @@ const Preview = forwardRef(({ }, ref) => {
                     ) : null}
 
                 {state.badges.githubStatsCard.selected ? (
-                    <a
+                    <><a
                         href={`http://www.github.com/${state.socials.github.linkSuffix}`}
                         target="_blank"
                         rel="noreferrer"
@@ -403,6 +403,8 @@ const Preview = forwardRef(({ }, ref) => {
                             className="object-scale-down" alt="GitHub Stats"
                         />
                     </a>
+                        <br />
+                    </>
                 ) : null}
 
                 {state.badges.githubStreak.selected ? (

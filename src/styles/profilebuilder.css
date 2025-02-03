@@ -503,6 +503,15 @@
   flex-direction: column;
 }
 
+@media only screen and (max-width: 755px) {
+  .light-content {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
 /* Section Headbar */
 
 .headbar {
@@ -918,9 +927,12 @@
   flex: 0 1 auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 755px) {
   .right-content {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    margin-left: 12px;
+    margin-right: 0;
   }
 
   .light .right-content {
@@ -1788,7 +1800,6 @@
 .fs-content .form-icon {
   height: 20px;
   width: 20px;
-  margin-right: 8px;
 }
 
 .finish-heading p {
@@ -1834,4 +1845,25 @@
   background-color: var(--primary);
   border: 2px solid var(--primary);
   color: black;
+}
+
+/* Resizable Right Content - React Split CSS */
+
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
+.gutter {
+  background-color: var(--background);
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+
+.light .gutter {
+  background-color: var(--light-background);
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
 }

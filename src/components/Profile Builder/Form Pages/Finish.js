@@ -48,31 +48,31 @@ const FinishSection = () => {
                     <br />
                     <div className="cta-box p-3 rounded">
                         <h6>If you like the app, show your support! ❤️</h6>
-                        <div className="support-buttons d-flex justify-content-center">
+                        <div className="support-buttons d-flex justify-content-center flex-column flex-lg-row">
                             <a
                                 href={`https://github.com/${githubUsername}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="support-btn"
+                                className="support-btn d-flex align-items-center mb-2 mb-lg-0"
                             >
-                                <img src={state.theme === "dark" ? "icons/socials/github-dark.svg" : "icons/socials/github.svg"} alt="github" className='form-icon' />
+                                <img src={state.theme === "dark" ? "icons/socials/github-dark.svg" : "icons/socials/github.svg"} alt="github" className='form-icon me-2' />
                                 Follow @{githubUsername}
                             </a>
                             <a
                                 href={`https://github.com/${githubUsername}/${repoName}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="support-btn"
+                                className="support-btn d-flex align-items-center mb-2 mb-lg-0"
                             >
-                                <i className="bx bx-star form-icon" style={{ fontSize: "20px" }}></i> Star ({stars})
+                                <i className="bx bx-star form-icon me-2" style={{ fontSize: "20px" }}></i> Star ({stars})
                             </a>
                             <a
                                 href={`https://github.com/${githubUsername}/${repoName}/fork`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="support-btn"
+                                className="support-btn d-flex align-items-center"
                             >
-                                <i className="bx bx-git-repo-forked form-icon" style={{ fontSize: "20px" }}></i> Fork ({forks})
+                                <i className="bx bx-git-repo-forked form-icon me-2" style={{ fontSize: "20px" }}></i> Fork ({forks})
                             </a>
                         </div>
                     </div>

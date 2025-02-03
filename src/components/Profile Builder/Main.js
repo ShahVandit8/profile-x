@@ -8,11 +8,14 @@ import Support from './Form Pages/Support.js';
 import Preview from './Preview.js';
 import RenderedMarkdown from "./RenderedMarkdown";
 import Modal from "./Modal";
+import Split from 'react-split'
 
 import logoDark from '../../assets/images/logo/logo-dark.png'
 import logoLight from '../../assets/images/logo/logo-light.png'
 import { Link } from 'react-router-dom';
 import FinishSection from './Form Pages/Finish.js';
+import LeftContent from './LeftContent.js';
+import RightContent from './RightContent.js';
 
 let TurndownService = require("turndown").default;
 
@@ -25,6 +28,7 @@ const Main = () => {
   const renderedMarkdownRef = useRef(null);
 
   const [copyStatus, setCopyStatus] = useState("Copy");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const retrievedStoredState = JSON.parse(
@@ -38,6 +42,14 @@ const Main = () => {
       });
     }
   }, [])
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   var turndownService = new TurndownService();
   turndownService.addRule("pRemoval", {
@@ -235,91 +247,28 @@ const Main = () => {
           </nav>
         </div>
         <div className="main-section" style={state.sidebar === 'open' ? { marginLeft: '250px', transition: 'all 0.2s ease' } : { marginLeft: '78px', transition: 'all 0.2s ease' }}>
-
-          <div className="row">
-            <div className="col-12 col-md-6 pe-0">
-              <div className="left-content">
-                {
-                  state.section === "introduction" ?
-                    <Introduction />
-                    :
-                    state.section === "socials" ?
-                      <Socials />
-                      :
-                      state.section === "skills" ?
-                        <Skills />
-                        :
-                        state.section === "badges" ?
-                          <Badges />
-                          :
-                          state.section === "support" ?
-                            <Support />
-                            :
-                            state.section === "finish" ?
-                              <FinishSection />
-                              :
-                            <></>
-                }
-              </div>
-            </div>
-            <div className="col-12 col-md-6 ps-0">
-              <div className="right-content">
-                <nav className="navbar py-3">
-                  <div className="container-fluid d-block">
-                    <button
-                      onClick={() => {
-                        dispatch({
-                          type: "SELECT_RENDER_MODE",
-                          payload: "preview",
-                        });
-                      }}
-                      className={state.renderMode === "preview" ? "btn btn-sm active-btn me-2" : "btn btn-sm nonactive-btn me-2"} type="button">
-                      <i class="fa-solid fa-eye me-2"></i>
-                      Preview
-                    </button>
-                    <button
-                      onClick={() => {
-                        dispatch({
-                          type: "SELECT_RENDER_MODE",
-                          payload: "markdown",
-                        });
-                      }}
-                      className={state.renderMode === "markdown" ? "btn btn-sm active-btn me-2" : "btn btn-sm nonactive-btn me-2"} type="button">
-                      <i class="fa-solid fa-code me-2"></i>
-                      Raw
-                    </button>
-                    <button className="btn btn-sm nonactive-btn" style={{ float: 'right' }} type="button"
-                      onClick={() => {
-                        const markdown = new Promise((resolve, reject) => {
-                          resolve(dispatch({
-                            type: "SELECT_RENDER_MODE",
-                            payload: "markdown",
-                          }))
-                        })
-                        markdown.then(() => {
-                          copyMarkdown(renderedMarkdownRef.current.innerText);
-                        })
-                      }
-                      }
-                    >
-                      <i class="fa-solid fa-copy me-2"></i>
-                      {copyStatus}
-                    </button>
+          <div>
+            {
+              isMobile  ? (
+                <div className='row'>
+                  <div className="col-12 pe-0">
+                    <LeftContent />
                   </div>
-                </nav>
-                <div className='content p-3'>
-                  {
-                    state.renderMode === "preview" ?
-                      <Preview ref={previewRef} />
-                      :
-                      <RenderedMarkdown ref={renderedMarkdownRef} />
-                  }
+                  <div className="col-12 ps-0">
+                    <RightContent copyMarkdown={copyMarkdown} copyStatus={copyStatus} ref={{ renderedMarkdownRef, previewRef }} />
+                  </div>
                 </div>
-              </div>
-            </div>
+              ) :
+                (
+                  <Split className="split" minSize={500} snapOffset={0} gutterSize={5}>
+                    <LeftContent />
+                    <RightContent copyMarkdown={copyMarkdown} copyStatus={copyStatus} ref={{ renderedMarkdownRef, previewRef }} />
+                  </Split>
+                )
+            }
           </div>
         </div>
-      </div>
+      </div >
       <Modal isOpen={isModalOpen} onClose={closeModal} />
     </>
   )
