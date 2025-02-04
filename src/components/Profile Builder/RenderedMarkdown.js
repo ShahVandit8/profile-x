@@ -81,7 +81,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
   if (state.badges.twitterFollowers.selected) {
     badgefollowList.push(
       `<a href="${state.socials.twitter.linkPrefix}${state.socials.twitter.linkSuffix}" target="_blank" rel="noreferrer"><img
-                  src="https://img.shields.io/twitter/follow/${state.socials.twitter.linkSuffix}?logo=x&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}" /></a> &nbsp;`
+                  src="https://img.shields.io/badge/follow-%40${state.socials.twitter.linkSuffix}-${state.badges.cardStyle.iconColor}?logo=x&style=for-the-badge&labelColor=${state.badges.cardStyle.bgColor}" /></a> &nbsp;`
 
     )
   }
@@ -89,7 +89,7 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
   if (state.badges.twitchStatus.selected) {
     badgefollowList.push(
       `<a href="${state.socials.twitch.linkPrefix}${state.socials.twitch.linkSuffix}" target="_blank" rel="noreferrer"><img
-                  src="https://img.shields.io/twitch/status/${state.socials.twitch.linkSuffix}?logo=twitch&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}&label=TWITCH+STATUS" /></a> &nbsp;`
+                  src="https://img.shields.io/twitch/status/${state.socials.twitch.linkSuffix}?logo=twitch&logoColor=fff&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}&label=TWITCH+STATUS" /></a> &nbsp;`
     )
   }
 

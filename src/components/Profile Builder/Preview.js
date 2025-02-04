@@ -136,7 +136,7 @@ const Preview = forwardRef(({ }, ref) => {
                 {state.badges.twitterFollowers.selected ? (
                     <a href={`https://x.com/${state.socials.twitter.linkSuffix}`}>
                         <img
-                            src={`https://img.shields.io/twitter/follow/${state.socials.twitter.linkSuffix}?logo=x&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}`}
+                            src={`https://img.shields.io/badge/follow-%40${state.socials.twitter.linkSuffix}-${state.badges.cardStyle.iconColor}?logo=x&style=for-the-badge&labelColor=${state.badges.cardStyle.bgColor}`}
                             className="img-fluid"
                             alt='Twitter' />
                     </a>
@@ -144,7 +144,7 @@ const Preview = forwardRef(({ }, ref) => {
                 {state.badges.twitchStatus.selected ? (
                     <a href={`${state.socials.twitch.linkPrefix}${state.socials.twitch.linkSuffix}`}>
                         <img
-                            src={`https://img.shields.io/twitch/status/${state.socials.twitch.linkSuffix}?logo=twitch&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}&label=TWITCH+STATUS`}
+                            src={`https://img.shields.io/twitch/status/${state.socials.twitch.linkSuffix}?logo=twitch&logoColor=fff&style=for-the-badge&color=${state.badges.cardStyle.iconColor}&labelColor=${state.badges.cardStyle.bgColor}&label=TWITCH+STATUS`}
                             className="img-fluid"
                             alt='' />
                     </a>
