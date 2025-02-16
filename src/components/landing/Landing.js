@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from './Navbar'
 import Hero from './Hero'
 import Features from './Features'
-import About from './About'
 import Footer from './Footer'
 
 import useApp from '../../Context/AppContext.js';
@@ -16,7 +15,6 @@ const Landing = () => {
       <Navbar />
       <Hero />
       <Features />
-      <About />
       <Footer/>
     </div>
   )

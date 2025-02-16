@@ -1,19 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import useApp from '../../Context/AppContext.js';
-import Introduction from './Form Pages/Introduction.js';
-import Skills from './Form Pages/Skills.js';
-import Socials from './Form Pages/Socials.js';
-import Badges from './Form Pages/Badges.js';
-import Support from './Form Pages/Support.js';
-import Preview from './Preview.js';
-import RenderedMarkdown from "./RenderedMarkdown";
 import Modal from "./Modal";
 import Split from 'react-split'
 
 import logoDark from '../../assets/images/logo/logo-dark.png'
 import logoLight from '../../assets/images/logo/logo-light.png'
 import { Link } from 'react-router-dom';
-import FinishSection from './Form Pages/Finish.js';
 import LeftContent from './LeftContent.js';
 import RightContent from './RightContent.js';
 
@@ -128,7 +120,7 @@ const Main = () => {
             <div className="menu-bar m-0">
               <div className="menu">
                 <ul className="menu-links">
-                  <li className={state.section === "introduction" ? 'list-items active' : 'list-items'} title="Introduction"
+                  <li className={state.section === "introduction" ? 'list-items active' : 'list-items'}
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -137,11 +129,12 @@ const Main = () => {
                     }}
                   >
                     <a>
-                      <i className="bx bx-id-card icons" />
+                      <i className="lni lni-user icons" />
                       <span className="text nav-text">Introduction</span>
+                      <span className={state.sidebar === "open" ? "d-none" : "menu-tooltip"}>Introduction</span>
                     </a>
                   </li>
-                  <li className={state.section === "socials" ? 'list-items active' : 'list-items'} title="Socials"
+                  <li className={state.section === "socials" ? 'list-items active' : 'list-items'}
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -150,11 +143,12 @@ const Main = () => {
                     }}
                   >
                     <a>
-                      <i className="bx bx-link icons" />
+                      <i className="lni lni-link icons" />
                       <span className="text nav-text">Socials</span>
+                      <span className={state.sidebar === "open" ? "d-none" : "menu-tooltip"}>Socials</span>
                     </a>
                   </li>
-                  <li className={state.section === "skills" ? 'list-items active' : 'list-items'} title="Skills"
+                  <li className={state.section === "skills" ? 'list-items active' : 'list-items'}
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -163,11 +157,12 @@ const Main = () => {
                     }}
                   >
                     <a>
-                      <i className="bx bxs-bolt icons" />
+                      <i className="lni lni-bolt-alt icons" />
                       <span className="text nav-text">Skills</span>
+                      <span className={state.sidebar === "open" ? "d-none" : "menu-tooltip"}>Skills</span>
                     </a>
                   </li>
-                  <li className={state.section === "badges" ? 'list-items active' : 'list-items'} title="Badges"
+                  <li className={state.section === "badges" ? 'list-items active' : 'list-items'}
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -176,11 +171,12 @@ const Main = () => {
                     }}
                   >
                     <a>
-                      <i className="bx bxs-award icons" />
+                      <i className="lni lni-shield icons" />
                       <span className="text nav-text">Badges</span>
+                      <span className={state.sidebar === "open" ? "d-none" : "menu-tooltip"}>Badges</span>
                     </a>
                   </li>
-                  <li className={state.section === "support" ? 'list-items active' : 'list-items'} title="Support"
+                  <li className={state.section === "support" ? 'list-items active' : 'list-items'}
                     onClick={() => {
                       dispatch({
                         type: "SHOW_SECTION",
@@ -189,20 +185,24 @@ const Main = () => {
                     }}
                   >
                     <a>
-                      <i className="bx bx-happy-alt icons" />
+                      <i className="lni lni-heart icons" />
                       <span className="text nav-text">Support</span>
+                      <span className={state.sidebar === "open" ? "d-none" : "menu-tooltip"}>Support</span>
                     </a>
                   </li>
                 </ul>
               </div>
               <div className="bottom-content">
-                <li className="" title="Go Back Home">
+                <li className="">
                   <Link to="/" >
-                    <i className="bx bx-log-out icons" />
-                    <nobr><span className="text nav-text">Go Home</span></nobr>
+                    <a>
+                      <i className="lni lni-exit icons" />
+                      <nobr><span className="text nav-text">Go Home</span></nobr>
+                      <span className={state.sidebar === "open" ? "d-none" : "menu-tooltip"}><nobr>Go Back Home</nobr></span>
+                    </a>
                   </Link>
                 </li>
-                <li className="" style={{ cursor: 'pointer' }} title="Toggle Theme"
+                <li className="" style={{ cursor: 'pointer' }}
                   onClick={() => {
                     if (state.theme === "dark") {
                       dispatch({
@@ -249,7 +249,7 @@ const Main = () => {
         <div className="main-section" style={state.sidebar === 'open' ? { marginLeft: '250px', transition: 'all 0.2s ease' } : { marginLeft: '78px', transition: 'all 0.2s ease' }}>
           <div>
             {
-              isMobile  ? (
+              isMobile ? (
                 <div className='row'>
                   <div className="col-12 pe-0">
                     <LeftContent />

@@ -3,15 +3,15 @@
   --font: "Inter", sans-serif;
   --white: #ffffff;
   --text: #e5faf8;
-  --background: #1b1b1b;
-  --primary: #adb4d7;
+  --background: #161616;
+  --primary: #ACC8E5;
   --secondary: #262626;
-  --accent: #333c47;
+  --accent: #2F2F2F;
   --border: #adadad;
 
   --light-text: #1b1b1b;
   --light-background: #f3f8ff;
-  --light-primary: #adb4d7;
+  --light-primary: #ACC8E5;
   --light-secondary: #262626;
   --light-accent: #333c47;
   --light-button: #dee1e6;
@@ -181,82 +181,64 @@ p {
 }
 
 /* ===== Mobile Pop CSS ===== */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popup-overlay-light {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(189, 187, 187, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1001;
-}
-
-.popup-ptag {
-  color: var(--text);
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.popup-ptag-light {
-  color: var(--light-text);
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.popup-span {
-  font-size: 30px;
-}
-
-.popup-i {
-  font-family: 700;
-  color: var(--primary);
-}
-
-.popup-popup {
+.popup-content {
+  text-align: center;
   background: var(--background);
-  color: var(--text);
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-sizing: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 400px;
+  padding: 30px;
+  height: 100dvh;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.popup-popup-light {
+.light .popup-content {
   background: var(--light-background);
-  color: var(--light-text);
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-sizing: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 400px;
 }
 
-.popup-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #adb4d7;
-  color: #1b1b1b;
+.popup-content .warning-icon {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--border);
+  margin: 0 auto 15px;
+}
+
+.popup-content .warning-icon i {
+  height: max-content;
+  font-size: 100px;
+}
+
+.popup-content .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--light-button);
+}
+
+.light .popup-content .title  {
+  color: var(--light-accent);
+}
+
+.popup-content .message {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.popup-content .ok-button {
+  background-color: var(--light-button);
+  color: var(--background);
   border: none;
+  padding: 10px 20px;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+}
+
+.light .popup-content .ok-button {
+  background-color: var(--secondary);
+  color: var(--light-background);
 }

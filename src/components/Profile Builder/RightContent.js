@@ -15,7 +15,7 @@ const RightContent = forwardRef(({
         <div>
             <div className="right-content">
                 <nav className="navbar py-3">
-                    <div className="container-fluid d-block">
+                    <div className="container-fluid right-section-navbar">
                         <button
                             onClick={() => {
                                 dispatch({
@@ -24,7 +24,7 @@ const RightContent = forwardRef(({
                                 });
                             }}
                             className={state.renderMode === "preview" ? "btn btn-sm active-btn me-2" : "btn btn-sm nonactive-btn me-2"} type="button">
-                            <i class="fa-solid fa-eye me-2"></i>
+                            <i class="bx bx-window-open me-2"></i>
                             Preview
                         </button>
                         <button
@@ -35,10 +35,10 @@ const RightContent = forwardRef(({
                                 });
                             }}
                             className={state.renderMode === "markdown" ? "btn btn-sm active-btn me-2" : "btn btn-sm nonactive-btn me-2"} type="button">
-                            <i class="fa-solid fa-code me-2"></i>
-                            Raw
+                            <i class="lni lni-markdown me-2"></i>
+                            Markdown
                         </button>
-                        <button className="btn btn-sm nonactive-btn" style={{ float: 'right' }} type="button"
+                        <button className="btn btn-sm right-nav-btn nonactive-btn" style={{ float: 'right' }} type="button"
                             onClick={() => {
                                 const markdown = new Promise((resolve, reject) => {
                                     resolve(dispatch({
@@ -52,7 +52,7 @@ const RightContent = forwardRef(({
                             }
                             }
                         >
-                            <i class="fa-solid fa-copy me-2"></i>
+                            <i class="lni lni-clipboard me-2"></i>
                             {copyStatus}
                         </button>
                     </div>

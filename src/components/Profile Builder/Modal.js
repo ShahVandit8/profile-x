@@ -24,7 +24,11 @@ const Modal = ({ isOpen, onClose }) => {
                         <div className="modal-container">
                             <div className="modal-content">
                                 <h4 className="mx-auto">🎉 Success! Code Copied.</h4>
-                                <button onClick={onClose} className={state.theme === 'dark' ? 'btn clbtn btn-secondary mx-auto' : 'btn clbtn clbtn-light mx-auto'}>
+                                <p className="modal-p text-center">
+                                    Your code is ready, and with just a few clicks, you'll have a sleek new GitHub profile.
+                                </p>
+                                <p className="modal-p text-center mt-2"><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme"><u>Click Here</u></a> to know what to do next.</p>
+                                <button onClick={onClose} className="btn btn-sm nonactive-btn w-25 mx-auto mt-2" style={{ float: 'right' }} type="button">
                                     Close
                                 </button>
                             </div>
@@ -36,7 +40,7 @@ const Modal = ({ isOpen, onClose }) => {
                                     <Link className="navbar-brand" style={{ marginTop: '10px' }} to="/">
                                         <span style={{ fontWeight: "normal" }} className="nav-title ">Profile<i style={{ color: '#ADB4D7', fontWeight: '700' }}>X</i></span>
                                     </Link>
-                                    <button onClick={onClose} className={state.theme === 'dark' ? 'btn clbtn btn-secondary' : 'btn clbtn clbtn-light'}>
+                                    <button onClick={onClose} className="btn btn-sm nonactive-btn" style={{ float: 'right' }} type="button">
                                         Close
                                     </button>
                                 </div>
@@ -48,37 +52,33 @@ const Modal = ({ isOpen, onClose }) => {
                                         </p>
                                         <p className="modal-bold">Here&apos;s what to do next:</p>
                                         <ul className="modal-list">
-                                            <li>Visit your GitHub profile (e.g., https://www.github.com/[YourName])</li>
-                                            <li>
-                                                Click the{" "}
-                                                <svg
-                                                    className="modal-icon"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth="2"
-                                                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                                                    ></path>
-                                                </svg>{" "}
-                                                button on [YourName]/ReadMe.md.
-                                            </li>
-                                            <li>Paste your code into the &apos;Edit file&apos; text editor.</li>
-                                            <li>Click the &apos;Preview&apos; tab to preview your new profile.</li>
-                                            <li>Click &apos;Commit Changes&apos; to save your new GitHub profile.</li>
+                                            <li>On Github, click + New repository button on upper-right corner.</li>
+                                            <li>Enter a repository name that matches your GitHub username.</li>
+                                            <li>Check Public and select Initialize this repository with a README.</li>
+                                            <li>Click Create repository to generate your profile README.</li>
+                                            <li>In the repository, click Edit README to customize your profile.</li>
+                                            <li>Paste the code you just copied, then click Commit Changes to save your new GitHub profile.</li>
                                         </ul>
                                         <a
-                                            className="btn btn-sponsor"
+                                            className="btn btn-sponsor nonactive-btn me-2 p-2"
                                             href="https://buymeacoffee.com/xK9lZSuHIj"
                                             rel="noreferrer"
                                             target="_blank"
                                         >
-                                            <img src="https://mediaresource.sfo2.digitaloceanspaces.com/wp-content/uploads/2024/04/29170826/buy-me-a-coffee-logo-F1878A1EB2-seeklogo.com.png" alt="" />
+                                            <img src="icons/support/buymeacoffee.svg" alt="buymeacoffe logo" />
                                             Buy me a coffee
+                                        </a>
+                                        <a
+                                            className="btn btn-sponsor nonactive-btn p-2"
+                                            href="https://github.com/ShahVandit8/profile-x"
+                                            rel="noreferrer"
+                                            target="_blank"
+                                        >
+                                            <img
+                                                src={state.theme === 'dark' ? 'icons/socials/github-dark.svg' : 'icons/socials/github.svg'}
+                                                alt="Github Logo"
+                                            />
+                                            Star on Github
                                         </a>
                                     </div>
                                     <div className="modal-right col-12 col-md-6">

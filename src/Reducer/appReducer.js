@@ -833,7 +833,7 @@ export const iconData = {
         },
         {
             name: "Netlify",
-            path: "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/netlify.svg",
+            path: "https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/icons/skills/netlify-colored.svg",
             iTag: "netlify",
             link: "https://www.netlify.com/",
         },
