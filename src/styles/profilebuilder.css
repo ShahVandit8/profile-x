@@ -2,7 +2,7 @@
 /* Dark Sidebar CSS */
 .dark .sidebar .text {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--text);
   transition: all 0.2s ease;
   white-space: unset;
@@ -237,10 +237,34 @@
   transform: translateY(-50%);
 }
 
+.sidebar-section a .menu-tooltip {
+  position: absolute;
+  left: 4.5rem;
+  /* transform: translateX(50%); */
+  background: #333;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  /* white-space: nowrap; */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sidebar-section a:hover .menu-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
 /* Light Sidebar CSS */
 .light .sidebar .text {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300;
   color: var(--dark-text);
   transition: all 0.2s ease;
   white-space: unset;
@@ -511,7 +535,6 @@
   }
 }
 
-
 /* Section Headbar */
 
 .headbar {
@@ -542,7 +565,7 @@
   font-weight: 300;
   font-size: 13px;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 6px 10px;
 }
 
 .section-btn:hover {
@@ -588,7 +611,7 @@
   font-weight: 300;
   font-size: 13px;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 6px 10px;
 }
 
 .light .section-btn:hover {
@@ -927,6 +950,16 @@
   flex: 0 1 auto;
 }
 
+.right-content .right-section-navbar {
+  display: block;
+}
+
+@media only screen and (max-width: 416px) {
+  .right-content .right-section-navbar {
+    display: flex;
+  }
+}
+
 @media only screen and (max-width: 755px) {
   .right-content {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -979,6 +1012,16 @@
 .nonactive-btn:focus {
   outline: none;
   box-shadow: none;
+}
+
+.right-nav-btn {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 416px) {
+  .right-nav-btn {
+    margin-top: 0.5rem;
+  }
 }
 
 .right-content textarea {
@@ -1268,46 +1311,11 @@
 .modal-header {
   display: flex;
   align-items: center;
-}
-
-.clbtn {
   border: none;
-  cursor: pointer;
-  width: fit-content;
-  height: fit-content;
-  display: inline-block;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  font-size: 15px;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-weight: 300;
-}
-
-.clbtn-light {
-  background-color: var(--light-button);
-}
-
-.clbtn:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.btn-sponsor {
-  background: var(--primary);
-  color: black;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-.btn-sponsor:focus {
-  outline: none !important;
-  box-shadow: none !important;
 }
 
 .btn-sponsor img {
-  height: 25px;
+  height: 20px;
   width: auto;
   margin-right: 10px;
 }

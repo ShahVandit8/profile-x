@@ -20,12 +20,12 @@ const Hero = () => {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div
-                                    className="ud-hero-content wow slideInLeft"
+                                    className="ud-hero-content wow fadeInUp"
                                     data-wow-delay=".2s"
                                 >
                                     <h1 className="ud-hero-title">
                                         Create a stunning <br />
-                                        <i style={{ color: '#ADB4D7' }}>GitHub</i> profile in minutes
+                                        <i style={{ color: '#ADB4D7' }}>GitHub profile</i> in minutes
                                     </h1>
                                     <p className="ud-hero-desc">
                                         Generate Readme.md for your profile and show off your skills, experience and projects.
@@ -54,7 +54,7 @@ const Hero = () => {
                                 </div>
                                 <div
                                     className="ud-hero-image wow fadeInUp"
-                                    data-wow-delay=".25s"
+                                    data-wow-delay=".2s"
                                 >
                                     <img src={state.theme === "dark" ? mocklight : mockdark} alt="hero-image" />
                                     <img src={state.theme === "dark" ? dotshape : dotshapedark} alt="shape" className="shape shape-1" />
