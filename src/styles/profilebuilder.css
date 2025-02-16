@@ -259,8 +259,6 @@
   visibility: visible;
 }
 
-
-
 /* Light Sidebar CSS */
 .light .sidebar .text {
   font-size: 16px;
@@ -1821,12 +1819,10 @@
 
 .cta-box {
   background-color: transparent;
-  border: 1px solid #dee2e6;
   color: var(--primary) !important;
 }
 
 .light .cta-box {
-  border: 1px solid var(--light-text);
   color: var(--light-text) !important;
 }
 
@@ -1836,23 +1832,31 @@
 }
 
 .support-btn {
-  display: flex;
-  text-decoration: none;
-  color: white;
-  padding: 6px 12px;
-  border: 2px solid var(--primary);
-  transition: all 0.3s ease-in-out;
-  font-size: medium;
+  background-color: var(--secondary);
+  color: var(--white);
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 8px 12px;
 }
 
 .light .support-btn {
+  background-color: var(--light-button);
   color: var(--light-text);
 }
 
 .support-btn:hover {
-  background-color: var(--primary);
-  border: 2px solid var(--primary);
-  color: black;
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.light .support-btn:hover {
+  background-color: #d3d6db;
+  color: var(--light-text);
 }
 
 /* Resizable Right Content - React Split CSS */
