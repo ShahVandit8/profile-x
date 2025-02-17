@@ -20,7 +20,7 @@ const Landing = () => {
         <meta property="og:title" content="ProfileX - Create a Stunning GitHub Profile in Minutes" />
         <meta property="og:description" content="Generate a custom README.md for your GitHub profile with ProfileX. Showcase your skills, projects, and social links effortlessly." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/og.png" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/ShahVandit8/repo-storage/refs/heads/main/profile-x/ogimage/og.png" />
         <meta property="og:url" content="https://www.profilex.dev/" />
         <link rel="canonical" href="https://www.profilex.dev/" />
       </Helmet>
