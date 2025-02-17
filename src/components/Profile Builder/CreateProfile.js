@@ -19,9 +19,9 @@ const CreateProfile = () => {
         <meta property="og:title" content="Create Your GitHub Profile - ProfileX" />
         <meta property="og:description" content="Build and customize your GitHub profile with ProfileX. Add skills, social links, badges, and more to your README.md." />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://profilex.dev/logo.png" />
-        <meta property="og:url" content="https://profilex.dev/create-profile" />
-        <link rel="canonical" href="https://profilex.dev/create-profile" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/ShahVandit8/profile-x/refs/heads/main/public/og.png" />
+        <meta property="og:url" content="https://www.profilex.dev/create-profile" />
+        <link rel="canonical" href="https://www.profilex.dev/create-profile" />
       </Helmet>
       <div className={state.theme === "dark" ? "dark" : "light"}>
         <Main />
