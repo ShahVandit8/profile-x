@@ -8,7 +8,7 @@ Create a stunning GitHub profile in minutes! Profile-X is a web app that helps y
 
 ## 🌟  Live Link
 
-Check out the live app here: [Profile-X](https://profile-x.vandit-shah.me/)
+Check out the live app here: [Profile-X](https://profilex.dev/)
 
 ---
 
