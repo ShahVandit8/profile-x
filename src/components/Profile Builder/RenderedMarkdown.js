@@ -38,16 +38,16 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
   }
 
   if (state.introduction.portfolioLink) {
-    introductionList.push(`- 👨‍💻 Check out my portfolio at [MyPortfolio](http://${state.introduction.portfolioLink})`);
+    introductionList.push(`- 👨‍💻 Check out my portfolio at [MyPortfolio](https://${state.introduction.portfolioLink})`);
   }
 
   if (state.introduction.resumeLink) {
-    introductionList.push(`- 📄 Check out my resume at [MyResume](http://${state.introduction.resumeLink})`);
+    introductionList.push(`- 📄 Check out my resume at [MyResume](https://${state.introduction.resumeLink})`);
   }
 
   if (state.introduction.workingOnTitle) {
     if (state.introduction.workingOnLink) {
-      const link = state.introduction.workingOnLink ? `(${state.introduction.workingOnLink})` : "";
+      const link = state.introduction.workingOnLink ? `(https://${state.introduction.workingOnLink})` : "";
       introductionList.push(`- 🔭 I'm currently working on [${state.introduction.workingOnTitle}]${link}`);
     }
     else {
