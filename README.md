@@ -1,6 +1,6 @@
 # Profile-X 🚀
 
-![Profile-X Socialify](https://socialify.git.ci/ShahVandit8/profile-x/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pattern=Solid&pulls=1&stargazers=1&theme=Auto)
+![Profile-X](https://i.ibb.co/fLSfjMS/og-min.png)
 
 Create a stunning GitHub profile in minutes! Profile-X is a web app that helps you generate a customized `README.md` for your GitHub profile, showcasing your skills, experience, and projects. With an intuitive interface, you can easily build a professional and visually appealing profile.
 
@@ -75,7 +75,7 @@ This project uses APIs and resources created by talented developers. Special tha
 
 ## 💡 Inspiration
 
-Profile-X was inspired by **[Daniel Cranney's ProfileMe.dev](https://profileme.dev/)**. A big shoutout to Daniel for the original idea and design!
+Profile-X was inspired by Daniel Cranney's ProfileMe.dev. A big shoutout to Daniel for the original idea and design!
 
 ---
 
