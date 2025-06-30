@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from '@vercel/analytics/react';
 import { useState, useEffect } from "react";
 import "../src/styles/lineicons.css";
 import "../src/styles/global.css";
@@ -60,15 +61,18 @@ const CreateProfileWithPopup = () => {
 
 function App() {
   return (
-    <AppProvider>
-      <Router>
-        <Routes>
-          <Route path="/" exact element={<Landing />} />
-          <Route path="create-profile" element={<CreateProfileWithPopup />} >
-          </Route>
-        </Routes>
-      </Router>
-    </AppProvider>
+    <div>
+      <AppProvider>
+        <Router>
+          <Routes>
+            <Route path="/" exact element={<Landing />} />
+            <Route path="create-profile" element={<CreateProfileWithPopup />} >
+            </Route>
+          </Routes>
+        </Router>
+      </AppProvider>
+      <Analytics />
+    </div>
   );
 }
 
