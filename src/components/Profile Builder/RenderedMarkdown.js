@@ -454,10 +454,12 @@ const RenderedMarkdown = forwardRef(({ }, ref) => {
 
   const finalListMarkdown = allLists.join("\n");
 
+  const branding = `<!-- Thank you for using ProfileX - https://profilex.dev [by Vandit Shah] -->`
 
   const finalMarkdown = [
     ...markdownContent,
-    finalListMarkdown
+    finalListMarkdown,
+    branding
   ].join("\n\n");
 
   return (
